@@ -1,7 +1,21 @@
-export default function Home() {
+import React from 'react';
+import { Navbar } from '../components/navbar';
+import { Wave } from '../components/Wave';
+import { Tablet } from '../components/Tablet';
+
+
+const Home = () => {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <div>
+      <Navbar />  
+      <main>
+        
+      </main>
+      <Tablet/>
+      <Wave />
+    </div>
+    
+  );
 }
+
+export default Home;
