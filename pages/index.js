@@ -28,7 +28,8 @@ const Home = () => {
           </svg>
         </div>
         <div className="wave">
-          <svg
+        <img className="tabframe" src="/home/wavetry.svg" alt="Alumni" />
+          {/* <svg
             width="1440"
             height="500"
             viewBox="0 50 1440 987"
@@ -71,7 +72,7 @@ const Home = () => {
                 <stop offset="0.711667" stop-color="#5F13EE" />
               </linearGradient>
             </defs>
-          </svg>
+          </svg> */}
         </div>
         <div className="tabletframe tabletframe-scaled">
           <object
