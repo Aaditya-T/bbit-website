@@ -3,13 +3,28 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Getting Started
 
 First, run the development server:
-
+  C 700 0.858704, 650 1.35878, 850 38.4167
+              C 500 63.4747, 400 303.718, 300 362.139
+              C 250 395.143, 150 265.237, 59.3635 223.859
 ```bash
 npm run dev
 # or
+
+        M59.3635 223.859
+              
+              C31.9891 216.502 -0.136475 213.359 -0.136475 213.359V805H698.5
+              
+              H1470
+              
+              V0.858704
+              
+              C1440 0.858704 1419.86 1.35878 1990.14 27.4167
+              
+              C549 90 845 370 545 462
+              
+              C300 550 213 265.237 59.3635 223.859Z"
 yarn dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
