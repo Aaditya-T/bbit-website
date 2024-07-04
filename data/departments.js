@@ -10,26 +10,27 @@ export const departments = [
       image: "https://example.com/civil.jpg",
     },
     {
-      name: "computer",
+      name: "Computer",
       vision: `To be a leading center of excellence in computer engineering education, 
           research, and innovation, producing world-class professionals who drive 
           technological advancements and contribute to the global knowledge economy`,
-      mission: `Mission: To provide high-quality education in computer engineering that 
-          equips students with strong theoretical foundations and practical skills.
+      mission: 
+      
+          `1. To provide high-quality education in computer engineering that equips students with strong theoretical foundations and practical skills.
   
-          To foster a culture of innovation, critical thinking, and problem-solving 
+          2. To foster a culture of innovation, critical thinking, and problem-solving 
           through cutting-edge research and collaborative projects.
   
-          To engage with industry partners and the community to address real-world 
-          challenges and contribute to sustainable development.
+          3. To engage with industry partners and the community to address 
+          real-world challenges and contribute to sustainable development.
   
-          To nurture ethical and socially responsible professionals committed to 
+          4. To nurture ethical and socially responsible professionals committed to 
           lifelong learning and leadership in the dynamic field of computer engineering.`,
-      faculty: "XYZ",
-      designation: "abc",
-      qualification: "MCA",
-      experience: "5 years",
-      image: "https://example.com/computer.jpg",
+      faculty: "Jiten P. Parmar",
+      designation: "I/C Head of Department",
+      qualification: "M.E. Computer",
+      experience: "26 years",
+      image: "/faculty/computer-gia/mask.png",
     },
     // Add other departments here
   ];

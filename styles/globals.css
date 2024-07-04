@@ -8,8 +8,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #F3F2FF;
-
+  background-color: #f3f2ff;
 }
 
 * {
@@ -17,7 +16,7 @@ body {
 }
 
 .navbar {
-  background-color: #F3F2FF;
+  background-color: #f3f2ff;
   padding: 1em;
   display: flex;
   align-items: center;
@@ -69,7 +68,7 @@ body {
   height: 785.64px;
 } */
 
-.wave{
+.wave {
   /* z-index: -1; */
 }
 
@@ -77,10 +76,9 @@ body {
   width: 1515px;
   height: 1100px;
   transform: scaleY(0.79);
-  transform: scaleX(0.3,1);
+  transform: scaleX(0.3, 1);
   transform-origin: left;
-  margin-top: -92px;    
-
+  margin-top: -92px;
 }
 
 .aloo {
@@ -202,6 +200,14 @@ body {
   background: url(/home/psychology.svg);
 }
 
+.campus {
+  width: 800px;
+  height: 400px;
+  margin-top: -590px;
+  margin-left: 200px;
+  transform: rotate(18deg);
+}
+
 .tabletframe {
   width: 350px;
   height: 353px;
@@ -210,12 +216,16 @@ body {
   transform: rotate(6deg);
   z-index: 1;
   top: 28px;
-  /* background: url(/home/tablet.svg); */
+  transition: transform 2s;
 }
 
 .tabletframe-scaled {
   transform: scale(0.67);
   margin-top: 0px;
+}
+
+.tabletframe-spin {
+  animation: spin 2s linear;
 }
 
 .rectangle {
@@ -272,7 +282,6 @@ body {
   height: 40px;
   margin-left: -30px;
   margin-top: 16px;
-
 }
 
 .rec2 h5 {
@@ -348,31 +357,31 @@ body {
 }
 
 .chairman h1 {
-position: absolute;
-width: 564px;
-height: 215px;
-left: 735px;
-top: 55px;
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 22px;
-line-height: 40px;
-color: #27066F;
+  position: absolute;
+  width: 564px;
+  height: 215px;
+  left: 735px;
+  top: 55px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 40px;
+  color: #27066f;
 }
 
 .chairman p {
-position: absolute;
-width: 494px;
-height: 215px;
-left: 735px;
-top: 96px;
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 24px;
-color: #27066F;
+  position: absolute;
+  width: 494px;
+  height: 215px;
+  left: 735px;
+  top: 96px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #27066f;
 }
 
 .chairman img {
@@ -391,46 +400,46 @@ color: #27066F;
   border-radius: 33px;
 }
 
-.principal h4{
-position: absolute;
-width: 202px;
-height: 40px;
-left: 737px;
-top: 360px;
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 25px;
-color: #27066f;
+.principal h4 {
+  position: absolute;
+  width: 202px;
+  height: 40px;
+  left: 737px;
+  top: 360px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #27066f;
 }
 
-.principal h1{
-position: absolute;
-width: 564px;
-height: 215px;
-left: 735px;
-top: 399px;
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 22px;
-line-height: 40px;
-color: #27066F;
+.principal h1 {
+  position: absolute;
+  width: 564px;
+  height: 215px;
+  left: 735px;
+  top: 399px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 40px;
+  color: #27066f;
 }
 
-.principal p{
-position: absolute;
-width: 494px;
-height: 215px;
-left: 735px;
-top: 443px;
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 24px;
-color: #27066F; 
+.principal p {
+  position: absolute;
+  width: 494px;
+  height: 215px;
+  left: 735px;
+  top: 443px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #27066f;
 }
 
 .principal img {
@@ -439,22 +448,22 @@ color: #27066F;
   bottom: 80px;
 }
 
-.news h1{
-position: absolute;
-width: 390px;
-height: 65.52px;
-left: 230px;
-top: 30px;
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 28px;
-line-height: 45px;
-text-align: center;
-color: #27066F;
+.news h1 {
+  position: absolute;
+  width: 390px;
+  height: 65.52px;
+  left: 230px;
+  top: 30px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 45px;
+  text-align: center;
+  color: #27066f;
 }
 
-.date1{
+.date1 {
   position: relative;
   top: 80px;
   width: 700px;
@@ -462,47 +471,47 @@ color: #27066F;
   margin-left: 60px;
 }
 
-.date1 img{
+.date1 img {
   position: absolute;
   top: 24px;
 }
 
-.date1 h3{
-position: absolute;
-width: 323.01px;
-height: 54.45px;
-left: 53px;
-top: 20px;
-font-family: 'Open Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 22px;
-line-height: 41px;
-color: #000000;
+.date1 h3 {
+  position: absolute;
+  width: 323.01px;
+  height: 54.45px;
+  left: 53px;
+  top: 20px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 41px;
+  color: #000000;
 }
 
-.date1 .line1{
+.date1 .line1 {
   position: relative;
   top: 100px;
   right: 20px;
   transform: scaleX(0.7);
 }
 
-.date1 p{
-position: relative;
-width: 359.18px;
-height: 39.98px;
-left: 52px;
-top: 80px;
-font-family: 'Open Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 22px;
-line-height: 30px;
-color: #000000;
+.date1 p {
+  position: relative;
+  width: 359.18px;
+  height: 39.98px;
+  left: 52px;
+  top: 80px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #000000;
 }
 
-.date2{
+.date2 {
   position: relative;
   top: 210px;
   width: 700px;
@@ -510,18 +519,18 @@ color: #000000;
   margin-left: 60px;
 }
 
-.date2 img{
+.date2 img {
   position: absolute;
   top: 24px;
 }
 
-.date2 h3{
+.date2 h3 {
   position: absolute;
   width: 323.01px;
   height: 54.45px;
   left: 53px;
   top: 20px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
@@ -529,13 +538,13 @@ color: #000000;
   color: #000000;
 }
 
-.date2 p{
+.date2 p {
   position: relative;
   width: 359.18px;
   height: 39.98px;
   left: 52px;
   top: 80px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
@@ -543,14 +552,14 @@ color: #000000;
   color: #000000;
 }
 
-.date2 .line2{
+.date2 .line2 {
   position: relative;
   top: 100px;
   right: 20px;
   transform: scaleX(0.7);
 }
 
-.date3{
+.date3 {
   position: relative;
   top: 340px;
   width: 700px;
@@ -558,13 +567,13 @@ color: #000000;
   margin-left: 60px;
 }
 
-.date3 h3{
+.date3 h3 {
   position: absolute;
   width: 323.01px;
   height: 54.45px;
   left: 53px;
   top: 20px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
@@ -572,18 +581,18 @@ color: #000000;
   color: #000000;
 }
 
-.date3 img{
+.date3 img {
   position: absolute;
   top: 24px;
 }
 
-.date3 p{
+.date3 p {
   position: relative;
   width: 359.18px;
   height: 39.98px;
   left: 52px;
   top: 80px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
@@ -591,7 +600,7 @@ color: #000000;
   color: #000000;
 }
 
-.date3 .line3{
+.date3 .line3 {
   position: relative;
   top: 100px;
   right: 20px;
@@ -602,7 +611,7 @@ color: #000000;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 210px;
+  padding-left: 250px;
   padding-top: 5px;
 }
 
@@ -611,22 +620,21 @@ color: #000000;
   font-size: 22px;
   width: 320px;
   height: 200px;
-  background-color: #FFB224;
+  background-color: #ffb224;
   margin: 10px;
   border-radius: 30px;
   padding-right: 190px;
   padding-top: 35px;
-  color: #FFFAEB;
+  color: #fffaeb;
   font-weight: 900;
-  font-family: 'Outfit';
+  font-family: "Outfit";
   font-style: normal;
-  
 }
-.card-item:nth-child(-n+3) .gia-btn {
+.card-item:nth-child(-n + 3) .gia-btn {
   bottom: 25px;
 }
 
-.card-item:nth-child(-n+3) .sfi-btn {
+.card-item:nth-child(-n + 3) .sfi-btn {
   bottom: 25px;
 }
 
@@ -634,11 +642,11 @@ color: #000000;
   bottom: 25px;
 }
 
-.card-item:nth-child(5) .gia-btn{
+.card-item:nth-child(5) .gia-btn {
   bottom: 25px;
 }
 
-.card-item:nth-child(6) .gia-btn{
+.card-item:nth-child(6) .gia-btn {
   bottom: 25px;
 }
 
@@ -646,36 +654,35 @@ color: #000000;
   bottom: 25px;
 }
 
-.card-item:nth-child(5) .sfi-btn
-{
+.card-item:nth-child(5) .sfi-btn {
   bottom: 25px;
 }
 
-.card-item:nth-child(6) .sfi-bt{
+.card-item:nth-child(6) .sfi-bt {
   bottom: 25px;
 }
 
-.card-item:nth-child(7) .gia-btn{
+.card-item:nth-child(7) .gia-btn {
   bottom: 25px;
 }
 
-.card-item:nth-child(7) .sfi-btn{
+.card-item:nth-child(7) .sfi-btn {
   bottom: 25px;
 }
 
-.card-item:nth-child(8) .gia-btn{
+.card-item:nth-child(8) .gia-btn {
   bottom: 25px;
 }
 
-  .card-item:nth-child(8) .sfi-btn{
-    visibility: hidden;
-  }
+.card-item:nth-child(8) .sfi-btn {
+  visibility: hidden;
+}
 
 .card-item span {
   font-size: 26px;
   text-align: left;
   display: inline-block;
-  width: 200px; 
+  width: 200px;
   margin-left: 30px;
   line-height: 30px;
 }
@@ -687,42 +694,6 @@ color: #000000;
   text-transform: uppercase;
 }
 
-/* .card-item span[data-name="Civil"] {
-  font-size: 26px;
-  padding-right: 60px;
-}
-
-.card-item span[data-name="Computer"] {
-  font-size: 26px;
-}
-
-.card-item span[data-name="Electrical"] {
-  font-size: 26px;
-}
-
-.card-item span[data-name='Electronic & Communication'] {
-  font-size: 26px;  
-}
-
-.card-item span[data-name="Information Technology"]
-{
-  font-size: 26px;
-}
-
-.card-item span[data-name="Mechanical"]
-{
-  font-size: 26px;
-}
-
-.card-item span[data-name="Mechatronics"]
-{
-  font-size: 26px;
-}
-.card-item span[data-name="Science & Humanities"]
-{
-  font-size: 26px;
-} */
-
 .gia-btn {
   position: absolute;
   font-size: 20px;
@@ -730,11 +701,11 @@ color: #000000;
   height: 40px;
   border: solid white;
   border-radius: 6px;
-  margin-top: 65px;   
+  margin-top: 65px;
   left: 30px;
 }
 
-.sfi-btn{
+.sfi-btn {
   position: absolute;
   font-size: 20px;
   width: 80px;
@@ -745,7 +716,7 @@ color: #000000;
   margin-top: 65px;
 }
 
-.card-item img{
+.card-item img {
   position: absolute;
   width: 80px;
   height: 70px;
@@ -754,75 +725,197 @@ color: #000000;
 }
 
 .course-svg.computer {
-  top:128px;
+  top: 128px;
   margin-left: 10px;
 }
 
 .course-svg.electrical {
   top: 50px;
   margin-left: 8px;
-} 
+}
 
 .course-svg.electronic-and-communication {
   top: 133px;
-  margin-left :10px;
+  margin-left: 10px;
   height: 65px;
 }
 
-.course-svg.information-technology{
+.course-svg.information-technology {
   top: 129px;
   margin-left: 9px;
 }
 
-.course-svg.mechanical{
+.course-svg.mechanical {
   top: 60px;
   margin-left: 8px;
 }
 
-.course-svg.mechatronics{
+.course-svg.mechatronics {
   top: 128px;
   margin-left: 8px;
 }
 
-.course-svg.science-and-humanities{
+.course-svg.science-and-humanities {
   top: 80px;
 }
 
-.c-circle1{
+.c-circle1 {
   position: absolute;
   width: 320px;
   height: 320px;
-  background-color: #EAE6FF;
+  background-color: #eae6ff;
   border-radius: 200px;
-  right: 200px;
+  right: 100px;
 }
 
-.c-circle2{
+.c-circle2 {
   position: absolute;
   width: 250px;
   height: 250px;
-  background-color: #EAE6FF;
+  background-color: #eae6ff;
   border-radius: 200px;
   right: 50px;
   top: 500px;
 }
 
-.c-circle3{
+.c-circle3 {
   position: absolute;
   width: 120px;
   height: 120px;
-  background-color: #EAE6FF;
+  background-color: #eae6ff;
   border-radius: 200px;
   right: 550px;
   top: 460px;
 }
 
-.c-circle4{
+.c-circle4 {
   position: absolute;
   width: 200px;
   height: 200px;
-  background-color: #EAE6FF;
+  background-color: #eae6ff;
   border-radius: 200px;
-  margin-left: 180px;
+  margin-left: 140px;
   top: 460px;
 }
+
+.deptDataMain {
+  background-color: #f3f2ff;
+  margin: 50px;
+}
+
+.deptDataRec {
+  position: relative;
+  width: 250px;
+  height: 40px;
+  background-color: #D8D1FF;
+  border-radius: 38px 38px 0px 0px;
+  left: 630px;
+  top: 80px;
+}
+
+.deptDataHeader.computer {
+  position: relative; 
+  font-family: Orelega One;
+  color: #27066F;
+  font-weight: 800;
+  text-align: center;
+  font-size: 25px;
+  top: -10px; 
+  left: 0; 
+}
+
+.deptDataVision.computer{
+  margin-left: 400px;
+  font-size: 22px;
+  margin-bottom: 26px;
+  font-weight: 500;
+  color: #54031F;
+  margin-top: 30px;
+}
+
+.deptDataVPara.computer{
+  width: 800px;
+  font-size: 18px;
+  margin-left: 400px;
+  color: #54031F;
+  font-weight: 400;
+}
+
+.deptDataMission.computer{
+  margin-left: 400px;
+  margin-top:25px;
+  font-size: 22px;
+  color: #54031F;
+  font-weight: 500;
+}
+
+.deptDataMPara{
+  width: 650px;
+  font-size: 18px;
+  margin-left: 400px;
+  white-space: pre-line;
+  margin-top: 26px;
+  color: #54031F;
+  font-weight: 400;
+
+}
+
+.deptDataFacultyH{
+  margin-left: 400px;
+  margin-top:25px;
+  font-size: 22px;
+  color: #54031F;
+  font-weight: 500; 
+}
+
+.faculty1{
+  margin-left: 400px;
+  margin-top: 26px;
+  color: #54031F;
+  font-weight: 400;
+  width: 170px;
+  height: 250px;
+  border: solid #54031F;
+  border-radius: 20px;
+}
+
+.facultyp1{
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 160px;
+  text-align: center;
+  
+}
+
+.facultyp2{
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 2px;
+  text-align: center;
+}
+
+.facultyh1{
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.facultyh2{
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.faculty1 img{
+  position: relative;
+  width: 168px;
+  height: 160px;
+  bottom: 239px;
+  border-radius: 20px 20px 0 0;
+}
+
+

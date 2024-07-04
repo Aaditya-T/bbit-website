@@ -29,50 +29,6 @@ const Home = () => {
         </div>
         <div className="wave">
         <img className="tabframe" src="/home/wavetry.svg" alt="Alumni" />
-          {/* <svg
-            width="1440"
-            height="500"
-            viewBox="0 50 1440 987"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="
-              M59.3635 223.859
-              
-              C30.9891 216.502 -0.136475 210 -0.136475 213.359
-              
-              V820
-              
-              H698.5
-              
-              H1470
-              
-              V0.858704
-              
-              C1440 0.858704 1422 1.35878 2000 17
-              
-              C600 -50 1000 450 590 490
-              
-              C200 550 213 265.237 59.3635 223.859Z"
-              fill="url(#paint0_linear_86_118)"           
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_86_118"
-                x1="720"
-                y1="768"
-                x2="720"
-                y2="0.999944"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#F3F2FF" />
-                <stop offset="0.24" stop-color="#AB86F7" />
-                <stop offset="0.44" stop-color="#8146F2" />
-                <stop offset="0.711667" stop-color="#5F13EE" />
-              </linearGradient>
-            </defs>
-          </svg> */}
         </div>
         <div className="tabletframe tabletframe-scaled">
           <object
@@ -80,6 +36,7 @@ const Home = () => {
             type="image/svg+xml"
             data="/home/tablet.svg"
           ></object>
+          <img src="/home/campus.jpg" className="campus"></img>
           <div className="ellipse1"></div>
           <div className="ellipse2"></div>
           <div className="ellipse3"></div>
@@ -88,8 +45,7 @@ const Home = () => {
           <div className="ellipse6"></div>
           <div className="rectangle"></div>
           <div className="psychology"></div>
-
-        </div>
+          </div>
         <div className="activities">
           <object
             className="tabframe"
