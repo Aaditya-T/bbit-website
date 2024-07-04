@@ -1,8 +1,7 @@
 import { Navbar } from "../components/navbar";
-// import Department from "../components/department";
+import { useRouter } from 'next/router';
 
 const cardsData = [
-
   { name: "Civil", path: "/courses/civil.svg" },
   { name: "Computer", path: "/courses/computer.svg" },
   { name: "Electrical", path: "/courses/electrical.svg" },
@@ -14,10 +13,16 @@ const cardsData = [
 ];
 
 const Cards = () => {
+  const router = useRouter();
+
+  const handleNavigation = (dept) => {
+    const deptSlug = dept.toLowerCase().replace(/\s+/g, '-');
+    router.push(`/${deptSlug}`);
+  };
+
   return (
     <div>
       <Navbar />
-      {/* <Department /> */}
       <div className="c-circle">
         <div className="c-circle1"></div>
         <div className="c-circle2"></div>
@@ -33,8 +38,8 @@ const Cards = () => {
               src={item.path}
               alt={item.name}
             />
-            <button onClick="/department" className="gia-btn">GIA</button>
-            <button onClick="path"className="sfi-btn">SFI</button>
+            <button onClick={() => handleNavigation(item.name)} className="gia-btn">GIA</button>
+            <button onClick={() => handleNavigation(item.name)} className="sfi-btn">SFI</button>
           </div>
         ))}
       </div>
