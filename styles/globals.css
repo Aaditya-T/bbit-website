@@ -28,3 +28,90 @@ a {
     background: black;
   }
 }
+/* components/Footer.module.css */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: #EAE6FF;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+.footerSection {
+  max-width: 180px;
+  margin-left: 50px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.footerSection h3 {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footerSection p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+  font-size: 25px;
+}
+
+.socialIcons a {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-size: cover;
+  color: white;
+}
+
+.footerBottom {
+  width: 100%;
+  font-size: 14px;
+}
+
+.footerBottom a {
+  color: #EAE6FF;
+  text-decoration: none;
+  margin: 0 10px;
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
+.footerBottom p {
+  color: #EAE6FF;
+  text-decoration: none;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.footerSectionFollow {
+  margin-right: 100px;
+  margin-top: 25px;
+}
+
