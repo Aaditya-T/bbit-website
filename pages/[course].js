@@ -23,12 +23,13 @@ const DepartmentPage = () => {
     return <div>Loading...</div>;
   }
 
-  const departmentClass = departmentData.name.toLowerCase();
+  
+  const departmentClass = departmentData.name.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
 
   return (
     <div>
       <Navbar />
-      <div className='deptDataRec'></div>
+      <div className={`deptDataRec ${departmentClass}`}></div>
       <div className={`deptDataMain ${departmentClass}`}>
         <h1 className={`deptDataHeader ${departmentClass}`}>
           {departmentData.type ? departmentData.name : departmentData.name.replace(/-gia|-sfi$/, '')}
