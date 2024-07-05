@@ -68,10 +68,6 @@ body {
   height: 785.64px;
 } */
 
-.wave {
-  /* z-index: -1; */
-}
-
 .wave img {
   width: 1515px;
   height: 1100px;
@@ -798,103 +794,79 @@ body {
   top: 460px;
 }
 
-.deptDataMain {
-  background-color: #f3f2ff;
-  margin: 50px;
-}
-
 .deptDataRec {
   position: relative;
   width: 250px;
   height: 40px;
-  background-color: #D8D1FF;
+  background-color: #d8d1ff;
   border-radius: 38px 38px 0px 0px;
   left: 630px;
-  top: 80px;
+  top: 30px;
 }
 
 .deptDataHeader.computer {
-  position: relative; 
+  position: relative;
   font-family: Orelega One;
-  color: #27066F;
+  color: #27066f;
   font-weight: 800;
   text-align: center;
   font-size: 25px;
-  top: -10px; 
-  left: 0; 
+  top: -10px;
+  left: 0;
 }
 
-.deptDataVision.computer{
+.deptDataVision.computer {
   margin-left: 400px;
   font-size: 22px;
   margin-bottom: 26px;
   font-weight: 500;
-  color: #54031F;
+  color: #54031f;
   margin-top: 30px;
 }
 
-.deptDataVPara.computer{
+.deptDataVPara.computer {
   width: 800px;
   font-size: 18px;
   margin-left: 400px;
-  color: #54031F;
+  color: #54031f;
   font-weight: 400;
 }
 
-.deptDataMission.computer{
+.deptDataMission.computer {
   margin-left: 400px;
-  margin-top:25px;
+  margin-top: 25px;
   font-size: 22px;
-  color: #54031F;
+  color: #54031f;
   font-weight: 500;
 }
 
-.deptDataMPara{
+.deptDataMPara.computer {
   width: 650px;
   font-size: 18px;
   margin-left: 400px;
   white-space: pre-line;
   margin-top: 26px;
-  color: #54031F;
+  color: #54031f;
   font-weight: 400;
-
 }
 
-.deptDataFacultyH{
+.deptDataFacultyH.computer {
   margin-left: 400px;
-  margin-top:25px;
+  margin-top: 25px;
   font-size: 22px;
-  color: #54031F;
-  font-weight: 500; 
+  color: #54031f;
+  font-weight: 500;
 }
 
-.faculty1{
-  margin-left: 400px;
-  margin-top: 26px;
-  color: #54031F;
-  font-weight: 400;
-  width: 170px;
-  height: 250px;
-  border: solid #54031F;
-  border-radius: 20px;
-}
-
-.facultyp1{
-  font-weight: 700;
-  font-size: 14px;
-  margin-top: 160px;
-  text-align: center;
-  
-}
-
-.facultyp2{
+/* 
+.facultyD.computer{
   font-weight: 700;
   font-size: 12px;
   margin-top: 2px;
   text-align: center;
 }
 
-.facultyh1{
+.facultyQ.computer{
   width: 166px;
   font-size: 11.2px;
   font-weight: 600;
@@ -902,7 +874,7 @@ body {
   margin-top: 2px;
 }
 
-.facultyh2{
+.facultyE.computer{
   width: 166px;
   font-size: 11.2px;
   font-weight: 600;
@@ -916,6 +888,445 @@ body {
   height: 160px;
   bottom: 239px;
   border-radius: 20px 20px 0 0;
+} */
+
+.faculty {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.faculty-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three items per row */
+  gap: 20px; /* Space between grid items */
+  margin: 20px 0; /* Margin around the container */
+}
+
+/* faculty-1 start.............. */
+.computer .faculty-1 {
+  margin-left: 400px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.computer .facultyName-1 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.computer .faculty-1 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -243px;
+  left: 401px;
+  border-radius: 20px 20px 0 0;
+}
+
+.computer .facultyDesignation-1 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.computer .facultyExperience-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.computer .facultyQualification-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+/* faculty-1 end............... */
+
+/* faculty-1 start............... */
+.computer .faculty-2 {
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.computer .faculty-2 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -243px;
+  left: 621px;
+  border-radius: 20px 20px 0 0;
+}
+
+.computer .facultyName-2 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.computer .facultyDesignation-2 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.computer .facultyQualification-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.computer .facultyExperience-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.computer .faculty-3 {
+  margin-left: -237px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.computer .faculty-3 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -243px;
+  left: 841px;
+  border-radius: 20px 20px 0 0;
+}
+
+.computer .facultyName-3 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.computer .facultyDesignation-3 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.computer .facultyQualification-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.computer .facultyExperience-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
 }
 
 
+.computer .lab-container{
+  margin-bottom: 120px;
+}
+
+.computer .labTitle-1 {
+  margin-left: 900px; /* Adjusted margin value */
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: -270px;
+}
+
+.computer .labTitle-2 {
+  margin-left: 900px; /* Adjusted margin value */
+  font-size: 20px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: 140px;
+}
+
+.computer .labDetail-1 {
+  width: 400px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+}
+
+.computer .labDetail-2 {
+  width: 400px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+
+}
+
+.computer .labImg-1 {
+  position: relative;
+  width: 380px;
+  height: 280px;
+  border-radius: 20px;
+  margin-top: 60px;
+  margin-left: 400px;
+}
+
+
+.computer .labImg-2{
+  position: absolute;
+  width: 380px;
+  height: 280px;
+  margin-top: -10px;
+  left: 400px;
+}
+
+
+/* asdasdasd */
+
+.deptDataHeader.civil {
+  position: relative;
+  font-family: Orelega One;
+  color: #27066f;
+  font-weight: 800;
+  text-align: center;
+  font-size: 25px;
+  top: -10px;
+  left: 0;
+}
+
+.deptDataVision.civil {
+  margin-left: 400px;
+  font-size: 22px;
+  margin-bottom: 26px;
+  font-weight: 500;
+  color: #54031f;
+  margin-top: 30px;
+}
+
+.deptDataVPara.civil {
+  width: 800px;
+  font-size: 18px;
+  margin-left: 400px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataMission.civil {
+  margin-left: 400px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+.deptDataMPara.civil {
+  width: 650px;
+  font-size: 18px;
+  margin-left: 400px;
+  white-space: pre-line;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataFacultyH.civil {
+  margin-left: 400px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+.faculty {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.faculty-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three items per row */
+  gap: 20px; /* Space between grid items */
+  margin: 20px 0; /* Margin around the container */
+}
+
+/* faculty-1 start.............. */
+.civil .faculty-1 {
+  margin-left: 400px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 260px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.civil .facultyName-1 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.civil.faculty-1 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -243px;
+  left: 401px;
+  border-radius: 20px 20px 0 0;
+}
+
+.civil .facultyDesignation-1 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.civil .facultyExperience-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.civil .facultyQualification-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+/* faculty-1 end............... */
+
+/* faculty-1 start............... */
+.civil .faculty-2 {
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 260px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.civil .faculty-2 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -243px;
+  left: 621px;
+  border-radius: 20px 20px 0 0;
+}
+
+.civil .facultyName-2 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.civil .facultyDesignation-2 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.civil .facultyQualification-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.civil .facultyExperience-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.civil .faculty-3 {
+  margin-left: -237px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 260px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.civil .faculty-3 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -243px;
+  left: 841px;
+  border-radius: 20px 20px 0 0;
+}
+
+.civil .facultyName-3 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.civil .facultyDesignation-3 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.civil .facultyQualification-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.civil .facultyExperience-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}

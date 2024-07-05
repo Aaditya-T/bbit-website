@@ -15,9 +15,10 @@ const cardsData = [
 const Cards = () => {
   const router = useRouter();
 
-  const handleNavigation = (dept) => {
+  const handleNavigation = (dept, type) => {
     const deptSlug = dept.toLowerCase().replace(/\s+/g, '-');
-    router.push(`/${deptSlug}`);
+    const typeSlug = type.toLowerCase();
+    router.push(`/${deptSlug}-${typeSlug}`);
   };
 
   return (
@@ -38,8 +39,8 @@ const Cards = () => {
               src={item.path}
               alt={item.name}
             />
-            <button onClick={() => handleNavigation(item.name)} className="gia-btn">GIA</button>
-            <button onClick={() => handleNavigation(item.name)} className="sfi-btn">SFI</button>
+            <button onClick={() => handleNavigation(item.name, 'gia')} className="gia-btn">GIA</button>
+            <button onClick={() => handleNavigation(item.name, 'sfi')} className="sfi-btn">SFI</button>
           </div>
         ))}
       </div>
