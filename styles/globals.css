@@ -162,3 +162,78 @@ svg {
       font-size: 10px;
   }
 }
+/* components/SvgComponent.module.css */
+
+.svgContainer {
+  position: relative;
+  width: 100%;
+  max-width: 997px; /* Same as the SVG width for alignment */
+  margin: auto;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+.overlayText {
+  position: absolute;
+  color: #000; /* Adjust color as needed */
+  font-size: 16px; /* Adjust size as needed */
+}
+
+.text2 {
+  top: 85px; /* Adjust position as needed */
+  left: 230px; /* Adjust position as needed */
+  color: white;
+  font-weight: bolder;
+  font-size: xx-large;
+  text-decoration: none;
+}
+
+.text3 {
+  top: 400px; /* Adjust position as needed */
+  left: 640px; /* Adjust position as needed */
+  color: white;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.text4 {
+  top: 700px; /* Adjust position as needed */
+  left: 230px; /* Adjust position as needed */
+  color: white;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.text5 {
+  top: 1025px; /* Adjust position as needed */
+  left: 550px; /* Adjust position as needed */
+  color: white;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.icon {
+  position: absolute;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+}
+
+.icon1 { top: 20px; left: 750px; }
+.icon2 { top: 350px; left: -10px; }
+.icon3 { top: 660px; left: 770px; }
+.icon4 { top: 950px; left: -10px; }
+.icon5 { top: 35px; left: 230px; }
+.icon6 { top: 350px; left: 640px; }
+.icon7 { top: 650px; left: 230px; }
+.icon8 { top: 975px; left: 640px; }
+
+/* Add more styles for other text elements as needed */
+
