@@ -29,10 +29,11 @@ const Footer = () => {
                 <div className="footer-section-follow">
                     <h3>Follow Us On:</h3>
                     <div className="social-icons">
-                        <a href="#"><i className="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i className="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i className="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i className="fa-brands fa-facebook"></i></a>
+                        <img src="instagram 1.svg"></img>
+                        <img src="../public/footer_images/linkedin 1.svg"></img>
+                        <img src="../public/footer_images/ twitter 1.svg"></img>
+                        <img src="../public/footer_images/facebook.svg"></img>
+                       
                     </div>
                 </div>
                 <div className="footer-bottom">

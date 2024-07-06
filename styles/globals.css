@@ -56,12 +56,13 @@ svg {
   font-size: 25px;
 }
 
-.social-icons a {
+.social-icons img {
   width: 40px;
   height: 40px;
   display: inline-block;
   background-size: cover;
-  color: white;
+  background-color: red;
+  color: white ;
 }
 
 .footer-bottom {
