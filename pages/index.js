@@ -1,5 +1,5 @@
 import Footer from "../components/footer"
-import styles from './SvgComponent.module.css';
+import styles from './styles/global.css';
 export default function Home() {
   return (
     <h1 className="text-3xl font-bold underline">
