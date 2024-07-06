@@ -38,7 +38,7 @@ const Cards = () => {
               className={`course-svg ${item.name.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
               src={item.path}
               alt={item.name}
-            />
+            />  
             <button onClick={() => handleNavigation(item.name, 'gia')} className="gia-btn">GIA</button>
             <button onClick={() => handleNavigation(item.name, 'sfi')} className="sfi-btn">SFI</button>
           </div>

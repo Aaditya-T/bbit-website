@@ -9,6 +9,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #f3f2ff;
+  scroll-behavior: smooth 4s;
 }
 
 * {
@@ -33,6 +34,7 @@ body {
   display: flex;
   margin-left: auto;
   justify-content: center;
+
 }
 .navbar li {
   margin-right: 20px;
@@ -63,10 +65,6 @@ body {
   width: 104px;
 }
 
-/* .wave {
-  width: 1440.27px;
-  height: 785.64px;
-} */
 
 .wave img {
   width: 1515px;
@@ -77,12 +75,41 @@ body {
   margin-top: -92px;
 }
 
-.aloo {
+/* .aloo {
   position: absolute;
   left: 970px;
   top: 110px;
   z-index: 1;
+} */
+
+.flex-banner{
+  position: absolute;
+  width: 30%;
+  height: 300px;
+  display: flex;
+  gap: 5px;
+  top: 120px;
+  right: 200px;
+  z-index: 1;
 }
+
+.flex-banner img{
+  width: 10%;
+  height: 120%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #27066F;
+  transition: all ease 0.3s;
+}
+
+.flex-banner img:hover{
+  width: 100%;
+}
+
+.flex-banner img.big{
+  width: 60%;
+}
+
 
 .welcome {
   position: absolute;
@@ -96,6 +123,7 @@ body {
   font-size: 38px;
   line-height: 48px;
   color: #27066f;
+  
 }
 
 .subwelcome {
@@ -112,7 +140,7 @@ body {
   color: #27066f;
 }
 
-.ellipse1 {
+/* .ellipse1 {
   width: 15px;
   height: 15px;
   background: #e2f3fc;
@@ -184,7 +212,7 @@ body {
   left: -390px;
   bottom: -110px;
   position: absolute;
-}
+} */
 
 .psychology {
   position: absolute;
@@ -196,14 +224,14 @@ body {
   background: url(/home/psychology.svg);
 }
 
-.campus {
+/* .campus {
   width: 800px;
   height: 400px;
   margin-top: -590px;
   margin-left: 200px;
   transform: rotate(18deg);
-}
-
+} */
+/* 
 .tabletframe {
   width: 350px;
   height: 353px;
@@ -212,19 +240,16 @@ body {
   transform: rotate(6deg);
   z-index: 1;
   top: 28px;
-  transition: transform 2s;
+  transition: transform 7s;
 }
 
 .tabletframe-scaled {
   transform: scale(0.67);
   margin-top: 0px;
-}
+} */
 
-.tabletframe-spin {
-  animation: spin 2s linear;
-}
 
-.rectangle {
+/* .rectangle {
   position: absolute;
   height: 65px;
   width: 20px;
@@ -233,13 +258,13 @@ body {
   top: 442px;
   background: #e2f3fc;
   transform: rotate(18.32deg);
-}
+} */
 
 .activities {
   position: relative;
   width: 150px;
   height: 150px;
-  bottom: 550px;
+  bottom: 540px;
   left: 290px;
   z-index: 1;
   transform: scale(0.9);
@@ -265,7 +290,7 @@ body {
   position: relative;
   width: 150px;
   height: 150px;
-  bottom: 698.6px;
+  bottom: 683px;
   left: 690px;
   z-index: 1;
   transform: scale(0.81);
@@ -291,7 +316,7 @@ body {
   position: relative;
   width: 150px;
   height: 150px;
-  bottom: 850px;
+  bottom: 836px;
   left: 1090px;
   z-index: 1;
   transform: scale(0.83);
@@ -315,7 +340,8 @@ body {
 
 .section-2 {
   position: relative;
-  bottom: 160px;
+  bottom: 0px;
+  top: -70px;
 }
 
 .section-2 .news {
@@ -488,7 +514,7 @@ body {
 
 .date1 .line1 {
   position: relative;
-  top: 100px;
+  top: 90px;
   right: 20px;
   transform: scaleX(0.7);
 }
@@ -509,7 +535,7 @@ body {
 
 .date2 {
   position: relative;
-  top: 210px;
+  top: 205px;
   width: 700px;
   height: 28px;
   margin-left: 60px;
@@ -550,14 +576,14 @@ body {
 
 .date2 .line2 {
   position: relative;
-  top: 100px;
+  top: 90px;
   right: 20px;
   transform: scaleX(0.7);
 }
 
 .date3 {
   position: relative;
-  top: 340px;
+  top: 335px;
   width: 700px;
   height: 28px;
   margin-left: 60px;
@@ -598,9 +624,48 @@ body {
 
 .date3 .line3 {
   position: relative;
-  top: 100px;
+  top: 90px;
   right: 20px;
   transform: scaleX(0.7);
+}
+
+.vw-1{
+  width: 100px;
+  background-color: #EAE6FF;
+  color: #27066F;
+  font-weight: 600;
+  border-radius: 3px;
+  margin-top: 460px;
+  margin-left: 105px;
+}
+
+
+.sidebar {
+  width: 200px;
+  margin-top: 85px;
+  position: fixed;
+  top: 110px;
+  left: 200px;
+  z-index: 1; /* add this to make sure it's on top */
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.sidebar a:hover {
+  color: #23527c;
 }
 
 .card {
@@ -609,6 +674,7 @@ body {
   flex-wrap: wrap;
   padding-left: 250px;
   padding-top: 5px;
+  gap: 0 24px
 }
 
 .card-item {

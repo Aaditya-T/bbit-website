@@ -1,17 +1,19 @@
 import React from "react";
 import { Navbar } from "../components/navbar";
+import FlexBanner from "../components/FlexBanner";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
+      <FlexBanner />
       <main>
         <h1 className="welcome">Welcome to B & B Institute Of Technology</h1>
         <h5 className="subwelcome">
           Unlock your potential with innovative courses and hands-on learning
           opportunities.
         </h5>
-        <div className="aloo">
+        {/* <div className="aloo">
           <svg
             width="430"
             height="410"
@@ -26,11 +28,11 @@ const Home = () => {
               stroke-width="1.43688"
             />
           </svg>
-        </div>
+        </div>*/}
         <div className="wave">
         <img className="tabframe" src="/home/wavetry.svg" alt="Alumni" />
-        </div>
-        <div className="tabletframe tabletframe-scaled">
+        </div> 
+        {/* <div className="tabletframe tabletframe-scaled">
           <object
             className="tabframe"
             type="image/svg+xml"
@@ -45,7 +47,15 @@ const Home = () => {
           <div className="ellipse6"></div>
           <div className="rectangle"></div>
           <div className="psychology"></div>
-          </div>
+          </div> */}
+
+        {/* <div className="flex-banner">
+          <img src='/home/banner-1.jpg' alt="college-images"></img>
+          <img src='/home/banner-2.jpg' className='big' alt="college-images"></img>
+          <img src='/home/banner-3.jpg' alt="college-images"></img>
+          <img src='/home/banner-4.jpg' alt="college-images"></img>
+        </div> */}
+
         <div className="activities">
           <object
             className="tabframe"
@@ -97,6 +107,8 @@ const Home = () => {
             <img className="line3" src="/home/line.svg" alt="line" />
             <img className="tabframe3" src="/home/calendar.svg" alt="calendar" />
             </div>
+
+            <button className="vw-1">View More</button>
           </div>
 
           <div className="chairman">
