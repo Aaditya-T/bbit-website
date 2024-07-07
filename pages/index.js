@@ -1,5 +1,5 @@
 import Footer from "../components/footer";
-import vision from "../components/vision"
+import vision from "../components/vision";
 
 export default function Home() {
   return (
@@ -60,8 +60,8 @@ export default function Home() {
       <div className="icon icon8"><img src="/stair_img/pin1.png" alt="Icon 8"/></div>
     </div>
 
-   { /* <div>
-      <div className="container1">
+    <div>
+      <div className="container">
         <svg viewBox="0 0 66.701 199.999" fill="none" xmlns="http://www.w3.org/2000/svg" width="66.701" height="199.999">
           <path d="M20.322 14.359C16.552 7.343 11.417 4.818 0 0v199.999h66.701s-18.94 -29.663 -19.994 -50.935c-1.138 -22.974 15.966 -41.011 9.287 -63.284 -4.559 -15.201 -6.774 -13.564 -15.296 -23.573 -10.837 -12.729 -16.607 -40.832 -20.376 -47.848" fill="#FB6BB0"/>
           <path d="M12.619 22.965C8.672 13.437 0 7.203 0 7.203V199.999h42.938s-9.997 -29.099 -9.287 -50.093c0.66 -19.516 11.136 -31.069 6.009 -50.093 -4.015 -14.898 -13.018 -18.822 -19.065 -33.208 -5.981 -14.229 -2.071 -29.386 -7.976 -43.639" fill="#42C2EE"/>
@@ -85,9 +85,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div> */}
+    </div> 
 
-    <vision/>
     <Footer />
 
       
