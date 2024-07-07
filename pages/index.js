@@ -3,7 +3,7 @@ import Footer from "../components/footer";
 export default function Home() {
   return (
     <>
-    <Footer />
+
     
     <div className="svgContainer">
     
@@ -49,16 +49,17 @@ export default function Home() {
         <div className="text5"><a href="#">Awards & Achievements</a></div>
       </div>
       
-      <div className="icon1"><img src="/stair_img/icon-1.png" alt="Icon 1"/></div>
-      <div className="icon2"><img src="/stair_img/icon-2.png"  alt="Icon 2"/></div>
-      <div className="icon3"><img src="/stair_img/icon-3.png"  alt="Icon 3"/></div>
-      <div className="icon4"><img src="/stair_img/icon-4.png"  alt="Icon 4"/></div>
-      <div className="icon5"><img src="/stair_img/pin1.png"  alt="Icon 5"/></div>
-      <div className="icon6"><img src="/stair_img/pin1.png" alt="Icon 6"/></div>
-      <div className="icon7"><img src="/stair_img/pin1.png" alt="Icon 7"/></div>
-      <div className="icon8"><img src="/stair_img/pin1.png" alt="Icon 8"/></div>
+      <div className="icon icon1"><img src="/stair_img/icon-1.png" alt="Icon 1"/></div>
+      <div className="icon icon2"><img src="/stair_img/icon-2.png"  alt="Icon 2"/></div>
+      <div className="icon icon3"><img src="/stair_img/icon-3.png"  alt="Icon 3"/></div>
+      <div className="icon icon4"><img src="/stair_img/icon-4.png"  alt="Icon 4"/></div>
+      <div className="icon icon5"><img src="/stair_img/pin1.png"  alt="Icon 5"/></div>
+      <div className="icon icon6"><img src="/stair_img/pin1.png" alt="Icon 6"/></div>
+      <div className="icon icon7"><img src="/stair_img/pin1.png" alt="Icon 7"/></div>
+      <div className="icon icon8"><img src="/stair_img/pin1.png" alt="Icon 8"/></div>
     </div>
 
+    <Footer />
 
       
     </>
