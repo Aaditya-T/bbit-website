@@ -30,6 +30,19 @@ const DepartmentPage = () => {
   return (
     <div>
       <Navbar />
+
+      <div className='ellipse1'></div>
+      <div className='ellipse2'></div>
+      <div className='ellipse3'></div>
+      <div className='ellipse4'></div>
+      <div className='ellipse5'></div>
+      <div className='ellipse6'></div>
+      <div className='ellipse7'></div>
+      <div className='ellipse8'></div>
+      <div className='ellipse9'></div>
+      
+
+
       <Sidebar departmentData={departmentData} />
       <div className={`deptDataRec ${departmentClass}`}></div>
       <div className={`deptDataMain ${departmentClass}`}>
