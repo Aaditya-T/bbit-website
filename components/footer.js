@@ -1,6 +1,4 @@
 // components/Footer.js
-
-
 const Footer = () => {
     return (
         <div className="container1">

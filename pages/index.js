@@ -3,19 +3,10 @@ import Footer from "../components/footer";
 export default function Home() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Home Page</h1>
-      <Footer />
-      
-    </>
-  );
-}
-// components/SvgComponent.js
-
-import styles from './globals.css';
-
-const SvgComponent = () => {
-  return (
-    <div className={styles.svgContainer}>
+    <Footer />
+    
+    <div className="svgContainer">
+    
       <svg width="1277" height="1743" viewBox="0 0 1277 1743" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M379.453 0.371094L20.1876 128.018L360.241 266.911L717.584 135.89L379.453 0.371094Z" fill="#0C8ABD"/>
         <path d="M360.241 312.459V266.911L717.585 135.89V181.438L360.241 312.459Z" fill="#BEE8F9"/>
@@ -51,25 +42,26 @@ const SvgComponent = () => {
         <path d="M365.364 1543.38L429.404 1519.2L800.196 1671.59L736.156 1695.2L365.364 1543.38Z" fill="#DD6702"/>
       </svg>
       
-      {/* Overlay Text */}
-      <div className={styles.allLink}>
-        <div className={`${styles.overlayText} ${styles.text2}`}><a href="#">Courses</a></div>
-        <div className={`${styles.overlayText} ${styles.text3}`}><a href="#">Hostels</a></div>
-        <div className={`${styles.overlayText} ${styles.text4}`}><a href="#">Events</a></div>
-        <div className={`${styles.overlayText} ${styles.text5}`}><a href="#">Awards & Achievements</a></div>
+      <div className="rand">
+        <div className="text2"><a href="#">Courses</a></div>
+        <div className="text3"><a href="#">Hostels</a></div>
+        <div className="text4"><a href="#">Events</a></div>
+        <div className="text5"><a href="#">Awards & Achievements</a></div>
       </div>
       
-      {/* Overlay Icons */}
-      <div className={`${styles.icon} ${styles.icon1}`}><img src="stairs_imgs/icon-1.png" alt="Icon 1"/></div>
-      <div className={`${styles.icon} ${styles.icon2}`}><img src="stairs_imgs/icon-2.png" alt="Icon 2"/></div>
-      <div className={`${styles.icon} ${styles.icon3}`}><img src="stairs_imgs/icon-3.png" alt="Icon 3"/></div>
-      <div className={`${styles.icon} ${styles.icon4}`}><img src="stairs_imgs/icon-4.png" alt="Icon 4"/></div>
-      <div className={`${styles.icon} ${styles.icon5}`}><img src="stairs_imgs/pin1.png" alt="Icon 5"/></div>
-      <div className={`${styles.icon} ${styles.icon6}`}><img src="stairs_imgs/pin1.png" alt="Icon 6"/></div>
-      <div className={`${styles.icon} ${styles.icon7}`}><img src="stairs_imgs/pin1.png" alt="Icon 7"/></div>
-      <div className={`${styles.icon} ${styles.icon8}`}><img src="stairs_imgs/pin1.png" alt="Icon 8"/></div>
+      <div className="icon1"><img src="/stair_img/icon-1.png" alt="Icon 1"/></div>
+      <div className="icon2"><img src="/stair_img/icon-2.png"  alt="Icon 2"/></div>
+      <div className="icon3"><img src="/stair_img/icon-3.png"  alt="Icon 3"/></div>
+      <div className="icon4"><img src="/stair_img/icon-4.png"  alt="Icon 4"/></div>
+      <div className="icon5"><img src="/stair_img/pin1.png"  alt="Icon 5"/></div>
+      <div className="icon6"><img src="/stair_img/pin1.png" alt="Icon 6"/></div>
+      <div className="icon7"><img src="/stair_img/pin1.png" alt="Icon 7"/></div>
+      <div className="icon8"><img src="/stair_img/pin1.png" alt="Icon 8"/></div>
     </div>
-  );
-};
 
-export default SvgComponent;
+
+      
+    </>
+  );
+}
+
