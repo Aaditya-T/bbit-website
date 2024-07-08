@@ -34,6 +34,7 @@ const Home = () => {
             opportunities.
           </h5>
         </div>
+        
         <div className="relative flex justify-center items-center min-h-screen">
           <svg
             viewBox="0 0 2158 770"
@@ -72,6 +73,7 @@ const Home = () => {
               </div>
             ))}
           </div>
+
         </div>
 
         <div className="section-2">

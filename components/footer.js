@@ -31,9 +31,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
       <div className="text-white text-center absolute w-screen bottom-0 mb-5">
         Copyright 2024. All Rights Reserved By BBIT
       </div>
+      
       <div className="bottom-0 w-screen flex justify-center items-center">
         <svg
           viewBox="0 0 1440 300"
