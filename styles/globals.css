@@ -8,7 +8,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #f3f2ff;
+  background-color: #F3F2FF;
   scroll-behavior: smooth 4s;
 }
 
@@ -33,8 +33,6 @@ body {
   padding: 0;
   display: flex;
   margin-left: auto;
-  justify-content: center;
-
 }
 .navbar li {
   margin-right: 20px;
@@ -64,6 +62,8 @@ body {
   height: 40px;
   width: 104px;
 }
+
+
 
 
 .wave img {
@@ -907,11 +907,11 @@ body {
   background-color: #F3F2FF;
 }
 
-.deptDataRec.computer{
+/* .deptDataRec.computer{
   width: 250px;
-}
+} */
 
-.deptDataHeader.computer {
+/* .deptDataHeader.computer {
   position: relative;
   font-family: Orelega One;
   color: #27066f;
@@ -920,10 +920,11 @@ body {
   font-size: 25px;
   top: -10px;
   left: 58px;
-}
+} */
 
 .deptDataVision.computer {
   margin-left: 450px;
+  display: flex;
   font-size: 22px;
   margin-bottom: 26px;
   font-weight: 500;
@@ -940,6 +941,7 @@ body {
 }
 
 .deptDataMission.computer {
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -958,6 +960,7 @@ body {
 }
 
 .deptDataFacultyH.computer {
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -965,10 +968,9 @@ body {
   font-weight: 500;
 }
 
-/* .faculty {
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 5px;
+/* 
+.faculty {
+  text-align: center;
 } */
 
 .faculty-container {
@@ -1002,7 +1004,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -216px;
   left: 451px;
   border-radius: 20px 20px 0 0;
 }
@@ -1013,13 +1015,14 @@ body {
   font-weight: 600;
   text-align: center;
   margin-top: 0px;
-  font-weight: 600;
 }
 
 .computer .facultyExperience-1 {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
+
 }
 
 .computer .facultyQualification-1 {
@@ -1044,7 +1047,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -217px;
   left: 671px;
   border-radius: 20px 20px 0 0;
 }
@@ -1076,6 +1079,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .computer .faculty-3 {
@@ -1093,13 +1097,12 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -217px;
   left: 892.5px;
   border-radius: 20px 20px 0 0;
 }
 
 .computer .facultyName-3 {
-  font-weight: 700;
   font-size: 12px;
   margin-top: 164px;
   text-align: center;
@@ -1125,6 +1128,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 
@@ -1133,7 +1137,7 @@ body {
 }
 
 .computer .labTitle-1 {
-  margin-left: 900px;
+  margin-left: 565px;
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -1141,7 +1145,7 @@ body {
 }
 
 .computer .labTitle-2 {
-  margin-left: 900px; 
+  margin-left: 540px;
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -1177,8 +1181,6 @@ body {
   margin-top: 60px;
   margin-left: 450px;
 }
-
-
 .computer .labImg-2{
   position: absolute;
   width: 380px;
@@ -1202,6 +1204,7 @@ body {
 }
 
 .deptDataVision.civil {
+  display: flex;
   margin-left: 450px;
   font-size: 22px;
   margin-bottom: 26px;
@@ -1219,6 +1222,7 @@ body {
 }
 
 .deptDataMission.civil {
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -1237,6 +1241,7 @@ body {
 }
 
 .deptDataFacultyH.civil{
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -1282,7 +1287,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -217px;
   left: 451px;
   border-radius: 20px 20px 0 0;
 }
@@ -1300,6 +1305,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .civil .facultyQualification-1 {
@@ -1324,7 +1330,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -217px;
   left: 671px;
   border-radius: 20px 20px 0 0;
 }
@@ -1356,6 +1362,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .civil .faculty-3 {
@@ -1373,7 +1380,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -217px;
   left: 892.5px;
   border-radius: 20px 20px 0 0;
 }
@@ -1405,6 +1412,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 
@@ -1413,7 +1421,7 @@ body {
 }
 
 .civil .labTitle-1 {
-  margin-left: 900px;
+  margin-left: 565px;
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -1421,7 +1429,7 @@ body {
 }
 
 .civil .labTitle-2 {
-  margin-left: 900px; 
+  margin-left: 540px;
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -1482,6 +1490,7 @@ body {
 }
 
 .deptDataVision.electrical {
+  display: flex;
   margin-left: 450px;
   font-size: 22px;
   margin-bottom: 26px;
@@ -1499,6 +1508,7 @@ body {
 }
 
 .deptDataMission.electrical{
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -1517,6 +1527,7 @@ body {
 }
 
 .deptDataFacultyH.electrical {
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -1549,7 +1560,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -216px;
   left: 451px;
   border-radius: 20px 20px 0 0;
 }
@@ -1567,6 +1578,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .electrical .facultyQualification-1 {
@@ -1591,7 +1603,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -217px;
   left: 671px;
   border-radius: 20px 20px 0 0;
 }
@@ -1623,6 +1635,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .electrical.faculty-3 {
@@ -1640,7 +1653,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -217px;
   left: 892.5px;
   border-radius: 20px 20px 0 0;
 }
@@ -1672,6 +1685,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 
@@ -1680,7 +1694,7 @@ body {
 }
 
 .electrical .labTitle-1 {
-  margin-left: 900px;
+  margin-left: 565px;
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -1688,7 +1702,7 @@ body {
 }
 
 .electrical .labTitle-2 {
-  margin-left: 900px; 
+  margin-left: 540px; 
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -1740,11 +1754,11 @@ body {
 
 
 
-.deptDataRec.electronic-and-communication{
+/* .deptDataRec.electronic-and-communication{
   width: 350px;
   left: 650px;
   top: 25px;
-}
+} */
 
 .deptDataHeader.electronic-and-communication {
   position: relative;
@@ -1758,6 +1772,7 @@ body {
 }
 
 .deptDataVision.electronic-and-communication {
+  display: flex;
   margin-left: 450px;
   font-size: 22px;
   margin-bottom: 26px;
@@ -1775,6 +1790,7 @@ body {
 }
 
 .deptDataMission.electronic-and-communication {
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -1793,6 +1809,7 @@ body {
 }
 
 .deptDataFacultyH.electronic-and-communication {
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -1832,7 +1849,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -251px;
+  bottom: -216px;
   left: 451px;
   border-radius: 20px 20px 0 0;
 }
@@ -1850,6 +1867,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .electronic-and-communication .facultyQualification-1 {
@@ -1874,7 +1892,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -251px;
+  bottom: -217px;
   left: 671px;
   border-radius: 20px 20px 0 0;
 }
@@ -1906,6 +1924,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .electronic-and-communication .faculty-3 {
@@ -1923,7 +1942,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -251px;
+  bottom: -217px;
   left: 892.5px;
   border-radius: 20px 20px 0 0;
 }
@@ -1955,6 +1974,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 
@@ -1963,7 +1983,7 @@ body {
 }
 
 .electronic-and-communication .labTitle-1 {
-  margin-left: 900px;
+  margin-left: 565px;
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -1971,7 +1991,7 @@ body {
 }
 
 .electronic-and-communication .labTitle-2 {
-  margin-left: 900px; 
+  margin-left: 540px; 
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -2022,11 +2042,11 @@ body {
 
 
 
-.deptDataRec.information-technology{
+/* .deptDataRec.information-technology{
   width: 350px;
   left: 650px;
   top: 25px;
-}
+} */
 
 .deptDataHeader.information-technology {
   position: relative;
@@ -2040,6 +2060,7 @@ body {
 }
 
 .deptDataVision.information-technology {
+  display: flex;
   margin-left: 450px;
   font-size: 22px;
   margin-bottom: 26px;
@@ -2057,6 +2078,7 @@ body {
 }
 
 .deptDataMission.information-technology{
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -2075,6 +2097,7 @@ body {
 }
 
 .deptDataFacultyH.information-technology{
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -2114,7 +2137,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -251px;
+  bottom: -216px;
   left: 451px;
   border-radius: 20px 20px 0 0;
 }
@@ -2132,6 +2155,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .information-technology .facultyQualification-1 {
@@ -2156,7 +2180,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -251px;
+  bottom: -217px;
   left: 671px;
   border-radius: 20px 20px 0 0;
 }
@@ -2188,6 +2212,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .information-technology .faculty-3 {
@@ -2205,7 +2230,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -251px;
+  bottom: -217px;
   left: 892.5px;
   border-radius: 20px 20px 0 0;
 }
@@ -2237,6 +2262,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 
@@ -2245,7 +2271,7 @@ body {
 }
 
 .information-technology .labTitle-1 {
-  margin-left: 900px;
+  margin-left: 565px;
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -2253,7 +2279,7 @@ body {
 }
 
 .information-technology .labTitle-2 {
-  margin-left: 900px; 
+  margin-left: 540px;
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -2305,11 +2331,11 @@ body {
 
 
 
-.deptDataRec.mechanical{
+/* .deptDataRec.mechanical{
   width: 250px;
   left: 700px;
   top: 25px;
-}
+} */
 
 .deptDataHeader.mechanical {
   position: relative;
@@ -2323,6 +2349,7 @@ body {
 }
 
 .deptDataVision.mechanical {
+  display: flex;
   margin-left: 450px;
   font-size: 22px;
   margin-bottom: 26px;
@@ -2340,6 +2367,7 @@ body {
 }
 
 .deptDataMission.mechanical {
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -2358,6 +2386,7 @@ body {
 }
 
 .deptDataFacultyH.mechanical {
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -2396,7 +2425,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -216px;
   left: 451px;
   border-radius: 20px 20px 0 0;
 }
@@ -2414,6 +2443,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .mechanical .facultyQualification-1 {
@@ -2438,7 +2468,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -217px;
   left: 671px;
   border-radius: 20px 20px 0 0;
 }
@@ -2470,6 +2500,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .mechanical .faculty-3 {
@@ -2487,7 +2518,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -217px;
   left: 892.5px;
   border-radius: 20px 20px 0 0;
 }
@@ -2519,6 +2550,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 
@@ -2527,7 +2559,7 @@ body {
 }
 
 .mechanical .labTitle-1 {
-  margin-left: 900px;
+  margin-left: 565px;
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -2535,7 +2567,7 @@ body {
 }
 
 .mechanical .labTitle-2 {
-  margin-left: 900px; 
+  margin-left: 540px;
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -2584,12 +2616,12 @@ body {
 
 
 
-
+/* 
 .deptDataRec.mechatronics{
   width: 250px;
   left: 700px;
   top: 25px;
-}
+} */
 
 .deptDataHeader.mechatronics {
   position: relative;
@@ -2603,6 +2635,7 @@ body {
 }
 
 .deptDataVision.mechatronics {
+  display: flex;
   margin-left: 450px;
   font-size: 22px;
   margin-bottom: 26px;
@@ -2620,6 +2653,7 @@ body {
 }
 
 .deptDataMission.mechatronics {
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -2638,6 +2672,7 @@ body {
 }
 
 .deptDataFacultyH.mechatronics {
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -2676,7 +2711,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -216px;
   left: 451px;
   border-radius: 20px 20px 0 0;
 }
@@ -2694,6 +2729,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .mechatronics .facultyQualification-1 {
@@ -2718,7 +2754,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -217px;
   left: 671px;
   border-radius: 20px 20px 0 0;
 }
@@ -2750,6 +2786,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .mechatronics .faculty-3 {
@@ -2767,7 +2804,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -217px;
   left: 892.5px;
   border-radius: 20px 20px 0 0;
 }
@@ -2799,6 +2836,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 
@@ -2807,7 +2845,7 @@ body {
 }
 
 .mechatronics .labTitle-1 {
-  margin-left: 900px;
+  margin-left: 565px;
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -2815,7 +2853,7 @@ body {
 }
 
 .mechatronics .labTitle-2 {
-  margin-left: 900px; 
+  margin-left: 540px; 
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -2863,11 +2901,11 @@ body {
 }
 
 
-.deptDataRec.science-and-humanities{
+/* .deptDataRec.science-and-humanities{
   width: 300px;
   left: 700px;
   top: 25px;
-}
+} */
 
 .deptDataHeader.science-and-humanities{
   position: relative;
@@ -2881,6 +2919,7 @@ body {
 }
 
 .deptDataVision.science-and-humanities {
+  display: flex;
   margin-left: 450px;
   font-size: 22px;
   margin-bottom: 26px;
@@ -2898,6 +2937,7 @@ body {
 }
 
 .deptDataMission.science-and-humanities {
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -2916,6 +2956,7 @@ body {
 }
 
 .deptDataFacultyH.science-and-humanities{
+  display: flex;
   margin-left: 450px;
   margin-top: 25px;
   font-size: 22px;
@@ -2947,7 +2988,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -216px;
   left: 451px;
   border-radius: 20px 20px 0 0;
 }
@@ -2965,6 +3006,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .science-and-humanities .facultyQualification-1 {
@@ -2989,7 +3031,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -217px;
   left: 671px;
   border-radius: 20px 20px 0 0;
 }
@@ -3021,6 +3063,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .science-and-humanities .faculty-3 {
@@ -3038,7 +3081,7 @@ body {
   position: absolute;
   width: 198px;
   height: 170px;
-  bottom: -259px;
+  bottom: -217px;
   left: 892.5px;
   border-radius: 20px 20px 0 0;
 }
@@ -3051,7 +3094,7 @@ body {
   font-weight: 600;
 }
 
-.science-and-humanities.facultyDesignation-3 {
+.science-and-humanities .facultyDesignation-3 {
   width: 166px;
   font-size: 11.2px;
   font-weight: 600;
@@ -3070,6 +3113,7 @@ body {
   font-size: 11.2px;
   text-align: center;
   font-weight: 600;
+  margin-top: -22px;
 }
 
 .science-and-humanities .lab-container{
@@ -3077,7 +3121,7 @@ body {
 }
 
 .science-and-humanities .labTitle-1 {
-  margin-left: 900px;
+  margin-left: 565px;
   font-size: 22px;
   font-weight: 600;
   color: #54031f;
@@ -3085,7 +3129,7 @@ body {
 }
 
 .science-and-humanities .labTitle-2 {
-  margin-left: 900px; 
+  margin-left: 540px; 
   font-size: 22px;
   font-weight: 600;
   color: #54031f;

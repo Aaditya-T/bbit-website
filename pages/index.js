@@ -1,7 +1,6 @@
 import React from "react";
 import { Navbar } from "../components/navbar";
 import FlexBanner from "../components/FlexBanner";
-import footer from "../components/footer.js";
 import Footer from "../components/footer.js";
 
 const Home = () => {

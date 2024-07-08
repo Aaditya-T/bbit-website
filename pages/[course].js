@@ -31,25 +31,13 @@ const DepartmentPage = () => {
     <div>
       <Navbar />
 
-      <div className='ellipse1'></div>
-      <div className='ellipse2'></div>
-      <div className='ellipse3'></div>
-      <div className='ellipse4'></div>
-      <div className='ellipse5'></div>
-      <div className='ellipse6'></div>
-      <div className='ellipse7'></div>
-      <div className='ellipse8'></div>
-      <div className='ellipse9'></div>
-      
-
-
       <Sidebar departmentData={departmentData} />
-      <div className={`deptDataRec ${departmentClass}`}></div>
+      {/* <div className={`deptDataRec ${departmentClass}`}></div> */}
       <div className={`deptDataMain ${departmentClass}`}>
         <Element name="about">
-          <h1 id="about" className={`deptDataHeader ${departmentClass}`}>
+          {/* <h1 id="about" className={`deptDataHeader ${departmentClass}`}>
             {departmentData.type ? departmentData.name : departmentData.name.replace(/-gia|-sfi$/, '')}
-          </h1>
+          </h1> */}
         </Element>
         <Element name="vision">
           <h2 id="vision" className={`deptDataVision ${departmentClass}`}>Vision</h2>
