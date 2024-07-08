@@ -44,7 +44,7 @@ const FlexBanner = () => {
   }, []);
 
   return (
-    <div ref={flexBannerRef} className="flex-banner">
+    <div ref={flexBannerRef} className="flex-banner mt-10">
       <img src='/home/banner-1.jpg' alt="college-images"></img>
       <img src='/home/banner-2.jpg' alt="college-images"></img>
       <img src='/home/banner-3.jpg' alt="college-images"></img>
