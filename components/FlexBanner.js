@@ -27,7 +27,7 @@ const FlexBanner = () => {
   }, []);
 
   return (
-    <div className="absolute mt-[5vh] w-[30vw] h-[10vh] flex gap-1 top-[10vh] right-[15vw] ">
+    <div className="absolute mt-[5vh] w-[30vw] h-[10vh] flex gap-1 top-[10vh] right-[10vw] ">
       {[1, 2, 3, 4].map((index) => (
         <Image
           key={index}
@@ -36,7 +36,6 @@ const FlexBanner = () => {
           className={`hover:w-[100%] w-[10%] h-[40vh] object-cover border-2 rounded-[10px] border-solid border-[#27066F] z-[1]`}
           width="0"
           height="0"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
           id={`banner-${index}`}
         />
       ))}
