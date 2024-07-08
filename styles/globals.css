@@ -8,23 +8,3520 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  background-color: #f3f2ff;
+  scroll-behavior: smooth 4s;
 }
 
 * {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.navbar {
+  background-color: #f3f2ff;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  top: 0;
+  position: sticky;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: auto;
+  justify-content: center;
+
+}
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: indigo;
+  text-decoration: none;
+}
+
+.home {
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.admission,
+.placement,
+.about,
+.contact {
+  font-size: 0.9em;
+}
+
+.navbar svg {
+  position: sticky;
+  left: 25px;
+  /* top: 25px; */
+  height: 40px;
+  width: 104px;
+}
+
+
+.wave img {
+  width: 1515px;
+  height: 1100px;
+  transform: scaleY(0.79);
+  transform: scaleX(0.3, 1);
+  transform-origin: left;
+  margin-top: -92px;
+}
+
+/* .aloo {
+  position: absolute;
+  left: 970px;
+  top: 110px;
+  z-index: 1;
+} */
+
+.flex-banner{
+  position: absolute;
+  width: 30%;
+  height: 300px;
+  display: flex;
+  gap: 5px;
+  top: 120px;
+  right: 200px;
+  z-index: 1;
+}
+
+.flex-banner img{
+  width: 10%;
+  height: 120%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #27066F;
+  transition: all ease 0.3s;
+}
+
+.flex-banner img:hover{
+  width: 100%;
+}
+
+.flex-banner img.big{
+  width: 60%;
+}
+
+
+.welcome {
+  position: absolute;
+  width: 490px;
+  height: 418px;
+  left: 157.86px;
+  top: 130px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 48px;
+  color: #27066f;
+  
+}
+
+.subwelcome {
+  position: absolute;
+  width: 380px;
+  height: 418px;
+  left: 157.86px;
+  top: 250px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 25px;
+  color: #27066f;
+}
+
+/* .ellipse1 {
+  width: 15px;
+  height: 15px;
+  background: #e2f3fc;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 70px;
+  margin-left: 128px;
+  margin-top: 0px;
+  bottom: 60px;
+  position: absolute;
+}
+
+.ellipse2 {
+  width: 15px;
+  height: 15px;
+  background: #e2f3fc;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 70px;
+  margin-left: 117px;
+  margin-top: 0px;
+  bottom: 30px;
+  position: absolute;
+}
+
+.ellipse3 {
+  width: 15px;
+  height: 15px;
+  background: #1aabdd;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 70px;
+  margin-left: 400px;
+  top: 10px;
+  position: absolute;
+}
+
+.ellipse4 {
+  width: 15px;
+  height: 15px;
+  background: #fde6f2;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 70px;
+  margin-left: 750px;
+  top: 390px;
+  position: absolute;
+}
+
+.ellipse5 {
+  width: 15px;
+  height: 15px;
+  background: #f53f91;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 70px;
+  left: -250px;
+  bottom: 30px;
+  position: absolute;
+}
+
+.ellipse6 {
+  width: 115px;
+  height: 115px;
+  background: #f53f91;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 100px;
+  left: -390px;
+  bottom: -110px;
+  position: absolute;
+} */
+
+.psychology {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: -372px;
+  top: 360px;
+  transform: scale(1);
+  background: url(/home/psychology.svg);
+}
+
+/* .campus {
+  width: 800px;
+  height: 400px;
+  margin-top: -590px;
+  margin-left: 200px;
+  transform: rotate(18deg);
+} */
+/* 
+.tabletframe {
+  width: 350px;
+  height: 353px;
+  position: absolute;
+  left: 850px;
+  transform: rotate(6deg);
+  z-index: 1;
+  top: 28px;
+  transition: transform 7s;
+}
+
+.tabletframe-scaled {
+  transform: scale(0.67);
+  margin-top: 0px;
+} */
+
+
+/* .rectangle {
+  position: absolute;
+  height: 65px;
+  width: 20px;
+  left: 181.5%;
+  right: 2.57%;
+  top: 442px;
+  background: #e2f3fc;
+  transform: rotate(18.32deg);
+} */
+
+.activities {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  bottom: 540px;
+  left: 290px;
+  z-index: 1;
+  transform: scale(0.9);
+}
+
+.rec1 {
+  border: 2px white solid;
+  border-radius: 20px;
+  width: 160px;
+  height: 40px;
+  margin-left: -30px;
+  margin-top: 16px;
+}
+
+.rec1 h5 {
+  text-align: center;
+  color: white;
+  padding: 3px;
+  font-size: 18px;
+}
+
+.virtual-tour {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  bottom: 683px;
+  left: 690px;
+  z-index: 1;
+  transform: scale(0.81);
+}
+
+.rec2 {
+  border: 2px white solid;
+  border-radius: 20px;
+  width: 160px;
+  height: 40px;
+  margin-left: -30px;
+  margin-top: 16px;
+}
+
+.rec2 h5 {
+  text-align: center;
+  color: white;
+  padding: 3px;
+  font-size: 18px;
+}
+
+.alumnis {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  bottom: 836px;
+  left: 1090px;
+  z-index: 1;
+  transform: scale(0.83);
+}
+
+.rec3 {
+  border: 2px white solid;
+  border-radius: 20px;
+  width: 160px;
+  height: 40px;
+  margin-left: -30px;
+  margin-top: 16px;
+}
+
+.rec3 h5 {
+  text-align: center;
+  color: white;
+  padding: 3px;
+  font-size: 18px;
+}
+
+.section-2 {
+  position: relative;
+  bottom: 0px;
+  top: -70px;
+}
+
+.section-2 .news {
+  height: 585px;
+  width: 505px;
+  border: 2px;
+  background: #d8d1ff;
+  margin-top: -440px;
+  margin-left: 180px;
+  border-radius: 33px;
+}
+
+.section-2 .chairman {
+  height: 235px;
+  width: 550px;
+  border: 2px;
+  background: #d8d1ff;
+  margin-top: -580px;
+  margin-left: 720px;
+  border-radius: 33px;
+}
+
+.chairman h4 {
+  position: absolute;
+  width: 256px;
+  height: 40px;
+  left: 737px;
+  top: 22px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #27066f;
+}
+
+.chairman h1 {
+  position: absolute;
+  width: 564px;
+  height: 215px;
+  left: 735px;
+  top: 55px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 40px;
+  color: #27066f;
+}
+
+.chairman p {
+  position: absolute;
+  width: 494px;
+  height: 215px;
+  left: 735px;
+  top: 96px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #27066f;
+}
+
+.chairman img {
+  position: relative;
+  left: 370px;
+  bottom: 60px;
+}
+
+.section-2 .principal {
+  height: 235px;
+  width: 550px;
+  border: 2px;
+  background: #d8d1ff;
+  margin-top: 108px;
+  margin-left: 720px;
+  border-radius: 33px;
+}
+
+.principal h4 {
+  position: absolute;
+  width: 202px;
+  height: 40px;
+  left: 737px;
+  top: 360px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #27066f;
+}
+
+.principal h1 {
+  position: absolute;
+  width: 564px;
+  height: 215px;
+  left: 735px;
+  top: 399px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 40px;
+  color: #27066f;
+}
+
+.principal p {
+  position: absolute;
+  width: 494px;
+  height: 215px;
+  left: 735px;
+  top: 443px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #27066f;
+}
+
+.principal img {
+  position: relative;
+  left: 370px;
+  bottom: 80px;
+}
+
+.news h1 {
+  position: absolute;
+  width: 390px;
+  height: 65.52px;
+  left: 230px;
+  top: 30px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 45px;
+  text-align: center;
+  color: #27066f;
+}
+
+.date1 {
+  position: relative;
+  top: 80px;
+  width: 700px;
+  height: 28px;
+  margin-left: 60px;
+}
+
+.date1 img {
+  position: absolute;
+  top: 24px;
+}
+
+.date1 h3 {
+  position: absolute;
+  width: 323.01px;
+  height: 54.45px;
+  left: 53px;
+  top: 20px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 41px;
+  color: #000000;
+}
+
+.date1 .line1 {
+  position: relative;
+  top: 90px;
+  right: 20px;
+  transform: scaleX(0.7);
+}
+
+.date1 p {
+  position: relative;
+  width: 359.18px;
+  height: 39.98px;
+  left: 52px;
+  top: 80px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.date2 {
+  position: relative;
+  top: 205px;
+  width: 700px;
+  height: 28px;
+  margin-left: 60px;
+}
+
+.date2 img {
+  position: absolute;
+  top: 24px;
+}
+
+.date2 h3 {
+  position: absolute;
+  width: 323.01px;
+  height: 54.45px;
+  left: 53px;
+  top: 20px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 41px;
+  color: #000000;
+}
+
+.date2 p {
+  position: relative;
+  width: 359.18px;
+  height: 39.98px;
+  left: 52px;
+  top: 80px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.date2 .line2 {
+  position: relative;
+  top: 90px;
+  right: 20px;
+  transform: scaleX(0.7);
+}
+
+.date3 {
+  position: relative;
+  top: 335px;
+  width: 700px;
+  height: 28px;
+  margin-left: 60px;
+}
+
+.date3 h3 {
+  position: absolute;
+  width: 323.01px;
+  height: 54.45px;
+  left: 53px;
+  top: 20px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 41px;
+  color: #000000;
+}
+
+.date3 img {
+  position: absolute;
+  top: 24px;
+}
+
+.date3 p {
+  position: relative;
+  width: 359.18px;
+  height: 39.98px;
+  left: 52px;
+  top: 80px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.date3 .line3 {
+  position: relative;
+  top: 90px;
+  right: 20px;
+  transform: scaleX(0.7);
+}
+
+.vw-1{
+  width: 100px;
+  background-color: #EAE6FF;
+  color: #27066F;
+  font-weight: 600;
+  border-radius: 3px;
+  margin-top: 460px;
+  margin-left: 105px;
+}
+
+
+.sidebar {
+  width: 200px;
+  margin-top: 85px;
+  position: fixed;
+  top: 110px;
+  left: 200px;
+  z-index: 1; /* add this to make sure it's on top */
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.sidebar a:hover {
+  color: #23527c;
+}
+
+.card {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 250px;
+  padding-top: 5px;
+  gap: 0 24px
+}
+
+.card-item {
+  position: relative;
+  font-size: 22px;
+  width: 320px;
+  height: 200px;
+  background-color: #ffb224;
+  margin: 10px;
+  border-radius: 30px;
+  padding-right: 190px;
+  padding-top: 35px;
+  color: #fffaeb;
+  font-weight: 900;
+  font-family: "Outfit";
+  font-style: normal;
+}
+.card-item:nth-child(-n + 3) .gia-btn {
+  bottom: 25px;
+}
+
+.card-item:nth-child(-n + 3) .sfi-btn {
+  bottom: 25px;
+}
+
+.card-item:nth-child(4) .gia-btn {
+  bottom: 25px;
+}
+
+.card-item:nth-child(5) .gia-btn {
+  bottom: 25px;
+  visibility: hidden;
+}
+
+.card-item:nth-child(6) .gia-btn {
+  /* bottom: 25px; */
+  
+}
+
+.card-item:nth-child(4) .sfi-btn {
+  bottom: 25px;
+}
+
+.card-item:nth-child(5) .sfi-btn {
+  bottom: 25px;
+  margin-left: -32px;
+}
+
+.card-item:nth-child(6) .sfi-bt {
+  bottom: 25px;
+}
+
+.card-item:nth-child(7) .gia-btn {
+  bottom: 25px;
+  visibility: hidden;
+}
+
+.card-item:nth-child(7) .sfi-btn {
+  bottom: 25px;
+  margin-left: -32px;
+}
+
+.card-item:nth-child(8) .gia-btn {
+  bottom: 25px;
+}
+
+.card-item:nth-child(8) .sfi-btn {
+  bottom: 25px;
+}
+
+.card-item span {
+  font-size: 26px;
+  text-align: left;
+  display: inline-block;
+  width: 200px;
+  margin-left: 30px;
+  line-height: 30px;
+}
+
+.department-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.gia-btn {
+  position: absolute;
+  font-size: 20px;
+  width: 80px;
+  height: 40px;
+  border: solid white;
+  border-radius: 6px;
+  margin-top: 65px;
+  left: 30px;
+}
+
+.sfi-btn {
+  position: absolute;
+  font-size: 20px;
+  width: 80px;
+  height: 40px;
+  border: solid white;
+  border-radius: 6px;
+  margin-left: 60px;
+  margin-top: 65px;
+}
+
+.card-item img {
+  position: absolute;
+  width: 80px;
+  height: 70px;
+  bottom: 130px;
+  left: 235px;
+}
+
+.course-svg.computer {
+  top: 128px;
+  margin-left: 10px;
+}
+
+.course-svg.electrical {
+  top: 50px;
+  margin-left: 8px;
+}
+
+.course-svg.electronic-and-communication {
+  top: 133px;
+  margin-left: 10px;
+  height: 65px;
+}
+
+.course-svg.information-technology {
+  top: 129px;
+  margin-left: 9px;
+}
+
+.course-svg.mechanical {
+  top: 60px;
+  margin-left: 8px;
+}
+
+.course-svg.mechatronics {
+  top: 128px;
+  margin-left: 8px;
+}
+
+.course-svg.science-and-humanities {
+  top: 80px;
+}
+
+.c-circle1 {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background-color: #eae6ff;
+  border-radius: 200px;
+  right: 100px;
+}
+
+.c-circle2 {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-color: #eae6ff;
+  border-radius: 200px;
+  right: 50px;
+  top: 500px;
+}
+
+.c-circle3 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: #eae6ff;
+  border-radius: 200px;
+  right: 550px;
+  top: 460px;
+}
+
+.c-circle4 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #eae6ff;
+  border-radius: 200px;
+  margin-left: 140px;
+  top: 460px;
+}
+
+.deptDataRec {
+  position: relative;
+  width: 250px;
+  height: 40px;
+  background-color: #d8d1ff;
+  border-radius: 38px 38px 0px 0px;
+  left: 690px;
+  top: 30px;
+}
+
+.ellipse1{
+
+  width: 145px;
+  height: 145px;
+  background: #EAE6FF;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 70px;
+  margin-top: 50px;
+  left: 1280px;
+  position: absolute;
+}
+
+
+.ellipse2{
+
+  width: 145px;
+  height: 145px;
+  background: #EAE6FF;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 70px;
+  margin-top: 550px;
+  left: 1280px;
+  position: absolute;
+}
+
+
+.deptDataMain{
+  background-color: #F3F2FF;
+}
+
+.deptDataRec.computer{
+  width: 250px;
+}
+
+.deptDataHeader.computer {
+  position: relative;
+  font-family: Orelega One;
+  color: #27066f;
+  font-weight: 800;
+  text-align: center;
+  font-size: 25px;
+  top: -10px;
+  left: 58px;
+}
+
+.deptDataVision.computer {
+  margin-left: 450px;
+  font-size: 22px;
+  margin-bottom: 26px;
+  font-weight: 500;
+  color: #54031f;
+  margin-top: 30px;
+}
+
+.deptDataVPara.computer {
+  width: 800px;
+  font-size: 18px;
+  margin-left: 450px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataMission.computer {
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+.deptDataMPara.computer {
+  width: 750px;
+  font-size: 18px;
+  margin-left: 450px;
+  white-space: pre-line;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataFacultyH.computer {
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+/* .faculty {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+} */
+
+.faculty-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three items per row */
+  gap: 20px; 
+  margin: 20px 0; 
+}
+
+/* faculty-1 start.............. */
+.computer .faculty-1 {
+  margin-left: 450px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.computer .facultyName-1 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.computer .faculty-1 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 451px;
+  border-radius: 20px 20px 0 0;
+}
+
+.computer .facultyDesignation-1 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.computer .facultyExperience-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.computer .facultyQualification-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+/* faculty-1 end............... */
+
+/* faculty-1 start............... */
+.computer .faculty-2 {
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.computer .faculty-2 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 671px;
+  border-radius: 20px 20px 0 0;
+}
+
+.computer .facultyName-2 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.computer .facultyDesignation-2 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.computer .facultyQualification-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.computer .facultyExperience-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.computer .faculty-3 {
+  margin-left: -210px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.computer .faculty-3 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 892.5px;
+  border-radius: 20px 20px 0 0;
+}
+
+.computer .facultyName-3 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.computer .facultyDesignation-3 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.computer .facultyQualification-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.computer .facultyExperience-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+.computer .lab-container{
+  margin-bottom: 120px;
+}
+
+.computer .labTitle-1 {
+  margin-left: 900px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: -270px;
+}
+
+.computer .labTitle-2 {
+  margin-left: 900px; 
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: 140px;
+}
+
+.computer .labDetail-1 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+}
+
+.computer .labDetail-2 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+
+}
+
+.computer .labImg-1 {
+  position: relative;
+  width: 380px;
+  height: 280px;
+  border-radius: 20px;
+  margin-top: 60px;
+  margin-left: 450px;
+}
+
+
+.computer .labImg-2{
+  position: absolute;
+  width: 380px;
+  height: 280px;
+  margin-top: -10px;
+  left: 400px;
+  margin-left: 50px;
+}
+
+
+/* asdasdasd */
+.deptDataHeader.civil {
+  position: relative;
+  font-family: Orelega One;
+  color: #27066f;
+  font-weight: 800;
+  text-align: center;
+  font-size: 25px;
+  top: -10px;
+  left: 56px;
+}
+
+.deptDataVision.civil {
+  margin-left: 450px;
+  font-size: 22px;
+  margin-bottom: 26px;
+  font-weight: 500;
+  color: #54031f;
+  margin-top: 30px;
+}
+
+.deptDataVPara.civil {
+  width: 800px;
+  font-size: 18px;
+  margin-left: 450px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataMission.civil {
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+.deptDataMPara.civil {
+  width: 750px;
+  font-size: 18px;
+  margin-left: 450px;
+  white-space: pre-line;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataFacultyH.civil{
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+
+.faculty {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.faculty-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three items per row */
+  gap: 20px; /* Space between grid items */
+  margin: 20px 0; /* Margin around the container */
+}
+
+/* faculty-1 start.............. */
+.civil .faculty-1 {
+  margin-left: 450px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 260px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.civil .facultyName-1 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.civil.faculty-1 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 451px;
+  border-radius: 20px 20px 0 0;
+}
+
+.civil .facultyDesignation-1 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.civil .facultyExperience-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.civil .facultyQualification-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+/* faculty-1 end............... */
+
+/* faculty-1 start............... */
+.civil .faculty-2 {
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 260px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.civil .faculty-2 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 671px;
+  border-radius: 20px 20px 0 0;
+}
+
+.civil .facultyName-2 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.civil .facultyDesignation-2 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.civil .facultyQualification-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.civil .facultyExperience-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.civil .faculty-3 {
+  margin-left: -210px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 260px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.civil .faculty-3 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 892.5px;
+  border-radius: 20px 20px 0 0;
+}
+
+.civil .facultyName-3 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.civil .facultyDesignation-3 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.civil .facultyQualification-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.civil .facultyExperience-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+.civil .lab-container{
+  margin-bottom: 120px;
+}
+
+.civil .labTitle-1 {
+  margin-left: 900px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: -270px;
+}
+
+.civil .labTitle-2 {
+  margin-left: 900px; 
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: 140px;
+}
+
+.civil .labDetail-1 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+}
+
+.civil .labDetail-2 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+
+}
+
+.civil .labImg-1 {
+  position: relative;
+  width: 380px;
+  height: 280px;
+  border-radius: 20px;
+  margin-top: 60px;
+  margin-left: 450px;
+}
+
+
+.civil .labImg-2{
+  position: absolute;
+  width: 380px;
+  height: 280px;
+  margin-top: -10px;
+  left: 400px;
+  margin-left: 50px;
+}
+
+
+
+.deptDataHeader.electrical {
+  position: relative;
+  font-family: Orelega One;
+  color: #27066f;
+  font-weight: 800;
+  text-align: center;
+  font-size: 25px;
+  top: -10px;
+  left: 40px;
+}
+
+.deptDataVision.electrical {
+  margin-left: 450px;
+  font-size: 22px;
+  margin-bottom: 26px;
+  font-weight: 500;
+  color: #54031f;
+  margin-top: 30px;
+}
+
+.deptDataVPara.electrical {
+  width: 800px;
+  font-size: 18px;
+  margin-left: 450px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataMission.electrical{
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+.deptDataMPara.electrical {
+  width: 750px;
+  font-size: 18px;
+  margin-left: 450px;
+  white-space: pre-line;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataFacultyH.electrical {
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+
+/* faculty-1 start.............. */
+.electrical .faculty-1 {
+  margin-left: 450px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.electrical .facultyName-1 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.electrical .faculty-1 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 451px;
+  border-radius: 20px 20px 0 0;
+}
+
+.electrical .facultyDesignation-1 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.electrical .facultyExperience-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.electrical .facultyQualification-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+/* faculty-1 end............... */
+
+/* faculty-1 start............... */
+.electrical .faculty-2 {
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.electrical .faculty-2 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 671px;
+  border-radius: 20px 20px 0 0;
+}
+
+.electrical .facultyName-2 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.electrical .facultyDesignation-2 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.electrical .facultyQualification-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.electrical .facultyExperience-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.electrical.faculty-3 {
+  margin-left: -210px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.electrical .faculty-3 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 892.5px;
+  border-radius: 20px 20px 0 0;
+}
+
+.electrical .facultyName-3 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.electrical .facultyDesignation-3 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.electrical .facultyQualification-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.electrical .facultyExperience-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+.electrical  .lab-container{
+  margin-bottom: 120px;
+}
+
+.electrical .labTitle-1 {
+  margin-left: 900px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: -270px;
+}
+
+.electrical .labTitle-2 {
+  margin-left: 900px; 
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: 140px;
+}
+
+.electrical .labDetail-1 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+}
+
+.electrical .labDetail-2 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+
+}
+
+.electrical .labImg-1 {
+  position: relative;
+  width: 380px;
+  height: 280px;
+  border-radius: 20px;
+  margin-top: 60px;
+  margin-left: 450px;
+}
+
+
+.electrical .labImg-2{
+  position: absolute;
+  width: 380px;
+  height: 280px;
+  margin-top: -10px;
+  left: 400px;
+  margin-left: 50px;
+}
+
+
+
+
+
+
+.deptDataRec.electronic-and-communication{
+  width: 350px;
+  left: 650px;
+  top: 25px;
+}
+
+.deptDataHeader.electronic-and-communication {
+  position: relative;
+  font-family: Orelega One;
+  color: #27066f;
+  font-weight: 800;
+  text-align: center;
+  font-size: 20px;
+  top: -10px;
+  left: 70px;
+}
+
+.deptDataVision.electronic-and-communication {
+  margin-left: 450px;
+  font-size: 22px;
+  margin-bottom: 26px;
+  font-weight: 500;
+  color: #54031f;
+  margin-top: 30px;
+}
+
+.deptDataVPara.electronic-and-communication {
+  width: 800px;
+  font-size: 18px;
+  margin-left: 450px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataMission.electronic-and-communication {
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+.deptDataMPara.electronic-and-communication {
+  width: 750px;
+  font-size: 18px;
+  margin-left: 450px;
+  white-space: pre-line;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataFacultyH.electronic-and-communication {
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+
+.faculty-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three items per row */
+  gap: 20px; 
+  margin: 20px 0; 
+}
+
+/* faculty-1 start.............. */
+.electronic-and-communication .faculty-1 {
+  margin-left: 450px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.electronic-and-communication .facultyName-1 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.electronic-and-communication .faculty-1 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -251px;
+  left: 451px;
+  border-radius: 20px 20px 0 0;
+}
+
+.electronic-and-communication .facultyDesignation-1 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.electronic-and-communication .facultyExperience-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.electronic-and-communication .facultyQualification-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+/* faculty-1 end............... */
+
+/* faculty-1 start............... */
+.electronic-and-communication .faculty-2 {
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.electronic-and-communication .faculty-2 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -251px;
+  left: 671px;
+  border-radius: 20px 20px 0 0;
+}
+
+.electronic-and-communication .facultyName-2 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.electronic-and-communication .facultyDesignation-2 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.electronic-and-communication .facultyQualification-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.electronic-and-communication .facultyExperience-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.electronic-and-communication .faculty-3 {
+  margin-left: -210px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.electronic-and-communication .faculty-3 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -251px;
+  left: 892.5px;
+  border-radius: 20px 20px 0 0;
+}
+
+.electronic-and-communication .facultyName-3 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.electronic-and-communication .facultyDesignation-3 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.electronic-and-communication .facultyQualification-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.electronic-and-communication .facultyExperience-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+.electronic-and-communication .lab-container{
+  margin-bottom: 120px;
+}
+
+.electronic-and-communication .labTitle-1 {
+  margin-left: 900px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: -270px;
+}
+
+.electronic-and-communication .labTitle-2 {
+  margin-left: 900px; 
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: 140px;
+}
+
+.electronic-and-communication .labDetail-1 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+}
+
+.electronic-and-communication .labDetail-2 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+
+}
+
+.electronic-and-communication .labImg-1 {
+  position: relative;
+  width: 380px;
+  height: 280px;
+  border-radius: 20px;
+  margin-top: 60px;
+  margin-left: 450px;
+}
+
+
+.electronic-and-communication .labImg-2{
+  position: absolute;
+  width: 380px;
+  height: 280px;
+  margin-top: -10px;
+  left: 400px;
+  margin-left: 50px;
+}
+
+
+
+
+
+.deptDataRec.information-technology{
+  width: 350px;
+  left: 650px;
+  top: 25px;
+}
+
+.deptDataHeader.information-technology {
+  position: relative;
+  font-family: Orelega One;
+  color: #27066f;
+  font-weight: 800;
+  text-align: center;
+  font-size: 20px;
+  top: -10px;
+  left: 70px;
+}
+
+.deptDataVision.information-technology {
+  margin-left: 450px;
+  font-size: 22px;
+  margin-bottom: 26px;
+  font-weight: 500;
+  color: #54031f;
+  margin-top: 30px;
+}
+
+.deptDataVPara.information-technology{
+  width: 800px;
+  font-size: 18px;
+  margin-left: 450px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataMission.information-technology{
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+.deptDataMPara.information-technology {
+  width: 750px;
+  font-size: 18px;
+  margin-left: 450px;
+  white-space: pre-line;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataFacultyH.information-technology{
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+
+.faculty-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three items per row */
+  gap: 20px; 
+  margin: 20px 0; 
+}
+
+/* faculty-1 start.............. */
+.information-technology .faculty-1 {
+  margin-left: 450px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.information-technology .facultyName-1 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.information-technology .faculty-1 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -251px;
+  left: 451px;
+  border-radius: 20px 20px 0 0;
+}
+
+.information-technology .facultyDesignation-1 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.information-technology .facultyExperience-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.information-technology .facultyQualification-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+/* faculty-1 end............... */
+
+/* faculty-1 start............... */
+.information-technology .faculty-2 {
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.information-technology .faculty-2 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -251px;
+  left: 671px;
+  border-radius: 20px 20px 0 0;
+}
+
+.information-technology .facultyName-2 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.information-technology .facultyDesignation-2 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.information-technology .facultyQualification-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.information-technology .facultyExperience-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.information-technology .faculty-3 {
+  margin-left: -210px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.information-technology .faculty-3 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -251px;
+  left: 892.5px;
+  border-radius: 20px 20px 0 0;
+}
+
+.information-technology .facultyName-3 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.information-technology .facultyDesignation-3 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.information-technology .facultyQualification-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.information-technology .facultyExperience-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+.information-technology .lab-container{
+  margin-bottom: 120px;
+}
+
+.information-technology .labTitle-1 {
+  margin-left: 900px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: -270px;
+}
+
+.information-technology .labTitle-2 {
+  margin-left: 900px; 
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: 140px;
+}
+
+.information-technology .labDetail-1 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+}
+
+.information-technology .labDetail-2 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+
+}
+
+.information-technology .labImg-1 {
+  position: relative;
+  width: 380px;
+  height: 280px;
+  border-radius: 20px;
+  margin-top: 60px;
+  margin-left: 450px;
+}
+
+
+.information-technology .labImg-2{
+  position: absolute;
+  width: 380px;
+  height: 280px;
+  margin-top: -10px;
+  left: 400px;
+  margin-left: 50px;
+}
+
+
+
+
+
+
+.deptDataRec.mechanical{
+  width: 250px;
+  left: 700px;
+  top: 25px;
+}
+
+.deptDataHeader.mechanical {
+  position: relative;
+  font-family: Orelega One;
+  color: #27066f;
+  font-weight: 800;
+  text-align: center;
+  font-size: 25px;
+  top: -10px;
+  left: 70px;
+}
+
+.deptDataVision.mechanical {
+  margin-left: 450px;
+  font-size: 22px;
+  margin-bottom: 26px;
+  font-weight: 500;
+  color: #54031f;
+  margin-top: 30px;
+}
+
+.deptDataVPara.mechanical {
+  width: 800px;
+  font-size: 18px;
+  margin-left: 450px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataMission.mechanical {
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+.deptDataMPara.mechanical {
+  width: 750px;
+  font-size: 18px;
+  margin-left: 450px;
+  white-space: pre-line;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataFacultyH.mechanical {
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+.faculty-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three items per row */
+  gap: 20px; 
+  margin: 20px 0; 
+}
+
+/* faculty-1 start.............. */
+.mechanical .faculty-1 {
+  margin-left: 450px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.mechanical .facultyName-1 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mechanical .faculty-1 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 451px;
+  border-radius: 20px 20px 0 0;
+}
+
+.mechanical .facultyDesignation-1 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.mechanical .facultyExperience-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mechanical .facultyQualification-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+/* faculty-1 end............... */
+
+/* faculty-1 start............... */
+.mechanical .faculty-2 {
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.mechanical .faculty-2 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 671px;
+  border-radius: 20px 20px 0 0;
+}
+
+.mechanical .facultyName-2 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mechanical .facultyDesignation-2 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.mechanical .facultyQualification-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mechanical .facultyExperience-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mechanical .faculty-3 {
+  margin-left: -210px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.mechanical .faculty-3 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 892.5px;
+  border-radius: 20px 20px 0 0;
+}
+
+.mechanical .facultyName-3 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mechanical .facultyDesignation-3 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.mechanical .facultyQualification-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mechanical .facultyExperience-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+.mechanical .lab-container{
+  margin-bottom: 120px;
+}
+
+.mechanical .labTitle-1 {
+  margin-left: 900px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: -270px;
+}
+
+.mechanical .labTitle-2 {
+  margin-left: 900px; 
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: 140px;
+}
+
+.mechanical .labDetail-1 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+}
+
+.mechanical .labDetail-2 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+
+}
+
+.mechanical .labImg-1 {
+  position: relative;
+  width: 380px;
+  height: 280px;
+  border-radius: 20px;
+  margin-top: 60px;
+  margin-left: 450px;
+}
+
+
+.mechanical .labImg-2{
+  position: absolute;
+  width: 380px;
+  height: 280px;
+  margin-top: -10px;
+  left: 400px;
+  margin-left: 50px;
+}
+
+
+
+
+.deptDataRec.mechatronics{
+  width: 250px;
+  left: 700px;
+  top: 25px;
+}
+
+.deptDataHeader.mechatronics {
+  position: relative;
+  font-family: Orelega One;
+  color: #27066f;
+  font-weight: 800;
+  text-align: center;
+  font-size: 25px;
+  top: -10px;
+  left: 70px;
+}
+
+.deptDataVision.mechatronics {
+  margin-left: 450px;
+  font-size: 22px;
+  margin-bottom: 26px;
+  font-weight: 500;
+  color: #54031f;
+  margin-top: 30px;
+}
+
+.deptDataVPara.mechatronics {
+  width: 800px;
+  font-size: 18px;
+  margin-left: 450px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataMission.mechatronics {
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+.deptDataMPara.mechatronics {
+  width: 750px;
+  font-size: 18px;
+  margin-left: 450px;
+  white-space: pre-line;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataFacultyH.mechatronics {
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+.faculty-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three items per row */
+  gap: 20px; 
+  margin: 20px 0; 
+}
+
+/* faculty-1 start.............. */
+.mechatronics .faculty-1 {
+  margin-left: 450px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.mechatronics .facultyName-1 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mechatronics .faculty-1 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 451px;
+  border-radius: 20px 20px 0 0;
+}
+
+.mechatronics .facultyDesignation-1 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.mechatronics .facultyExperience-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mechatronics .facultyQualification-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+/* faculty-1 end............... */
+
+/* faculty-1 start............... */
+.mechatronics .faculty-2 {
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.mechatronics .faculty-2 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 671px;
+  border-radius: 20px 20px 0 0;
+}
+
+.mechatronics .facultyName-2 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mechatronics .facultyDesignation-2 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.mechatronics .facultyQualification-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mechatronics .facultyExperience-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mechatronics .faculty-3 {
+  margin-left: -210px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.mechatronics .faculty-3 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 892.5px;
+  border-radius: 20px 20px 0 0;
+}
+
+.mechatronics .facultyName-3 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mechatronics .facultyDesignation-3 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.mechatronics .facultyQualification-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mechatronics .facultyExperience-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+.mechatronics .lab-container{
+  margin-bottom: 120px;
+}
+
+.mechatronics .labTitle-1 {
+  margin-left: 900px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: -270px;
+}
+
+.mechatronics .labTitle-2 {
+  margin-left: 900px; 
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: 140px;
+}
+
+.mechatronics .labDetail-1 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+}
+
+.mechatronics .labDetail-2 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+
+}
+
+.mechatronics .labImg-1 {
+  position: relative;
+  width: 380px;
+  height: 280px;
+  border-radius: 20px;
+  margin-top: 60px;
+  margin-left: 450px;
+}
+
+
+.mechatronics .labImg-2{
+  position: absolute;
+  width: 380px;
+  height: 280px;
+  margin-top: -10px;
+  left: 400px;
+  margin-left: 50px;
+}
+
+
+.deptDataRec.science-and-humanities{
+  width: 300px;
+  left: 700px;
+  top: 25px;
+}
+
+.deptDataHeader.science-and-humanities{
+  position: relative;
+  font-family: Orelega One;
+  color: #27066f;
+  font-weight: 800;
+  text-align: center;
+  font-size: 25px;
+  top: -14px;
+  left: 95px;
+}
+
+.deptDataVision.science-and-humanities {
+  margin-left: 450px;
+  font-size: 22px;
+  margin-bottom: 26px;
+  font-weight: 500;
+  color: #54031f;
+  margin-top: 30px;
+}
+
+.deptDataVPara.science-and-humanities{
+  width: 800px;
+  font-size: 18px;
+  margin-left: 450px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataMission.science-and-humanities {
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+.deptDataMPara.science-and-humanities {
+  width: 750px;
+  font-size: 18px;
+  margin-left: 450px;
+  white-space: pre-line;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+}
+
+.deptDataFacultyH.science-and-humanities{
+  margin-left: 450px;
+  margin-top: 25px;
+  font-size: 22px;
+  color: #54031f;
+  font-weight: 500;
+}
+
+/* faculty-1 start.............. */
+.science-and-humanities .faculty-1 {
+  margin-left: 450px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.science-and-humanities .facultyName-1 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.science-and-humanities .faculty-1 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 451px;
+  border-radius: 20px 20px 0 0;
+}
+
+.science-and-humanities .facultyDesignation-1 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.science-and-humanities .facultyExperience-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.science-and-humanities .facultyQualification-1 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+/* faculty-1 end............... */
+
+/* faculty-1 start............... */
+.science-and-humanities .faculty-2 {
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.science-and-humanities .faculty-2 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 671px;
+  border-radius: 20px 20px 0 0;
+}
+
+.science-and-humanities .facultyName-2 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.science-and-humanities .facultyDesignation-2 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.science-and-humanities .facultyQualification-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.science-and-humanities .facultyExperience-2 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.science-and-humanities .faculty-3 {
+  margin-left: -210px;
+  margin-top: 26px;
+  color: #54031f;
+  font-weight: 400;
+  width: 200px;
+  height: 250px;
+  border: solid #54031f;
+  border-radius: 20px;
+}
+
+.science-and-humanities .faculty-3 img {
+  position: absolute;
+  width: 198px;
+  height: 170px;
+  bottom: -259px;
+  left: 892.5px;
+  border-radius: 20px 20px 0 0;
+}
+
+.science-and-humanities .facultyName-3 {
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 164px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.science-and-humanities.facultyDesignation-3 {
+  width: 166px;
+  font-size: 11.2px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+.science-and-humanities .facultyQualification-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.science-and-humanities .facultyExperience-3 {
+  font-size: 11.2px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.science-and-humanities .lab-container{
+  margin-bottom: 120px;
+}
+
+.science-and-humanities .labTitle-1 {
+  margin-left: 900px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: -270px;
+}
+
+.science-and-humanities .labTitle-2 {
+  margin-left: 900px; 
+  font-size: 22px;
+  font-weight: 600;
+  color: #54031f;
+  margin-top: 140px;
+}
+
+.science-and-humanities .labDetail-1 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+}
+
+.science-and-humanities .labDetail-2 {
+  width: 310px;
+  font-size: 18px;
+  color: #54031f;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-left: 900px;
+  line-height: 23px;
+
+}
+
+.science-and-humanities .labImg-1 {
+  position: relative;
+  width: 380px;
+  height: 280px;
+  border-radius: 20px;
+  margin-top: 60px;
+  margin-left: 450px;
+}
+
+
+.science-and-humanities .labImg-2{
+  position: absolute;
+  width: 380px;
+  height: 280px;
+  margin-top: -10px;
+  left: 400px;
+  margin-left: 50px;
+}
+
+
+
+/* Harshil css from here */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.elli1{
+    width: 135px;
+    height: 135px;
+    background: #EAE6FF;
+    -moz-border-radius: 70px;
+    -webkit-border-radius: 70px;
+    border-radius: 70px;
+    margin-left: 78px;
+    margin-top: 200px;
+    position: relative;
   }
-  body {
-    color: white;
-    background: black;
+
+  .elli2 {
+    width: 90px; /* half of the original width */
+    height: 140px;
+    background: #EAE6FF;
+    -moz-border-radius: 140px 0 0 140px;
+    -webkit-border-radius: 140px 0 0 140px;
+    border-radius: 140px 0 0  140px;
+    margin-left: 1420px;
+    margin-top: -200px;
+    position: relative;
+  }
+
+  .elli3{
+    width: 50px;
+    height: 50px;
+    background: #EAE6FF;
+    -moz-border-radius: 70px;
+    -webkit-border-radius: 70px;
+    border-radius: 70px;
+    margin-left: 1300px;
+    margin-top: 100px;
+    position: relative;
+  }
+
+  .elli4 {
+    width: 110px; /* half of the original width */
+    height: 220px;
+    background: #EAE6FF;
+    -moz-border-radius: 110px 0 0 110px;
+    -webkit-border-radius: 110px 0 0 110px;
+    border-radius: 110px 0 0 110px;
+    margin-left: 1400px;
+    margin-top: 480px;
+    position: relative;
+  }
+
+  .elli5 {
+    width: 260px;
+    height: 260px;
+    background: #EAE6FF;
+    -moz-border-radius: 150px;
+    -webkit-border-radius: 150px;
+    border-radius: 150px;
+    margin-left: -80px;
+    margin-top: -290px;
+    position: relative;
+  }
+
+
+
+.container1 {
+  position: absolute;
+  width: 100%;
+  max-width: 1600px;
+  margin-top: 540vh;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+  flex-wrap: wrap;
+  color: #EAE6FF;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+.overlay .footer-section {
+  max-width: 180px;
+  margin-left: 50px;
+  margin-top: 65px;
+  margin-bottom: 50px;
+}
+
+.overlay .footer-section h3 {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.overlay .footer-section p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.overlay .social-icons {
+  display: flex;
+  gap: 25px;
+  font-size: 25px;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 40px;
+  display: inline-block;
+  background-size: cover;
+  color: white ;
+}
+
+.contact{
+  margin-left: -50px;
+}
+
+.footer-bottom {
+  width: 100%;
+  font-size: 12px;
+}
+
+.footer-bottom a {
+  color: #EAE6FF;
+  text-decoration: none;
+  margin: 0 10px;
+  text-align: left; 
+  margin-left: 50px;
+  margin-top: 40px;
+}
+
+.footer-bottom p {
+  color: #EAE6FF;
+  text-decoration: none;
+  margin: 0 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer-section-follow {
+  margin-right: 100px;
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+.footer-section-follow h3{
+  font-size: 17px;
+}
+
+
+.svgContainer {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Same as the SVG width for alignment */
+  margin-left: 400px;
+  bottom: 1000px;
+}
+
+svg {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.rand {
+  position: absolute;
+  color: #000; /* Adjust color as needed */
+  font-size: 16px; /* Adjust size as needed */
+}
+
+.text2 {
+  top: -1040px; /* Adjust position as needed */
+  left: 180px; /* Adjust position as needed */
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+}
+
+.text3 {
+  top: -790px; /* Adjust position as needed */
+  left: 510px; /* Adjust position as needed */
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+  position: absolute;
+}
+
+.text4 {
+  top: -550px; /* Adjust position as needed */
+  left: 180px; /* Adjust position as needed */
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+  position: absolute;
+}
+
+.text5 {
+  top: -300px; /* Adjust position as needed */
+  left: 500px; /* Adjust position as needed */
+  color: white;
+  font-weight: bolder;
+  font-size: 25px;
+  position: absolute;
+}
+
+a {
+  text-decoration: none;
+  /* color: white; */
+}
+
+.icon {
+  position: absolute;
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Adjust size as needed */
+}
+
+.icon1 { top: 20px; left: 620px; }
+.icon2 { top: 260px; left: -10px; }
+.icon3 { top: 530px; left: 700px; }
+.icon4 { top: 780px; left: -10px; }
+.icon5 { top: 0px; left: 150px; width: 50px;}
+.icon6 { top: 250px; left: 620px; width: 50px;}
+.icon7 { top: 500px; left: 150px; width: 50px;}
+.icon8 { top: 745px; left: 620px; width: 50px;}
+
+/*vision mission css*/
+
+  .container {
+  position: relative;
+  width: 700px;
+  height: 900px;
+  bottom: 1700px;
+}
+
+
+.content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 1000px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #27066F;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: 260px;
+  margin-top: -1100px;
+}
+
+
+.vision, .mission {
+  background: #d8d1ff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  font-weight: 700;
+}
+
+p, ul {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.vision {
+  height: 250px;
+}  
+
+p{
+  margin-left: 20px;
+}
+
+
+
+
+@media (max-width: 1200px) {
+  .overlay {
+      padding: 40px 20px;
+  }
+
+  .overlay .footer-section {
+      margin: 20px 20px 40px 20px;
+  }
+
+  .overlay .footer-section h3 {
+      font-size: 18px;
+  }
+
+  .overlay .footer-section p {
+      font-size: 14px;
+  }
+
+  .overlay .social-icons {
+      font-size: 20px;
+  }
+
+  .social-icons a {
+      width: 30px;
+      height: 30px;
+  }
+
+  .footer-bottom a, .footer-bottom p {
+      font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay {
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+  }
+
+  .overlay .footer-section {
+      max-width: none;
+      width: 100%;
+      text-align: center;
+      margin: 20px 0;
+  }
+
+  .footer-bottom a, .footer-bottom p {
+      font-size: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .overlay {
+    padding: 60px 30px;
+  }
+
+  .overlay .footer-section {
+    max-width: 220px;
+    margin: 30px 30px 50px 30px;
+  }
+
+  .overlay .footer-section h3 {
+    font-size: 20px;
+  }
+
+  .overlay .footer-section p {
+    font-size: 16px;
+  }
+
+  .overlay .social-icons {
+    font-size: 30px;
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-bottom a, .footer-bottom p {
+    font-size: 10px;
   }
 }
