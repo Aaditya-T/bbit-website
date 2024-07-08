@@ -21,7 +21,7 @@ const topButts = [
 const Home = () => {
   return (
     <div>
-      <FlexBanner />
+        <FlexBanner />
       <main>
         <div className="absolute text-[--text-primary] font-OrelegaOne ml-[10vw] z-10">
           <div className="text-left text-[3vw] font-bold mt-[20vh] mb-[1vh]">
