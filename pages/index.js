@@ -24,15 +24,15 @@ const Home = () => {
       <FlexBanner />
       <main>
         <div className="absolute text-[--text-primary] font-OrelegaOne ml-[10vw] z-10">
-          <h1 className="text-left text-6xl font-bold mt-[20vh] mb-5">
+          <div className="text-left text-[3vw] font-bold mt-[20vh] mb-[1vh]">
             Welcome to B & B <br /> Institute Of Technology
-          </h1>
-          <h5 className="text-2xl">
+          </div>
+          <div className="text-[1.5vw]">
             Unlock your potential with innovative
             <br /> courses and hands-on learning
             <br />
             opportunities.
-          </h5>
+          </div>
         </div>
         
         <div className="relative flex justify-center items-center min-h-screen">
@@ -63,11 +63,11 @@ const Home = () => {
             </defs>
           </svg>
 
-          <div className="absolute bottom-20 flex flex-row justify-center items-center gap-[20vw]">
+          <div className="absolute bottom-[10vh] flex flex-row justify-center items-center gap-[20vw] text-[1vw]">
             {topButts.map((item, index) => (
               <div key={index} className="z-10 flex flex-col items-center">
-                <img src={item.icon} alt={item.name} />
-                <button className="text-white bg-[daisyBush100] px-7 py-2 mt-7 rounded-full border-2 border-[--daisyBush100]">
+                <img src={item.icon} alt={item.name} className="w-[5vw]" />
+                <button className="text-white bg-[daisyBush100] px-[3vw] py-[1vh] mt-[2vh] rounded-full border-[0.1vw] border-[--daisyBush100]">
                   {item.name}
                 </button>
               </div>
@@ -146,6 +146,7 @@ const Home = () => {
             />
           </div>
         </div>
+
         <div className="elli1"></div>
         <div className="elli2"></div>
         <div className="elli3"></div>
