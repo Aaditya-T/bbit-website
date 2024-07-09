@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 /* styles/globals.css */
-
+*{
+  margin: 0;
+  padding: 0;
+}
 .container1 {
   position: relative;
   width: 100%;
@@ -307,3 +310,78 @@ li {
 .vision {
   height: 200px;
 }  */
+
+
+.hostelcontainer {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.hostelheader {
+  background-color: #FFDE88;
+  padding: 10px;
+  text-align: center;
+  margin:  0 350px ;
+  border-radius: 10px;
+}
+.hostelheader h1{
+  color: #461502;
+  font-family: Orelega One;
+font-size: 25px;
+font-weight: 400;
+line-height: 52.34px;
+
+}
+
+.hostelimageContainer {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+
+}
+
+.hostelimagePlaceholder {
+  width: 100%;
+  max-width: 1100px;
+  height: 300px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-size: 20px;
+  border-radius: 10px;
+  font: Outfit;
+  font-weight: 600;
+}
+
+.hostelcontent {
+  padding: 20px 120px;
+  color: #27066F;
+  font-family: Outfit;
+ font-size: 23px;
+ font-weight: 600;
+ line-height: 30px;
+ text-align: left;
+}
+
+.hostelcontent p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.hostelcontent h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #27066F;
+}
+
+.hostelcontent ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.hostelcontent ul li {
+  margin-bottom: 10px;
+}
