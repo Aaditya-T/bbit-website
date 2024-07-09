@@ -76,44 +76,32 @@ const Home = () => {
 
         </div>
 
-        <div className="section-2">
-          <div className="news">
-            <h1>LATEST NEWS</h1>
-
-            <div className="date1">
-              <h3>01 July 2024</h3>
-              <p>Creato event result declaration</p>
-              <img className="line1" src="/home/line.svg" alt="line" />
-              <img
-                className="tabframe1"
-                src="/home/calendar.svg"
-                alt="calendar"
-              />
+        <div className="relative bottom-0">
+          <div className=" w-[35vw] border-2 bg-[#d8d1ff] rounded-xl ml-[10vw] mt-[10vh]">
+            <h1 className="text-[2vw] font-bold text-[--text-primary] text-center mt-[5vh]">
+            LATEST NEWS</h1>
+            <div className="flex flex-col items-center">
+              {
+                Array(3)
+                  .fill(0)
+                  .map((_, index) => (
+                    <div key={index} className="flex flex-col mt-[4vh] w-full">
+                      <div className="flex flex-row ml-[4vw]">
+                        <img
+                          src="/home/calendar.svg"
+                          alt="calendar"
+                          className="mr-[1vw]"
+                        />
+                        <h3 className="font-bold text-[#27066F] text-2xl">01 July 2024</h3>
+                      </div>
+                      <p className="text-start ml-[6.5vw] mt-6 text-[#27066F] font-bold text-lg">Creato event result declaration</p>
+                      <hr className="w-[80%] h-[3px] mx-auto mt-[2vh] bg-[#27066F]" />
+                    </div>
+                  ))
+              }
             </div>
 
-            <div className="date2">
-              <h3>01 July 2024</h3>
-              <p>Creato event result declaration</p>
-              <img className="line2" src="/home/line.svg" alt="line" />
-              <img
-                className="tabframe2"
-                src="/home/calendar.svg"
-                alt="calendar"
-              />
-            </div>
-
-            <div className="date3">
-              <h3>01 July 2024</h3>
-              <p>Creato event result declaration</p>
-              <img className="line3" src="/home/line.svg" alt="line" />
-              <img
-                className="tabframe3"
-                src="/home/calendar.svg"
-                alt="calendar"
-              />
-            </div>
-
-            <button className="vw-1">View More</button>
+            <button className="bg-white text-[#27066F] px-[1vw] py-[1vh] mt-[2vh] rounded-lg border-[0.1vw] border-[--daisyBush100] ml-[3vw] mb-[1vh] font-OrelegaOne">View More</button>
           </div>
 
           <div className="chairman">
