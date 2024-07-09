@@ -1,6 +1,6 @@
 // Sidebar.js
 import React, { useState, useEffect } from 'react';
-import { Link, Element, Events } from 'react-scroll';
+import { Link, Events } from 'react-scroll';
 
 const Sidebar = ({ departmentData }) => {
   const offsetValue = -90;

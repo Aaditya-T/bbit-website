@@ -145,13 +145,39 @@ export const departments = [
         image: "/faculty/computer-gia/computer-2.png"
       },
       {
-        id: "computer-faculty-2",
+        id: "computer-faculty-3",
         name: "Bob Johnson",
         designation: "Assistant Professor",
         qualification: "M.Sc.",
         experience: "6 years",
         image: "/faculty/computer-gia/computer-3.png"
-      }
+      },
+      {
+        id: "computer-faculty-1",
+        name: "Jiten P. Parmar",
+        designation: "I/C Head of Department",
+        qualification: "M.E. Computer",
+        experience: "26 years",
+        image: "/faculty/computer-gia/mask.png"
+      },
+      {
+        id: "computer-faculty-2",
+        name: "Bob Johnson",
+        designation: "Assistant Professor",
+        qualification: "M.Sc.",
+        experience: "6 years",
+        image: "/faculty/computer-gia/computer-2.png"
+      },
+      {
+        id: "computer-faculty-3",
+        name: "Bob Johnson",
+        designation: "Assistant Professor",
+        qualification: "M.Sc.",
+        experience: "6 years",
+        image: "/faculty/computer-gia/computer-3.png"
+      },
+
+  
     ],
     lab: [
 

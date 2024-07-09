@@ -1,5 +1,5 @@
-// import { Navbar } from "../components/navbar";
 import { useRouter } from 'next/router';
+import { Navbar } from "../components/navbar";
 
 const cardsData = [
   { name: "Civil", path: "/courses/civil.svg" },
@@ -23,26 +23,27 @@ const Cards = () => {
 
   return (
     <div>
-      {/* <Navbar /> */}
-
-      <div className="mt-[14vh]">
-        <div className="flex flex-wrap text-center pl-[27vh] gap-[0vh|2vh]">
+    <Navbar />
+      <div className="c-circle">
+        <div className="c-circle1"></div>
+        <div className="c-circle2"></div>
+        <div className="c-circle3"></div>
+        <div className="c-circle4"></div>
+      </div>
+      <div className="card">
         {cardsData.map((item, index) => (
-          <div className="relative text-[2vh] w-[22vw] h-[28vh] bg-[#FFB224] m-[2vh] rounded-[5vh] pr-[2vw] pt-[2vh] text-[#FFFAEB]" key={index}>
-            <span className='mr-[10vw] text-[3vh] inline-block text-left leading-[4vh]' data-name={item.name}>{item.name}</span>
+          <div className="card-item" key={index}>
+            <span data-name={item.name}>{item.name}</span>
             <img
-              className={`absolute w-[6vw] h-[12vh] mt-[2vh] ml-[15vw] bg-img-base dept-${  item.name.toLowerCase()}`}
+              className={`course-svg ${item.name.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
               src={item.path}
               alt={item.name}
-           />  
-           <div className='card-item'>
+            />  
             <button onClick={() => handleNavigation(item.name, 'gia')} className="gia-btn">GIA</button>
             <button onClick={() => handleNavigation(item.name, 'sfi')} className="sfi-btn">SFI</button>
-            </div>
           </div>
         ))}
       </div>
-    </div>
     </div>
   );
 };
