@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { motion } from "framer-motion";
 import React, { useEffect } from "react";
 
 const FlexBanner = () => {
@@ -27,7 +27,12 @@ const FlexBanner = () => {
   }, []);
 
   return (
-    <div className="absolute mt-[5vh] w-[25vw] h-[10vh] flex gap-1 top-[10vh] right-[10vw] ">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.5 }}
+      className="absolute mt-[5vh] w-[25vw] h-[10vh] flex gap-1 top-[10vh] right-[10vw] z-[1]"
+    >
       {[1, 2, 3, 4].map((index) => (
         <img
           key={index}
@@ -37,7 +42,7 @@ const FlexBanner = () => {
           id={`banner-${index}`}
         />
       ))}
-    </div>
+    </motion.div>
   );
 };
 

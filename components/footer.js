@@ -1,7 +1,7 @@
 // use tailwind css
 const Footer = () => {
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <div className="text-white flex justify-around absolute w-screen bottom-20 text-xl">
         <div className="flex flex-row gap-64">
           <div className="flex flex-col">

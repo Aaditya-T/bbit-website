@@ -24,31 +24,3 @@ body {
 * {
   box-sizing: border-box;
 }
-
-.flex-banner{
-  position: absolute;
-  width: 30%;
-  height: 300px;
-  display: flex;
-  gap: 5px;
-  top: 120px;
-  right: 200px;
-  z-index: 1;
-}
-
-.flex-banner img{
-  width: 10%;
-  height: 120%;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 2px solid #27066F;
-  transition: all ease 0.3s;
-}
-
-.flex-banner img:hover{
-  width: 100%;
-}
-
-.flex-banner img.big{
-  width: 60%;
-}

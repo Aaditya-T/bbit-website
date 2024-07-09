@@ -56,7 +56,7 @@ const Nav = () => {
       >
         {menuList.map((item) => {
           return (
-            <a
+            <Link
               key={item.name}
               href={item.link}
               className={
@@ -67,7 +67,7 @@ const Nav = () => {
               }
             >
               {item.name}
-            </a>
+            </Link>
           );
         })}
       </motion.div>
