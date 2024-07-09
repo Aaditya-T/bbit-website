@@ -1,4 +1,3 @@
-import { Navbar } from "../components/navbar";
 import { useRouter } from 'next/router';
 
 const cardsData = [
@@ -23,7 +22,6 @@ const Cards = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="c-circle">
         <div className="c-circle1"></div>
         <div className="c-circle2"></div>
