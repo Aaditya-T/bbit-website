@@ -3,6 +3,7 @@
 import React from "react";
 import FlexBanner from "../components/FlexBanner";
 import { motion } from "framer-motion";
+import { SecondSection } from "@/components/component/second-section";
 
 const topButts = [
   {
@@ -92,85 +93,9 @@ const Home = () => {
           initial={{ opacity: 0, y: 40 }}
           transition={{ duration: 1.5 }}
           whileInView={{ opacity: 1, y: 0}}
-          className="flex flex-row w-[80vw] mx-auto mt-[10vh] gap-[2vw] h-[80vh]"
+          className="mt-[10vh]"
         >
-          <div className="w-[45vw] bg-[#d8d1ff] rounded-xl flex flex-col h-[70vh]">
-            <h1 className="text-[--text-primary] text-center mt-[2vh] text-[2vw] font-bold">
-              LATEST NEWS
-            </h1>
-            <div className="flex flex-col items-center">
-              {Array(3)
-                .fill(0)
-                .map((_, index) => (
-                  <div key={index} className="flex flex-col mt-[4vh] w-full">
-                    <div className="flex flex-row ml-[4vw]">
-                      <img
-                        src="/home/calendar.svg"
-                        alt="calendar"
-                        className="mr-[1vw]"
-                      />
-                      <h3 className="font-bold text-[#27066F] text-[1.6vw]">
-                        01 July 2024
-                      </h3>
-                    </div>
-                    <p className="text-start ml-[6.5vw] mt-6 text-[#27066F] font-bold text-[1vw]">
-                      Creato event result declaration
-                    </p>
-                    <hr className="w-[25vw] h-[0.4vh] mx-auto mt-[2vh] bg-[#27066F]" />
-                  </div>
-                ))}
-            </div>
-
-            <button className="text-[#27066F] rounded-[0.5vw] border-[0.1vw] border-[#27066F] bg-white px-[2vw] py-[1vh] mt-[2vh] mx-auto text-[1.2vw] font-bold">
-              View More
-            </button>
-          </div>
-
-          <div className="flex flex-col w-[45vw] h-[70vh] gap-[25%]">
-            <div className="bg-[#d8d1ff] rounded-xl ml-[10vw] p-[0.7vw] h-[45%] w-[35vw]  translate-y-0">
-              <img
-                src="/home/chairman.svg"
-                alt="Chairman"
-                className="-mt-[10vh] ml-[22vw]"
-              />
-
-              <h4 className="text-[#27066F] text-[0.75vw] font-bold absolute top-2">
-                Er. BHIKUBHAI B. PATEL
-              </h4>
-              <h1 className="text-[--text-primary] text-start mt-[2.5vh] mb-1 text-[1.4vw] font-bold absolute top-7" >
-                CHAIRMAN's MESSAGE
-              </h1>
-              <p className="text-[1vw] text-[#27066F] text-start font-bold absolute top-[9vh]">
-                Education plays a vital role in the socio-economic development
-                of the country; Education that is thorough, purposeful and meets
-                the requirements of today’s technological industry market. It is
-                our deepest desire to serve the society by molding the
-                technocrats of tomorrow.{" "}
-              </p>
-            </div>
-
-            <div className="bg-[#d8d1ff] rounded-xl ml-[10vw] p-[0.7vw] h-[45%] w-[35vw]  translate-y-0">
-              <img
-                src="/home/principal.svg"
-                alt="Chairman"
-                className="-mt-[10vh] ml-[22vw]"
-              />
-
-              <h4 className="text-[#27066F] text-[0.75vw] font-bold absolute top-2">
-                Dr. K.M MAKWANA
-              </h4>
-              <h1 className="text-[--text-primary] text-start mt-[2.5vh] mb-1 text-[1.4vw] font-bold absolute top-7" >
-              PRINCIPAL's MESSAGE
-              </h1>
-              <p className="text-[1vw] text-[#27066F] text-start font-bold absolute top-[9vh]">
-                Education plays a vital role in the socio-economic development
-                of the country; Education that is thorough, purposeful and meets
-                the requirements of today’s technological industry market. It is
-                our deepest desire to serve the society by molding the
-                technocrats of tomorrow.{" "}
-              </p>
-            </div>
-          </div>
+         <SecondSection />
         </motion.div>
       </main>
     </div>

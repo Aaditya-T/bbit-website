@@ -43,7 +43,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="flex items-center justify-between w-full h-16 fixed top-0 z-50">
+    <nav className="flex items-center justify-between w-full h-16 fixed top-0 z-50 bg-[#F3F2FF]">
       <div className="flex items-center gap-2 p-4 mt-1">
           <Link href="/">
             <Image src="/home/bbit.png" alt="logo" width={100} height={50} />
