@@ -41,14 +41,14 @@ export function SecondSection() {
                 </Avatar>
                 <div>
                   <CardTitle className="text-lg font-bold">Er. BHIKHUBHAI B. PATEL</CardTitle>
-                  <CardDescription className="text-sm font-medium">CHAIRMAN'S MESSAGE</CardDescription>
+                  <CardDescription className="text-sm font-medium">CHAIRMAN&apos;S MESSAGE</CardDescription>
                 </div>
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-sm font-semibold">
                 Education plays a vital role in the socio-economic development of the country. Education that is
-                thorough, purposeful and meets the requirements of today's technological industry market. It is our
+                thorough, purposeful and meets the requirements of today&apos;s technological industry market. It is our
                 deepest desire to serve the society by molding the technocrats of tomorrow. READ MORE...
               </p>
             </CardContent>
@@ -62,14 +62,14 @@ export function SecondSection() {
                 </Avatar>
                 <div>
                   <CardTitle className="text-lg font-bold">Dr. K.M Makwana</CardTitle>
-                  <CardDescription className="text-sm font-medium">PRINCIPAL'S MESSAGE</CardDescription>
+                  <CardDescription className="text-sm font-medium">PRINCIPAL&apos;S MESSAGE</CardDescription>
                 </div>
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-sm font-semibold">
                 I am proud of being the Principal of such a wonderful institution dedicated to the causes of better
-                India. Through education and their real empowerment, come on let's give our best and make this
+                India. Through education and their real empowerment, come on let&apos;s give our best and make this
                 institution a modern temple of learning through our diligence, devotion and dedication. READ MORE...
               </p>
             </CardContent>
