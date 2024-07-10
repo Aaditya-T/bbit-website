@@ -4,6 +4,14 @@ import React from "react";
 import FlexBanner from "../components/FlexBanner";
 import { motion } from "framer-motion";
 import { SecondSection } from "@/components/component/second-section";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardFooter,
+  CardDescription,
+} from "@/components/ui/card";
 
 const topButts = [
   {
@@ -281,12 +289,78 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="absolute h-[70vh] w-[30vw] bottom-0 top-[350vh]">
-          <img
-            src="/home/visionMission/image.png"
-            alt="ellipse"
-            className="top-0 left-0 "
-          />
+        <div className="relative w-[80vw] h-[200vh]">
+          <div className="relative top-0 left-0 w-full h-full">
+            <img
+              src="/home/visionMission/image.png"
+              alt="visionMission"
+              className="w-[40vw] absolute top-0 left-0"
+            />
+
+            <div className="-top-[10vh] left-[10vw] h-full flex flex-col justify-center items-center relative">
+
+              <Card className="p-10 bg-[#D8D1FF] rounded-2xl shadow-lg w-[80%]">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center space-x-4 mx-auto">
+                    <div>
+                      <CardTitle className="text-5xl font-bold">
+                        Vision
+                      </CardTitle>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-xl font-semibold">
+                    At BBIT our vision is to create a nurturing and innovative
+                    environment where every student can thrive academically,
+                    socially, and personally. We aspire to be a leading
+                    institution recognized for excellence in education,
+                    fostering a culture of inclusivity, critical thinking, and
+                    lifelong learning. Through cutting-edge research, community
+                    engagement, and a commitment to sustainability, we aim to
+                    empower our students to become compassionate leaders and
+                    impactful global citizens.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="p-10 bg-[#D8D1FF] rounded-2xl shadow-lg w-[80%] mt-[38vh]">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center space-x-4 mx-auto">
+                    <div>
+                      <CardTitle className="text-5xl font-bold">
+                        Mission
+                      </CardTitle>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <ul className="list-disc list-inside">
+                    <li className="text-xl font-semibold">
+                      Prepare the student with strong fundamental concepts,
+                      analytical abilities & Problem solving skills.
+                    </li>
+                    <li className="text-xl font-semibold">
+                      Offer ambiance & Support to cultivate creativity &
+                      Innovation.
+                    </li>
+                    <li className="text-xl font-semibold">
+                      Disseminate quality training to enhance skills &
+                      Entrepreneurship for professional development.
+                    </li>
+                    <li className="text-xl font-semibold">
+                      Establish opportunities for the students and teachers for
+                      lifelong learning to meet the ever changing global
+                      technological standards.
+                    </li>
+                    <li className="text-xl font-semibold">
+                      Foster students to seek excellence in technical education.
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </main>
     </div>
