@@ -232,12 +232,15 @@ const Home = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          transition={{ duration: 1.5 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="mt-[20vh] max-w-[50vw] mx-auto mb-[195vh]"
+          // initial={{ opacity: 0, y: 40 }}
+          // transition={{ duration: 1.5 }}
+          // whileInView={{ opacity: 1, y: 0 }}
+          className="mt-[20vh] mx-auto mb-[195vh] w-[800px]"
         >
-          <div className="translate-x-0">
+          <div className="absolute h-[70vh] w-[50vw] top-[212vh] -z-1">
+            {stairCase}
+          </div>
+          <div className="translate-x-0 z-10">
             <img
               className="absolute top-0 left-0"
               src="/home/staircase/sideStuff.png"
@@ -249,6 +252,7 @@ const Home = () => {
               src="/home/staircase/pin.png"
               alt="ellipse"
             />
+
             <p className="absolute ml-[12vw] mt-[6vh] text-[1.5vw] font-bold">
               Courses
             </p>
@@ -272,23 +276,22 @@ const Home = () => {
             </p>
 
             <img
-              className="absolute ml-[38vw] mt-[83vh] w-[5vw] h-[8vh] hover:animate-bounce"
+              className="absolute ml-[38vw] mt-[80vh] w-[5vw] h-[8vh] hover:animate-bounce"
               src="/home/staircase/pin.png"
               alt="ellipse"
             />
-            <p className="absolute ml-[30vw] mt-[87vh] text-[1.5vw] font-bold text-center">
+            <p className="absolute ml-[30vw] mt-[85vh] text-[1.5vw] font-bold text-center">
               Awards & <br />
               Achievements
             </p>
           </div>
-          {stairCase}
         </motion.div>
 
         <div className="absolute h-[70vh] w-[30vw] bottom-0 top-[350vh]">
           <img
             src="/home/visionMission/image.png"
             alt="ellipse"
-            className="top-0 left-0"
+            className="top-0 left-0 "
           />
         </div>
       </main>

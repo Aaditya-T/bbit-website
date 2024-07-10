@@ -37,17 +37,10 @@ const Footer = () => {
       </div>
       
       <div className="bottom-0 w-screen flex justify-center items-center">
-        <svg
-          viewBox="0 0 1440 300"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-        >
-          <path
-            d="M0 68.5026V407.504H1440V68.5026C1440 68.5026 1011.98 0.370095 721.5 0.00148773C429.707 -0.36879 0 68.5026 0 68.5026Z"
-            fill="#5F13EE"
-          />
-        </svg>
+        <img
+          src="/footer.png"
+          alt="footer"
+        />
       </div>
     </div>
   );
