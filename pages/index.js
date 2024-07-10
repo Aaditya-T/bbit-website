@@ -231,61 +231,55 @@ const Home = () => {
           <SecondSection />
         </motion.div>
 
-        <motion.div
-          // initial={{ opacity: 0, y: 40 }}
-          // transition={{ duration: 1.5 }}
-          // whileInView={{ opacity: 1, y: 0 }}
-          className="mt-[20vh] mx-auto mb-[195vh] w-[800px]"
-        >
-          <div className="absolute h-[70vh] w-[50vw] top-[212vh] -z-1">
-            {stairCase}
-          </div>
-          <div className="translate-x-0 z-10">
+        <div className="container">
+          <div className="staircase">{stairCase}</div>
+          <div className="content">
             <img
-              className="absolute top-0 left-0"
+              className="side-stuff"
               src="/home/staircase/sideStuff.png"
               alt="ellipse"
             />
 
-            <img
-              className="absolute ml-[8vw] w-[5vw] h-[8vh] hover:animate-bounce"
-              src="/home/staircase/pin.png"
-              alt="ellipse"
-            />
+            <div className="pin-group-left">
+              <img
+                className="pin"
+                src="/home/staircase/pin.png"
+                alt="ellipse"
+              />
+              <p className="label">Courses</p>
+            </div>
 
-            <p className="absolute ml-[12vw] mt-[6vh] text-[1.5vw] font-bold">
-              Courses
-            </p>
+            <div className="pin-group-right">
+              <p className="label">Hostels</p>
+              <img
+                className="pin"
+                src="/home/staircase/pin.png"
+                alt="ellipse"
+              />
+            </div>
 
-            <img
-              className="absolute ml-[38vw] mt-[28vh] w-[5vw] h-[8vh] hover:animate-bounce"
-              src="/home/staircase/pin.png"
-              alt="ellipse"
-            />
-            <p className="absolute ml-[34vw] mt-[35vh] text-[1.5vw] font-bold">
-              Hostels
-            </p>
+            <div className="pin-group-left-2">
+              <img
+                className="pin"
+                src="/home/staircase/pin.png"
+                alt="ellipse"
+              />
+              <p className="label">Events</p>
+            </div>
 
-            <img
-              className="absolute ml-[8vw] mt-[53vh] w-[5vw] h-[8vh] hover:animate-bounce"
-              src="/home/staircase/pin.png"
-              alt="ellipse"
-            />
-            <p className="absolute ml-[12vw] mt-[60vh] text-[1.5vw] font-bold">
-              Events
-            </p>
-
-            <img
-              className="absolute ml-[38vw] mt-[80vh] w-[5vw] h-[8vh] hover:animate-bounce"
-              src="/home/staircase/pin.png"
-              alt="ellipse"
-            />
-            <p className="absolute ml-[30vw] mt-[85vh] text-[1.5vw] font-bold text-center">
-              Awards & <br />
-              Achievements
-            </p>
+            <div className="pin-group-right-2">
+              <p className="label text-center">
+                Awards & <br />
+                Achievements
+              </p>
+              <img
+                className="pin"
+                src="/home/staircase/pin.png"
+                alt="ellipse"
+              />
+            </div>
           </div>
-        </motion.div>
+        </div>
 
         <div className="absolute h-[70vh] w-[30vw] bottom-0 top-[350vh]">
           <img
