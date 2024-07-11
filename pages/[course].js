@@ -114,6 +114,31 @@ const DepartmentPage = () => {
           ))}
         </Element>
       </div>
+      {/* <div/> */}
+
+
+      <div className="w-[46vw] ml-[21vw] mt-[20vh] bg-[#27066f43] mb-[10vh] rounded-[3vh]">
+  <table>
+    <thead>
+      <tr>
+        <th className="text-[#54031F] w-[1vw] text-center py-[2vh] px-[1vw]  font-semibold text-[2vh] border border-solid border-[#27066F]">SR.NO</th>
+        <th className="text-[#54031F] w-[56vw] text-center py-[2vh] px-[1vw] font-semibold text-[2vh] border border-solid border-[#27066F]">Company Name</th>
+        <th className="text-[#54031F] w-[22vw] text-center py-[2vh] px-[1vw] font-semibold text-[2vh] border border-solid border-[#27066F]">Package (L/A)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {departmentData.placement.map((placement, index) => (
+        <tr key={index}>
+          <td className="text-[#54031f] py-[2vh] px-[2vw] text-center border border-solid border-[#27066F] text-[2.5vh]">{placement.sr}</td>
+          <td className="text-[#54031f] py-[2vh] px-[2vw]  text-center border border-solid border-[#27066F] text-[2.5vh]">{placement.company}</td>
+          <td className="text-[#54031f] py-[2vh] px-[2vw]  text-center border border-solid border-[#27066F] text-[2.5vh]">{placement.package}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+
     </>
   );
 };

@@ -191,6 +191,35 @@ export const departments = [
         detail: "Here, you can master HTML, CSS, RDBMS, Excel, and more, guided by expert instructors and using cutting-edge technology. Whether you're a beginner or looking to advance your technical expertise, our lab provides the perfect environment for learning, innovation, and growth. Join us to enhance your capabilities and stay ahead in the digital age.",
         img: "/faculty/computer-gia/techlab.png",
       }
+    ],
+
+    placement:[
+      {
+        sr:"1",
+        company:"Accenture",
+        package:"24 LPA"
+      },
+      {
+        sr:"2",
+        company:"TCS",
+        package:"24LPA"
+      },
+      {
+        sr:"3",
+        company:"Infosys",
+        package:"24LPA"
+      },
+      {
+        sr:"4",
+        company:"Wipro",
+        package:"24LPA"
+      },
+      {
+        sr:"5",
+        company:"Reliance",
+        package:"24LPA"
+      },
+      
     ]
   },
   {
