@@ -313,7 +313,7 @@ li {
 }  */
 
 
-.hostelcontainer {
+/* .hostelcontainer {
   padding: 20px;
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
@@ -375,7 +375,7 @@ line-height: 52.34px;
 
 .hostelcontent p {
   margin-bottom: 20px;
-  line-height: 1.6;
+  line-height: 1.6px;
 }
 
 .hostelcontent h2 {
@@ -491,7 +491,7 @@ width: 150px;
   position: absolute;
   z-index: 1;
   top: 1550px;
-}
+} */
 
 
 
