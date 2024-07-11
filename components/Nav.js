@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const cmnClass =
-  "text-[#27066F] hover:text-gray-700 font-medium transition-all duration-300 text-2xl";
+  "text-[#27066F] hover:text-gray-700 font-medium transition-all duration-300 text-[3vh]";
 
 const menuList = [
   {
@@ -43,8 +43,8 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="flex items-center justify-between w-full h-16 fixed top-0 z-50 bg-[#F3F2FF]">
-      <div className="flex items-center gap-2 p-4 mt-1">
+    <nav className="flex items-center justify-between w-full h-[8vh] fixed top-0 z-50 bg-[#F3F2FF]">
+      <div className="flex items-center gap-[2vh] p-[2vh] mt-[1vh]">
           <Link href="/">
             <Image src="/home/bbit.png" alt="logo" width={100} height={50} />
           </Link>
@@ -52,7 +52,7 @@ const Nav = () => {
       <motion.div
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
-        className="hidden md:flex items-center gap-7 mr-7"
+        className="hidden md:flex items-center gap-[3vh] mr-[6vh]"
       >
         {menuList.map((item) => {
           return (
