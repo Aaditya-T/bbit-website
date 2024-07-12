@@ -47,9 +47,9 @@ const Sidebar = ({ departmentData }) => {
           </Link>
         </li>
         <li>
-          <Link to="lab-container" smooth={true} duration={500} offset={offsetValue}>
+          <Link to="laboratory" smooth={true} duration={500} offset={offsetValue}>
             Laboratory
-            {currentSection === 'lab-container' && <i className="fas fa-arrow-up" />}
+            {currentSection === 'laboratory' && <i className="fas fa-arrow-up" />}
           </Link>
         </li>
         <li>
