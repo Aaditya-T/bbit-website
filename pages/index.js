@@ -197,30 +197,30 @@ const Home = () => {
             </defs>
           </svg>
 
-          <div className="absolute bottom-[10vh] flex flex-row justify-center items-center gap-[20vw] text-[1vw]">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.5 }}
-                className="z-10 flex flex-row items-center text-white gap-[15vw]"
-              >
-                <div className="flex flex-col items-center">
-                  <CountUp end={85} duration={5} className="text-5xl font-bold" />
-                  <p className="text-center text-2xl mt-2">Certified Teachers</p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <CountUp end={3000} duration={5} className="text-5xl font-bold" />
-                  <p className="text-center text-2xl mt-2">Students</p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <CountUp end={7} duration={5} className="text-5xl font-bold" />
-                  <p className="text-center text-2xl mt-2">Courses</p>
-                </div>
-                <div className="flex flex-col items-center">
-                  <CountUp end={24} duration={5} className="text-5xl font-bold" />
-                  <p className="text-center text-2xl mt-2">Awards Won</p>
-                </div>
-              </motion.div>
+          <div className="absolute bottom-[10vh] flex flex-row justify-center items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5 }}
+              className="z-10 flex flex-row items-center text-white gap-[14vw]"
+            >
+              <div className="flex flex-col items-center">
+                <CountUp end={85} duration={5} className="text-[4vw] font-bold" />
+                <p className="text-center text-[2vw] mt-2">Certified Teachers</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <CountUp end={3000} duration={5} className="text-[4vw] font-bold" />
+                <p className="text-center text-[2vw] mt-2">Students</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <CountUp end={7} duration={5} className="text-[4vw] font-bold" />
+                <p className="text-center text-[2vw] mt-2">Courses</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <CountUp end={24} duration={5} className="text-[4vw] font-bold" />
+                <p className="text-center text-[2vw] mt-2">Awards Won</p>
+              </div>
+            </motion.div>
           </div>
         </div>
 
