@@ -12,21 +12,7 @@ import {
   CardFooter,
   CardDescription,
 } from "@/components/ui/card";
-
-const topButts = [
-  {
-    name: "Activities",
-    icon: "/home/activity.svg",
-  },
-  {
-    name: "Virtual Tour",
-    icon: "/home/vtour.svg",
-  },
-  {
-    name: "Alumni",
-    icon: "/home/alumni.svg",
-  },
-];
+import CountUp from 'react-countup';
 
 const stairCase = (
   <svg viewBox="0 0 1277 1743" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -212,21 +198,29 @@ const Home = () => {
           </svg>
 
           <div className="absolute bottom-[10vh] flex flex-row justify-center items-center gap-[20vw] text-[1vw]">
-            {topButts.map((item, index) => (
-              // <div key={index} className="z-10 flex flex-col items-center">
               <motion.div
-                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5 }}
-                className="z-10 flex flex-col items-center"
+                className="z-10 flex flex-row items-center text-white gap-[15vw]"
               >
-                <img src={item.icon} alt={item.name} className="w-[5vw]" />
-                <button className="text-white bg-[daisyBush100] px-[3vw] py-[1vh] mt-[2vh] rounded-full border-[0.1vw] border-[--daisyBush100]">
-                  {item.name}
-                </button>
+                <div className="flex flex-col items-center">
+                  <CountUp end={85} duration={5} className="text-5xl font-bold" />
+                  <p className="text-center text-2xl mt-2">Certified Teachers</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <CountUp end={3000} duration={5} className="text-5xl font-bold" />
+                  <p className="text-center text-2xl mt-2">Students</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <CountUp end={7} duration={5} className="text-5xl font-bold" />
+                  <p className="text-center text-2xl mt-2">Courses</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <CountUp end={24} duration={5} className="text-5xl font-bold" />
+                  <p className="text-center text-2xl mt-2">Awards Won</p>
+                </div>
               </motion.div>
-            ))}
           </div>
         </div>
 
