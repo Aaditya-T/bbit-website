@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { departments } from "../data/departments";
 // import { Navbar } from "../components/navbar";
-import Footer from "../components/footer";
+// import Footer from "../components/footer";
 import Sidebar from "../components/sidebar";
 import { Element } from "react-scroll";
 
@@ -62,13 +62,13 @@ const DepartmentPage = () => {
   };
   return (
     <>
-      <Footer />
+      {/* <Footer /> */}
 
-      <div className="container ml-[16vw]">
-        <div className="-ml-[220px] mb-[2vh] relative">
+     
+        <div className="left-[1vw] -mt-[31vh] absolute text-[2.1vh]">
           <Sidebar />
         </div>
-
+        <div className="container ml-[16vw] mt-[22vh] relative">
         <Element name="about">
           <h2
             id="vision"
@@ -95,7 +95,7 @@ const DepartmentPage = () => {
           <div className="w-[12vw] h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] ml-[20vw] mt-[10vh]">
             <h2
               id="faculty"
-              className="ml-[2vw] mt-[0.7vh] text-[2vh] text-[#27066F] font-bold absolute"
+              className="ml-[2vw] mt-[0.7vh] text-[2vh] text-[#27066F] font-bold absolute w-full"
             >
               Faculty Members
             </h2>
