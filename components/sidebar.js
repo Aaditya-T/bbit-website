@@ -26,39 +26,39 @@ const Sidebar = ({ departmentData }) => {
   }, []);
 
   return (
-    <div className="sidebar">
+    <div className="w-[12vw] ml-[6vw] relative mt-[40vh] text-[2.3vh] text-[#23527c] cursor-pointer">
       <ul>
-        <li>
+        <li className='mb-[0.6vh] hover:font-semibold'>
           <Link to="about" smooth={true} duration={500} offset={offsetValue}>
             About Department
             {currentSection === 'about' && <i className="fas fa-arrow-up" />}
           </Link>
         </li>
-        <li>
+        <li className='mb-[0.6vh] hover:font-semibold'>
           <Link to="faculty" smooth={true} duration={500} offset={offsetValue}>
             Faculties
             {currentSection === 'faculty' && <i className="fas fa-arrow-up" />}
           </Link>
         </li>
-        <li>
+        <li className='mb-[0.6vh] hover:font-semibold'>
           <Link to="syllabus" smooth={true} duration={500} offset={offsetValue}>
             Syllabus
             {currentSection === 'syllabus' && <i className="fas fa-arrow-up" />}
           </Link>
         </li>
-        <li>
+        <li className='mb-[0.6vh] hover:font-semibold'>
           <Link to="laboratory" smooth={true} duration={500} offset={offsetValue}>
             Laboratory
             {currentSection === 'laboratory' && <i className="fas fa-arrow-up" />}
           </Link>
         </li>
-        <li>
+        <li className='mb-[0.6vh] hover:font-semibold'>
           <Link to="placements" smooth={true} duration={500} offset={offsetValue}>
             Placements
             {currentSection === 'placements' && <i className="fas fa-arrow-up" />}
           </Link>
         </li>
-        <li>
+        <li className='mb-[0.6vh] hover:font-semibold'>
           <Link to="department-activities" smooth={true} duration={500} offset={offsetValue}>
             Department Activities
             {currentSection === 'department-activities' && <i className="fas fa-arrow-up" />}
