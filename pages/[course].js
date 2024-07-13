@@ -9,8 +9,8 @@ import { Element } from "react-scroll";
 const DepartmentPage = () => {
   const router = useRouter();
   const { course } = router.query;
-
   const [departmentData, setDepartmentData] = useState(null);
+  const [selectedSemester, setSelectedSemester] = useState("Sem 1");
 
   useEffect(() => {
     if (course) {
@@ -28,11 +28,38 @@ const DepartmentPage = () => {
     return <div>Loading...</div>;
   }
 
-  const departmentClass = departmentData.name
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/&/g, "and");
-
+  const renderTableContent = () => {
+    const semesterData = departmentData.sem.find(
+      (sem) => sem[selectedSemester.toLowerCase().replace(" ", "")]
+    );
+    return semesterData[selectedSemester.toLowerCase().replace(" ", "")].map(
+      (course, index) => (
+        <tr key={index}>
+          <td className="border px-[1vw] py-[1vh] text-center text-[2.1vh]">
+            {course.subcode}
+          </td>
+          <td className="border px-[1vw] py-[1vh] text-center text-[2.1vh]">
+            {course.sub}
+          </td>
+          <td className="border px-[1vw] py-[1vh] text-center text-[2.1vh]">
+            {course.external}
+          </td>
+          <td className="border px-[1vw] py-[1vh] text-center text-[2.1vh]">
+            {course.mid}
+          </td>
+          <td className="border px-[1vw] py-[1vh] text-center text-[2.1vh]">
+            {course.internal}
+          </td>
+          <td className="border px-[1vw] py-[1vh] text-center text-[2.1vh]">
+            {course.practical}
+          </td>
+          <td className="border px-[1vw] py-[1vh] text-center text-[2.1vh]">
+            {course.total}
+          </td>
+        </tr>
+      )
+    );
+  };
   return (
     <>
       <Footer />
@@ -51,7 +78,7 @@ const DepartmentPage = () => {
           </h2>
 
           <p className="w-[60vw] text-[2vh] ml-[5vw] text-[#54031f] font-normal">
-          {departmentData.vision}
+            {departmentData.vision}
           </p>
 
           <h2
@@ -103,6 +130,65 @@ const DepartmentPage = () => {
           </div>
         </Element>
 
+        <Element name="syllabus">
+          <div className="w-[12vw] h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] ml-[20vw] mt-[10vh]">
+            <h2
+              id="syllabus"
+              className="ml-[4vw] mt-[0.7vh] text-[2vh] text-[#27066F] font-bold absolute"
+            >
+              Syllabus
+            </h2>
+          </div>
+
+          <div className="mt-[8vh]">
+            <div className="w-[46vw] h-[50vh] bg-[#D8D1FF] ml-[10vh] border border-[#27066F] overflow-hidden">
+              <table className="table-fixed w-full border-collapse">
+                <thead>
+                  <tr>
+                    {["Sem 1", "Sem 2", "Sem 3", "Sem 4", "Sem 5", "Sem 6"].map(
+                      (sem) => (
+                        <th
+                          key={sem}
+                          onClick={() => setSelectedSemester(sem)}
+                          className={`cursor-pointer text-[#54031F] text-center py-[2vh] px-[1vw] font-semibold text-[2vh] border-t border-b border-[#27066F] ${
+                            selectedSemester === sem ? "bg-[#B3A1FF]" : ""
+                          }`}
+                        >
+                          {sem}
+                        </th>
+                      )
+                    )}
+                  </tr>
+                </thead>
+              </table>
+              <tr>
+                <td className="border w-[18vw] px-[1vw] py-[1vh] font-bold text-[2vh] text-center">
+                  Subject Code
+                </td>
+                <td className="border w-[18vw] px-[1vw] py-[1vh] font-bold text-[2vh] text-center">
+                  Subject Name
+                </td>
+                <td className="border w-[7vw] px-[1vw]  py-[1vh] font-bold text-[2vh] text-center ">
+                  External
+                </td>
+                <td className="border w-[7vw] px-[1vw]  py-[1vh] font-bold text-[2vh] text-center ">
+                  Mid
+                </td>
+                <td className="border w-[7vw] px-[1vw]  py-[1vh] font-bold text-[2vh] text-center ">
+                  Internal
+                </td>
+                <td className="border w-[7vw] px-[1vw]  py-[1vh] font-bold text-[2vh] text-center ">
+                  Practical
+                </td>
+                <td className="border w-[7vw] px-[1vw]  py-[1vh] font-bold text-[2vh] text-center ">
+                  Total
+                </td>
+              </tr>
+              {renderTableContent()}
+            </div>
+          </div>
+        </Element>
+
         <Element name="laboratory">
           <div className="w-[12vw] h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] ml-[20vw] mt-[10vh]">
             <h2
@@ -143,7 +229,7 @@ const DepartmentPage = () => {
             Placement
           </h2>
         </div>
-        <div className="w-[46vw] ml-[21vw] mt-[5vh] bg-[#27066f43] mb-[10vh]">
+        <div className="w-[46vw] ml-[21vw] mt-[5vh] bg-[#D8D1FF] mb-[10vh]">
           <table>
             <thead>
               <tr>
@@ -178,26 +264,30 @@ const DepartmentPage = () => {
       </Element>
 
       <Element name="department-activities">
-      <div className="w-[12vw] h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] ml-[36vw] mt-[10vh]">
-            <h2
-              id="department-activities"
-              className="ml-[1vw] mt-[0.7vh] text-[2vh] text-[#27066F] font-bold absolute"
-            >
-             Department Activities
-            </h2>
-          </div>
+        <div className="w-[12vw] h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] ml-[36vw] mt-[10vh]">
+          <h2
+            id="department-activities"
+            className="ml-[1vw] mt-[0.7vh] text-[2vh] text-[#27066F] font-bold absolute"
+          >
+            Department Activities
+          </h2>
+        </div>
         <div className="mt-[8vh]">
           <div className="w-[46vw] h-[30vh] bg-[#D8D1FF] ml-[43vh] border border-[#27066F] rounded-[2vh]">
-            <img src="/home/banner-1.jpg" className="w-[17vw] h-[29.7vh] rounded-tl-[2vh] rounded-bl-[2vh]"></img>
+            <img
+              src="/home/banner-1.jpg"
+              className="w-[17vw] h-[29.7vh] rounded-tl-[2vh] rounded-bl-[2vh]"
+            ></img>
           </div>
 
           <div className="w-[46vw] h-[30vh] bg-[#D8D1FF] ml-[43vh] border border-[#27066F] rounded-[2vh] mt-[4vh]">
-            <img src="/home/banner-1.jpg" className="w-[17vw] h-[29.7vh] rounded-tl-[2vh] rounded-bl-[2vh]"></img>
+            <img
+              src="/home/banner-1.jpg"
+              className="w-[17vw] h-[29.7vh] rounded-tl-[2vh] rounded-bl-[2vh]"
+            ></img>
           </div>
         </div>
-
       </Element>
-
     </>
   );
 };
