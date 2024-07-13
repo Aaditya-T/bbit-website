@@ -25,80 +25,80 @@ body {
   box-sizing: border-box;
 }
 
-.container {
+/* .container {
   position: relative;
   margin: 10vh auto 70vh;
   width: 90%;
   max-width: 800px;
-}
+} */
 
-.staircase {
+/* .staircase {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
-}
+} */
 
-.content {
+/* .content {
   position: relative;
   z-index: 10;
   margin-top: 20vh;
-}
+} */
 
-.side-stuff {
+/* .side-stuff {
   position: absolute;
   top: 0;
   left: 0;
-}
+} */
 
-.pin-group-left {
+/* .pin-group-left {
   display: flex;
   align-items: center;
   margin: 3rem 0;
   position: relative;
   margin-left: 5.5rem;
   font-size: 2.5rem;
-}
+} */
 
-.pin-group-left-2 {
+/* .pin-group-left-2 {
   display: flex;
   align-items: center;
   margin: 27rem 0;
   position: relative;
   margin-left: 5.5rem;
   font-size: 2.5rem;
-}
+} */
 
-.pin-group-right {
+/* .pin-group-right {
   display: flex;
   align-items: center;
   margin: 10rem 35rem;
   position: absolute;
-}
-
+} */
+/* 
 .pin-group-right-2 {
   display: flex;
   align-items: top;
   margin: -15rem 30rem;
   position: absolute;
-}
+} */
 
-.pin {
+/* .pin {
   width: 5rem;
   height: 5rem;
   transition: transform 0.3s ease;
-}
+} */
 
-.pin:hover {
+/* .pin:hover {
   transform: scale(1.1);
-}
+} */
 
-.label {
+/* .label {
   margin-left: 1rem;
   margin-top: 3rem;
   font: 10rem 'Orelega One', cursive;
-}
+} */
 
 @media (min-width: 768px) {
   .pin-group {
