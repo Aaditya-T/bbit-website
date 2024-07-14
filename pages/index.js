@@ -254,56 +254,55 @@ const Home = () => {
         </motion.div>
 
         <div className="relative m-[10vh_auto_70vh] w-[52vw] text-white font-OrelegaOne">
-          <div className="absolute top-0 left-0 w-[1vh] h-auto">
-            {stairCase}
-          </div>
-          <div className="relative z-[10vh] mt-[20vh]">
-            <img
-              className="absolute w-[45vw] h-[120vh] ml-[4vw]"
-              src="/home/staircase/sideStuff.png"
-              alt="ellipse"
-            />
+  <div className="absolute top-0 left-0 w-full h-auto">
+    {stairCase}
+  </div>
+  <div className="relative z-10 mt-[20vh]">
+    <img
+      className="w-[60vw] h-auto ml-[1vw]"
+      src="/home/staircase/sideStuff.png"
+      alt="ellipse"
+    />
+    <div className="absolute inset-0 flex flex-col justify-around items-center">
+      <div className="relative flex items-center w-full ml-[8vw]">
+        <img
+          className="absolute -mt-[20vh] ml-[5vw] w-[4vw] h-[7vh] transition transform duration-300 ease-in-out hover:scale-110"
+          src="/home/staircase/pin.png"
+          alt="pin"
+        />
+        <p className="absolute text-[2vw] ml-[8vw] -mt-[8vh]">Courses</p>
+      </div>
+      <div className="relative flex items-center w-full justify-center ml-[34vw]">
+        <p className="absolute text-[2vw] mr-[12vw] -mt-[2vh]">Hostels</p>
+        <img
+          className="absolute -mt-[13vh] mr-[3vw] w-[4vw] h-[7vh] transition transform duration-300 ease-in-out hover:scale-110"
+          src="/home/staircase/pin.png"
+          alt="pin"
+        />
+      </div>
+      <div className="relative flex items-center w-full justify-start ml-[8vw]">
+        <img
+          className="absolute -mt-[12vh] ml-[5vw] w-[4vw] h-[7vh] transition transform duration-300 ease-in-out hover:scale-110"
+          src="/home/staircase/pin.png"
+          alt="pin"
+        />
+        <p className="absolute text-[2vw] ml-[7.5vw] mt-[2vh]">Events</p>
+      </div>
+      <div className="relative flex items-center w-full justify-center ml-[22vw]">
+        <p className="absolute text-[1.5vw] text-center mt-[9vh]">
+          Awards & <br />
+          Achievements
+        </p>
+        <img
+          className="absolute -mt-[5vh] ml-[10vw] w-[4vw] h-[7vh] transition transform duration-300 ease-in-out hover:scale-110"
+          src="/home/staircase/pin.png"
+          alt="pin"
+        />
+      </div>
+    </div>
+  </div>
+</div>
 
-            <div className="flex items-center m-[2vh] relative ml-[8vw]">
-              <img
-                className="w-[4vw] h-[8vh] -mt-[7vh] transition transform duration-300 ease-in-out hover:scale-110 "
-                src="/home/staircase/pin.png"
-                alt="ellipse"
-              />
-              <p className="mt-[7vh] text-[4vh]">Courses</p>
-            </div>
-
-            <div className="flex items-center mt-[21vh] ml-[34vw]">
-              <p className="mt-[7vh] text-[4vh]">Hostels</p>
-              <img
-                className="w-[4vw] h-[8vh] -mt-[7vh] transition transform duration-300 ease-in-out hover:scale-110"
-                src="/home/staircase/pin.png"
-                alt="ellipse"
-              />
-            </div>
-
-            <div className="flex items-center mt-[21vh] ml-[8vw]">
-              <img
-                className="w-[4vw] h-[8vh] -mt-[10vh] transition transform duration-300 ease-in-out hover:scale-110"
-                src="/home/staircase/pin.png"
-                alt="ellipse"
-              />
-              <p className="mt-[5vh] text-[4vh]">Events</p>
-            </div>
-
-            <div className="flex align-top mt-[28vh] ml-[27vw]">
-              <p className="-mt-[1vh] text-[3.5vh] ml-[4.5vw] text-center">
-                Awards & <br />
-                Achievements
-              </p>
-              <img
-                className="w-[4vw] h-[8vh] -mt-[6vh] transition transform duration-300 ease-in-out hover:scale-110"
-                src="/home/staircase/pin.png"
-                alt="ellipse"
-              />
-            </div>
-          </div>
-        </div>
 
         <div className="relative w-[80vw] h-[200vh]">
           <div className="relative top-0 left-0 w-full h-full">
