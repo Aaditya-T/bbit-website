@@ -292,7 +292,7 @@ const Home = () => {
             </div>
 
             <div className="flex align-top mt-[28vh] ml-[27vw]">
-              <p className="-mt-[2vh] text-[4vh] ml-[4vw] text-center">
+              <p className="-mt-[1vh] text-[3.5vh] ml-[4.5vw] text-center">
                 Awards & <br />
                 Achievements
               </p>
@@ -350,29 +350,24 @@ const Home = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-[2vh]">
-                  <ul className="list-disc list-inside">
-                    <li className="text-[2.5vh] font-semibold">
+                  <ul className="list-disc">
+                    <li className="text-[2.5vh] font-semibold mb-[2vh]">
                       Prepare the student with strong fundamental concepts,
                       analytical abilities & Problem solving skills.
                     </li>
-                    <br/>
-                    <li className="text-[2.5vh] font-semibold">
+                    <li className="text-[2.5vh] font-semibold mb-[2vh]">
                       Offer ambiance & Support to cultivate creativity &
                       Innovation.
                     </li>
-                    <br/>
-                    <li className="text-[2.5vh] font-semibold">
+                    <li className="text-[2.5vh] font-semibold mb-[2vh]">
                       Disseminate quality training to enhance skills &
                       Entrepreneurship for professional development.
                     </li>
-                    <br/>
-
-                    <li className="text-[2.5vh] font-semibold">
+                    <li className="text-[2.5vh] font-semibold mb-[2vh]">
                       Establish opportunities for the students and teachers for
                       lifelong learning to meet the ever changing global
                       technological standards.
                     </li>
-                    <br/>
                     <li className="text-[2.5vh] font-semibold">
                       Foster students to seek excellence in technical education.
                     </li>

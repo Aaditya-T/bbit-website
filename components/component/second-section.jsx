@@ -70,7 +70,7 @@ export function SecondSection() {
               <p className="text-[1vw] font-semibold">
                 I am proud of being the Principal of such a wonderful institution dedicated to the causes of better
                 India. Through education and their real empowerment, come on let&apos;s give our best and make this
-                institution a modern temple of learning through our diligence, devotion and dedication. READ MORE...
+                institution a modern temple of learning through our diligence, devotion and dedication.
               </p>
             </CardContent>
           </Card>
