@@ -1,18 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FlexBanner from "../components/FlexBanner";
 import { motion } from "framer-motion";
 import { SecondSection } from "@/components/component/second-section";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardFooter,
-  CardDescription,
-} from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import CountUp from "react-countup";
+import { isMobile } from "react-device-detect";
 
 const stairCase = (
   <div className="w-[52vw] h-[65vh]">
@@ -150,233 +144,254 @@ const stairCase = (
 );
 
 const Home = () => {
+  const [isMob, setIsMob] = useState(false);
+
+  useEffect(() => {
+    setIsMob(isMobile);
+  }, []);
+
   return (
     <div style={{ overflow: "hidden" }}>
-      <FlexBanner />
-      <main>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
-          className="absolute text-[--text-primary] font-OrelegaOne ml-[10vw] z-10"
-        >
-          <div className="text-left text-[3vw] font-bold mt-[20vh] mb-[1vh]">
-            Welcome to B & B <br /> Institute Of Technology
-          </div>
-          <div className="text-[1.5vw]">
-            Unlock your potential with innovative
-            <br /> courses and hands-on learning
-            <br />
-            opportunities.
-          </div>
-        </motion.div>
-
-        <div className="relative flex justify-center items-center min-h-screen w-screen">
-          <svg
-            viewBox="0 0 2158 770"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute bottom-0 w-screen"
-          >
-            <path
-              d="M89.1505 263.12C48.1347 255.76 0 252.615 0 252.615V786H1046.79H2158V0C2158 0 2127.62 0.500308 2020.16 36.5747C1912.69 72.6491 1266.93 343.016 818.006 401.463C564.394 434.483 319.853 304.517 89.1505 263.12Z"
-              fill="url(#paint0_linear_86_118)"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_86_118"
-                x1="1079"
-                y1="767.492"
-                x2="1079"
-                y2="0.141304"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#F3F2FF" />
-                <stop offset="0.15" stop-color="#AB86F7" />
-                <stop offset="0.24" stop-color="#8146F2" />
-                <stop offset="0.75" stop-color="#5F13EE" />
-              </linearGradient>
-            </defs>
-          </svg>
-
-          <div className="absolute bottom-[10vh] flex flex-row justify-center items-center">
+      {!isMob && (
+        <>
+          <FlexBanner />
+          <main>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5 }}
-              className="z-10 flex flex-row items-center text-white gap-[14vw]"
+              className="absolute text-[--text-primary] font-OrelegaOne ml-[10vw] z-10"
             >
-              <div className="flex flex-col items-center">
-                <CountUp
-                  end={85}
-                  duration={5}
-                  className="text-[4vw] font-bold"
-                />
-                <p className="text-center text-[2vw] mt-2">
-                  Certified Teachers
-                </p>
+              <div className="text-left text-[3vw] font-bold mt-[20vh] mb-[1vh]">
+                Welcome to B & B <br /> Institute Of Technology
               </div>
-              <div className="flex flex-col items-center">
-                <CountUp
-                  end={3000}
-                  duration={5}
-                  className="text-[4vw] font-bold"
-                />
-                <p className="text-center text-[2vw] mt-2">Students</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <CountUp
-                  end={7}
-                  duration={5}
-                  className="text-[4vw] font-bold"
-                />
-                <p className="text-center text-[2vw] mt-2">Courses</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <CountUp
-                  end={24}
-                  duration={5}
-                  className="text-[4vw] font-bold"
-                />
-                <p className="text-center text-[2vw] mt-2">Awards Won</p>
+              <div className="text-[1.5vw]">
+                Unlock your potential with innovative
+                <br /> courses and hands-on learning
+                <br />
+                opportunities.
               </div>
             </motion.div>
-          </div>
-        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          transition={{ duration: 1.5 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="mt-[10vh]"
-        >
-          <SecondSection />
-        </motion.div>
+            <div className="relative flex justify-center items-center min-h-screen w-screen">
+              <svg
+                viewBox="0 0 2158 770"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute bottom-0 w-screen"
+              >
+                <path
+                  d="M89.1505 263.12C48.1347 255.76 0 252.615 0 252.615V786H1046.79H2158V0C2158 0 2127.62 0.500308 2020.16 36.5747C1912.69 72.6491 1266.93 343.016 818.006 401.463C564.394 434.483 319.853 304.517 89.1505 263.12Z"
+                  fill="url(#paint0_linear_86_118)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_86_118"
+                    x1="1079"
+                    y1="767.492"
+                    x2="1079"
+                    y2="0.141304"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#F3F2FF" />
+                    <stop offset="0.15" stop-color="#AB86F7" />
+                    <stop offset="0.24" stop-color="#8146F2" />
+                    <stop offset="0.75" stop-color="#5F13EE" />
+                  </linearGradient>
+                </defs>
+              </svg>
 
-        <div className="relative m-[10vh_auto_70vh] w-[52vw] text-white font-OrelegaOne">
-  <div className="absolute top-0 left-0 w-full h-auto">
-    {stairCase}
-  </div>
-  <div className="relative z-10 mt-[20vh]">
-    <img
-      className="w-[60vw] h-auto ml-[1vw]"
-      src="/home/staircase/sideStuff.png"
-      alt="ellipse"
-    />
-    <div className="absolute inset-0 flex flex-col justify-around items-center">
-      <div className="relative flex items-center w-full ml-[8vw]">
-        <img
-          className="absolute -mt-[20vh] ml-[5vw] w-[4vw] h-[7vh] transition transform duration-300 ease-in-out hover:scale-110"
-          src="/home/staircase/pin.png"
-          alt="pin"
-        />
-        <p className="absolute text-[2vw] ml-[8vw] -mt-[8vh]">Courses</p>
-      </div>
-      <div className="relative flex items-center w-full justify-center ml-[34vw]">
-        <p className="absolute text-[2vw] mr-[12vw] -mt-[2vh]">Hostels</p>
-        <img
-          className="absolute -mt-[13vh] mr-[3vw] w-[4vw] h-[7vh] transition transform duration-300 ease-in-out hover:scale-110"
-          src="/home/staircase/pin.png"
-          alt="pin"
-        />
-      </div>
-      <div className="relative flex items-center w-full justify-start ml-[8vw]">
-        <img
-          className="absolute -mt-[12vh] ml-[5vw] w-[4vw] h-[7vh] transition transform duration-300 ease-in-out hover:scale-110"
-          src="/home/staircase/pin.png"
-          alt="pin"
-        />
-        <p className="absolute text-[2vw] ml-[7.5vw] mt-[2vh]">Events</p>
-      </div>
-      <div className="relative flex items-center w-full justify-center ml-[22vw]">
-        <p className="absolute text-[1.5vw] text-center mt-[9vh]">
-          Awards & <br />
-          Achievements
-        </p>
-        <img
-          className="absolute -mt-[5vh] ml-[10vw] w-[4vw] h-[7vh] transition transform duration-300 ease-in-out hover:scale-110"
-          src="/home/staircase/pin.png"
-          alt="pin"
-        />
-      </div>
-    </div>
-  </div>
-</div>
-
-
-        <div className="relative w-[80vw] h-[200vh]">
-          <div className="relative top-0 left-0 w-full h-full">
-            <img
-              src="/home/visionMission/image.png"
-              alt="visionMission"
-              className="w-[40vw] absolute top-0 left-0"
-            />
-
-            <div className="-top-[10vh] left-[10vw] h-full flex flex-col justify-center items-center relative">
-              <Card className="p-[5vh] bg-[#D8D1FF] rounded-[2vh] shadow-lg w-[65vw] text-[#27066F]">
-                <CardHeader className="pb-[3vh]">
-                  <div className="flex items-center space-x-[2vh] mx-auto">
-                    <div>
-                      <CardTitle className="text-[4.5vh] font-bold">
-                        Vision
-                      </CardTitle>
-                    </div>
+              <div className="absolute bottom-[10vh] flex flex-row justify-center items-center">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.5 }}
+                  className="z-10 flex flex-row items-center text-white gap-[14vw]"
+                >
+                  <div className="flex flex-col items-center">
+                    <CountUp
+                      end={85}
+                      duration={5}
+                      className="text-[4vw] font-bold"
+                    />
+                    <p className="text-center text-[2vw] mt-2">
+                      Certified Teachers
+                    </p>
                   </div>
-                </CardHeader>
-                <CardContent className="space-y-[2vh]">
-                  <p className="text-[2.5vh] font-semibold">
-                    At BBIT our vision is to create a nurturing and innovative
-                    environment where every student can thrive academically,
-                    socially, and personally. We aspire to be a leading
-                    institution recognized for excellence in education,
-                    fostering a culture of inclusivity, critical thinking, and
-                    lifelong learning. Through cutting-edge research, community
-                    engagement, and a commitment to sustainability, we aim to
-                    empower our students to become compassionate leaders and
-                    impactful global citizens.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="p-[5vh] bg-[#D8D1FF] rounded-[2vh] shadow-lg w-[65vw] mt-[38vh] text-[#27066F]">
-                <CardHeader className="pb-[3vh]">
-                  <div className="flex items-center space-x-[2vh] mx-auto">
-                    <div>
-                      <CardTitle className="text-[4.5vh] font-bold">
-                        Mission
-                      </CardTitle>
-                    </div>
+                  <div className="flex flex-col items-center">
+                    <CountUp
+                      end={3000}
+                      duration={5}
+                      className="text-[4vw] font-bold"
+                    />
+                    <p className="text-center text-[2vw] mt-2">Students</p>
                   </div>
-                </CardHeader>
-                <CardContent className="space-y-[2vh]">
-                  <ul className="list-disc">
-                    <li className="text-[2.5vh] font-semibold mb-[2vh]">
-                      Prepare the student with strong fundamental concepts,
-                      analytical abilities & Problem solving skills.
-                    </li>
-                    <li className="text-[2.5vh] font-semibold mb-[2vh]">
-                      Offer ambiance & Support to cultivate creativity &
-                      Innovation.
-                    </li>
-                    <li className="text-[2.5vh] font-semibold mb-[2vh]">
-                      Disseminate quality training to enhance skills &
-                      Entrepreneurship for professional development.
-                    </li>
-                    <li className="text-[2.5vh] font-semibold mb-[2vh]">
-                      Establish opportunities for the students and teachers for
-                      lifelong learning to meet the ever changing global
-                      technological standards.
-                    </li>
-                    <li className="text-[2.5vh] font-semibold">
-                      Foster students to seek excellence in technical education.
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+                  <div className="flex flex-col items-center">
+                    <CountUp
+                      end={7}
+                      duration={5}
+                      className="text-[4vw] font-bold"
+                    />
+                    <p className="text-center text-[2vw] mt-2">Courses</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <CountUp
+                      end={24}
+                      duration={5}
+                      className="text-[4vw] font-bold"
+                    />
+                    <p className="text-center text-[2vw] mt-2">Awards Won</p>
+                  </div>
+                </motion.div>
+              </div>
             </div>
-          </div>
-        </div>
-      </main>
+
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              transition={{ duration: 1.5 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="mt-[10vh]"
+            >
+              <SecondSection />
+            </motion.div>
+
+            <div className="relative m-[10vh_auto_70vh] w-[52vw] text-white font-OrelegaOne">
+              <div className="absolute top-0 left-0 w-full h-auto">
+                {stairCase}
+              </div>
+              <div className="relative z-10 mt-[20vh]">
+                <img
+                  className="w-[60vw] h-auto ml-[1vw]"
+                  src="/home/staircase/sideStuff.png"
+                  alt="ellipse"
+                />
+                <div className="absolute inset-0 flex flex-col justify-around items-center">
+                  <div className="relative flex items-center w-full ml-[8vw]">
+                    <img
+                      className="absolute -mt-[20vh] ml-[5vw] w-[4vw] h-[7vh] transition transform duration-300 ease-in-out hover:scale-110"
+                      src="/home/staircase/pin.png"
+                      alt="pin"
+                    />
+                    <p className="absolute text-[2vw] ml-[8vw] -mt-[8vh]">
+                      Courses
+                    </p>
+                  </div>
+                  <div className="relative flex items-center w-full justify-center ml-[34vw]">
+                    <p className="absolute text-[2vw] mr-[12vw] -mt-[2vh]">
+                      Hostels
+                    </p>
+                    <img
+                      className="absolute -mt-[13vh] mr-[3vw] w-[4vw] h-[7vh] transition transform duration-300 ease-in-out hover:scale-110"
+                      src="/home/staircase/pin.png"
+                      alt="pin"
+                    />
+                  </div>
+                  <div className="relative flex items-center w-full justify-start ml-[8vw]">
+                    <img
+                      className="absolute -mt-[12vh] ml-[5vw] w-[4vw] h-[7vh] transition transform duration-300 ease-in-out hover:scale-110"
+                      src="/home/staircase/pin.png"
+                      alt="pin"
+                    />
+                    <p className="absolute text-[2vw] ml-[7.5vw] mt-[2vh]">
+                      Events
+                    </p>
+                  </div>
+                  <div className="relative flex items-center w-full justify-center ml-[22vw]">
+                    <p className="absolute text-[1.5vw] text-center mt-[9vh]">
+                      Awards & <br />
+                      Achievements
+                    </p>
+                    <img
+                      className="absolute -mt-[5vh] ml-[10vw] w-[4vw] h-[7vh] transition transform duration-300 ease-in-out hover:scale-110"
+                      src="/home/staircase/pin.png"
+                      alt="pin"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative w-[80vw] h-[200vh]">
+              <div className="relative top-0 left-0 w-full h-full">
+                <img
+                  src="/home/visionMission/image.png"
+                  alt="visionMission"
+                  className="w-[40vw] absolute top-0 left-0"
+                />
+
+                <div className="-top-[10vh] left-[10vw] h-full flex flex-col justify-center items-center relative">
+                  <Card className="p-[5vh] bg-[#D8D1FF] rounded-[2vh] shadow-lg w-[65vw] text-[#27066F]">
+                    <CardHeader className="pb-[3vh]">
+                      <div className="flex items-center space-x-[2vh] mx-auto">
+                        <div>
+                          <CardTitle className="text-[4.5vh] font-bold">
+                            Vision
+                          </CardTitle>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="space-y-[2vh]">
+                      <p className="text-[2.5vh] font-semibold">
+                        At BBIT our vision is to create a nurturing and
+                        innovative environment where every student can thrive
+                        academically, socially, and personally. We aspire to be
+                        a leading institution recognized for excellence in
+                        education, fostering a culture of inclusivity, critical
+                        thinking, and lifelong learning. Through cutting-edge
+                        research, community engagement, and a commitment to
+                        sustainability, we aim to empower our students to become
+                        compassionate leaders and impactful global citizens.
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="p-[5vh] bg-[#D8D1FF] rounded-[2vh] shadow-lg w-[65vw] mt-[38vh] text-[#27066F]">
+                    <CardHeader className="pb-[3vh]">
+                      <div className="flex items-center space-x-[2vh] mx-auto">
+                        <div>
+                          <CardTitle className="text-[4.5vh] font-bold">
+                            Mission
+                          </CardTitle>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="space-y-[2vh]">
+                      <ul className="list-disc">
+                        <li className="text-[2.5vh] font-semibold mb-[2vh]">
+                          Prepare the student with strong fundamental concepts,
+                          analytical abilities & Problem solving skills.
+                        </li>
+                        <li className="text-[2.5vh] font-semibold mb-[2vh]">
+                          Offer ambiance & Support to cultivate creativity &
+                          Innovation.
+                        </li>
+                        <li className="text-[2.5vh] font-semibold mb-[2vh]">
+                          Disseminate quality training to enhance skills &
+                          Entrepreneurship for professional development.
+                        </li>
+                        <li className="text-[2.5vh] font-semibold mb-[2vh]">
+                          Establish opportunities for the students and teachers
+                          for lifelong learning to meet the ever changing global
+                          technological standards.
+                        </li>
+                        <li className="text-[2.5vh] font-semibold">
+                          Foster students to seek excellence in technical
+                          education.
+                        </li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+          </main>
+        </>
+      )}
+      {
+        isMob && (
+          <h1>Mobile View</h1>
+        )
+      }
     </div>
   );
 };
