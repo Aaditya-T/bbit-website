@@ -1,15 +1,13 @@
-import { Card, CardHeader, CardTitle, CardContent, CardFooter, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import { Card, CardHeader, CardTitle, CardContent, CardFooter, CardDescription } from "@/components/ui/card"
 
 export function SecondSection() {
   return (
-    (<div
-      className="flex flex-col items-center justify-center max-w-[70vw] mx-auto">
+    (<div className="mt-[10vh] flex flex-col items-center justify-center max-w-[70vw] mx-auto">
       <div className="grid gap-[10vw] md:grid-cols-3">
-        <Card className="p-[2vw] rounded-2xl shadow-lg bg-[#D8D1FF] min-w-[30vw] max-w-[30vw]">
+        <Card className="p-[2vw] rounded-2xl bg-[#D8D1FF] min-w-[30vw] max-w-[30vw]">
           <CardHeader className="items-center">
-            <CardTitle className="text-[2vw] font-light font-OrelegaOne">LATEST NEWS</CardTitle>
+            <CardTitle className="text-[2vw] text-[#27066F] font-bold">LATEST NEWS</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             {
@@ -31,51 +29,67 @@ export function SecondSection() {
             <Button variant="default" className="bg-[#EAE6FF] rounded-xl">View More</Button>
           </CardFooter>
         </Card>
-        <div className="md:col-span-2 flex flex-col gap-6 ml-[7vw]">
-          <Card className="p-[1vw] bg-[#D8D1FF] rounded-2xl shadow-lg">
-            <CardHeader className="pb-4">
-              <div className="flex items-center space-x-4">
-                <Avatar className="w-[5vw] h-[5vw]">
-                  <AvatarImage src="/home/chairman.svg" />
-                  <AvatarFallback>BP</AvatarFallback>
-                </Avatar>
-                <div>
-                  <CardTitle className="text-[2vw] font-bold">Chairman{"'"}s Message</CardTitle>
-                  <CardDescription className="text-[1.5vw] font-medium">Er. BHIKHUBHAI B. PATEL</CardDescription>
+       
+<div className=" left-[16vw] h-full flex flex-col justify-center items-center relative">
+                  <Card className="bg-[#D8D1FF] rounded-[2vh] w-[40vw] h-[25vh] text-[#27066F] absolute mb-[39vh]">
+                    <CardHeader className="pb-[0vh]">
+                      <div className="flex items-center space-x-[2vh] mx-auto">
+                        <div>
+                          <CardTitle className="text-[2.7vh] font-bold -mt-[1vh]">
+                            Our Vision
+                          </CardTitle>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="space-y-[2vh]">
+                      <p className="text-[1.9vh] font-semibold">
+                        At BBIT our vision is to create a nurturing and
+                        innovative environment where every student can thrive
+                        academically, socially, and personally. We aspire to be
+                        a leading institution recognized for excellence in
+                        education, fostering a culture of inclusivity, critical
+                        thinking, and lifelong learning. Through cutting-edge
+                        research, community engagement, and a commitment to
+                        sustainability, we aim to empower our students to become
+                        compassionate leaders and impactful global citizens.
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="p-[2.5vh] bg-[#D8D1FF] rounded-[2vh] w-[40vw] h-[37vh] mt-[27vh] text-[#27066F]">
+                    <CardHeader className="pb-[0vh]">
+                      <div className="flex items-center space-x-[2vh] mx-auto">
+                        <div>
+                          <CardTitle className="text-[2.7vh] font-bold -mt-[4vh] mb-[1vh]">
+                           Our Mission
+                          </CardTitle>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="space-y-[2vh]">
+                      <ul className="list-disc">
+                        <li className="text-[2vh] font-semibold mb-[1.7vh]">
+                        Develop strong fundamental concepts, analytical abilities, and problem-solving skills.
+                        </li>
+                        <li className="text-[2vh] font-semibold mb-[1.7vh]">
+                        Provide an environment that fosters creativity and innovation.
+                        </li>
+                        <li className="text-[2vh] font-semibold mb-[1.7vh]">
+                        Deliver quality training to enhance skills and entrepreneurship.
+                        </li>
+                        <li className="text-[2vh] font-semibold mb-[1.7vh]">
+                        Create opportunities for lifelong learning to meet evolving global technological standards.
+                        </li>
+                        <li className="text-[2vh] font-semibold">
+                        Encourage excellence in technical education.
+                        </li>
+                      </ul>
+                    </CardContent>
+                  </Card>
                 </div>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-[1vw] font-semibold">
-                Education plays a vital role in the socio-economic development of the country. Education that is
-                thorough, purposeful and meets the requirements of today&apos;s technological industry market. It is our
-                deepest desire to serve the society by molding the technocrats of tomorrow.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="p-[1vw] bg-[#D8D1FF] rounded-2xl shadow-lg">
-            <CardHeader className="pb-4">
-              <div className="flex items-center space-x-4">
-                <Avatar className="w-[5vw] h-[5vw]">
-                  <AvatarImage src="/home/principal.svg" />
-                  <AvatarFallback>KM</AvatarFallback>
-                </Avatar>
-                <div>
-                  <CardTitle className="text-[2vw] font-bold">Principal{"'"}s Message</CardTitle>
-                  <CardDescription className="text-[1.5vw] font-medium">Dr. K.M Makwana</CardDescription>
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-[1vw] font-semibold">
-                I am proud of being the Principal of such a wonderful institution dedicated to the causes of better
-                India. Through education and their real empowerment, come on let&apos;s give our best and make this
-                institution a modern temple of learning through our diligence, devotion and dedication.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
+        
       </div>
+      
     </div>)
   );
 }
