@@ -1,8 +1,10 @@
 "use client";
 import Sidebar from '@/components/sidebar';
+import { data } from 'autoprefixer';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { Element } from 'react-scroll';
+
 
 const DepartmentPage = ({ dept }) => {
   const router = useRouter();
@@ -15,13 +17,13 @@ const DepartmentPage = ({ dept }) => {
     if (!course) return;
     if (!dept) return;
     const data = dept.find((dept) => dept.slug === course);
-    console.log(data);
     setDepartmentData(data);
   }, [course, dept]);
 
 
   return (
     <>
+    
       <div className="left-[1vw] -mt-[31vh] absolute text-[2.1vh]">
         <Sidebar />
       </div>
@@ -58,20 +60,20 @@ const DepartmentPage = ({ dept }) => {
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 mx-[10vh] w-[40vw]">
-            {/* {departmentData.faculties.map((faculty) => (
+            {departmentData?.faculty.map((faculty) => (
               <div
                 key={faculty.id}
                 className="mt-[2vh] text-[#54031f] font-medium sm:w-auto border-[0.1vw] border-solid border-[#54031f] rounded-[1vw] p-[0.5vh]"
               >
                 <div className="w-full">
                   <img
-                    src={faculty.image}
-                    alt={faculty.name}
+                    src={`https://y4xgzczst4lpi3wu.public.blob.vercel-storage.com${faculty.image}`}
+                    alt={faculty.full_name}
                     className="h-[22vh] w-[22vw] object-cover rounded-t-[2vh]"
                   />
                 </div>
                 <div className="p-[0vh]">
-                  <p className="text-[1.6vh] text-center">{faculty.name}</p>
+                  <p className="text-[1.6vh] text-center">{faculty.full_name}</p>
                   <p className="text-[1.6vh] text-center">
                     {faculty.designation}
                   </p>
@@ -79,11 +81,11 @@ const DepartmentPage = ({ dept }) => {
                     Qualification: {faculty.qualification}
                   </h2>
                   <h2 className="text-[1.6vh] text-center">
-                    Experience: {faculty.experience}
+                    Experience: {new Date().getFullYear() - faculty.yoe + " years"}
                   </h2>
                 </div>
               </div>
-            ))} */}
+            ))}
           </div>
         </Element>
 
