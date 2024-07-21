@@ -24,8 +24,8 @@ const topButts = [
     icon: "/home/heroSection/btnevents.svg",
   },
   {
-    name: "Contact Us",
-    icon: "/home/heroSection/btncontact.svg",
+    name: "Newsletter",
+    icon: "/home/heroSection/btnnewsletter.svg",
   },
 ];
 
@@ -50,14 +50,18 @@ const Home = () => {
               transition={{ duration: 1.5 }}
               className="absolute text-[--text-primary] font-OrelegaOne ml-[10vw] z-10"
             >
-              <div className="text-left text-[3vw] font-bold mt-[20vh] mb-[1vh]">
-                Welcome to B & B <br /> Institute Of Technology
+              <div className="text-left text-[2.4vw] mt-[12vh] mb-[0.8vh]">
+                <div className="text-[1.8vw]">Welcome to</div> 
+                B & B Institute Of Technology
               </div>
-              <div className="text-[1.5vw]">
+              <div className="text-[1.4vw]">
                 Unlock your potential with innovative
                 <br /> courses and hands-on learning
                 <br />
                 opportunities.
+              </div>
+              <div className="mt-[1.5vh] font-extralight text-[1vw]">Contact us to know more:
+                <br/> Phone: 02692 - 237240 <br/>Email: principal@bbit.ac.in
               </div>
             </motion.div>
 
@@ -107,7 +111,7 @@ const Home = () => {
                           alt={item.name}
                           className="w-[10vw] h-[8vh]"
                         />
-                        <button className="text-white bg-[daisyBush100] px-3 py-2 mt-7 rounded-full border-2 border-[--daisyBush100] text-[1.7vh]">
+                        <button className="text-white bg-[daisyBush100] w-[12vw] py-[0.8vh] mt-[2.5vh] rounded-full border-[0.3vh] border-[--daisyBush100] text-[1.7vh]">
                           {item.name}
                         </button>
                       </div>

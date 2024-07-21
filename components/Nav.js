@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const cmnClass =
-  "text-[#27066F] hover:text-gray-700 font-medium transition-all duration-300 text-[3vh]";
+  "text-[#27066F] hover:text-gray-700 transition-all duration-300 text-[3vh] font-medium";
 
 const menuList = [
   {

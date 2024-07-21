@@ -31,14 +31,14 @@ const FlexBanner = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5 }}
-      className="absolute mt-[5vh] w-[25vw] h-[10vh] flex gap-1 top-[10vh] right-[10vw] z-[1]"
+      className="absolute mt-[5vh] w-[25vw] h-[10vh] flex gap-[0.1vh] top-[10vh] right-[10vw] z-[1]"
     >
       {[1, 2, 3, 4].map((index) => (
         <img
           key={index}
           src={`/home/banner-${index}.jpg`}
           alt="college-images"
-          className={`hover:w-[100%] w-[10%] h-[40vh] object-cover border-2 rounded-[10px] border-solid border-[#27066F] z-[1]`}
+          className={`hover:w-[100%] w-[10%] h-[40vh] object-cover border-[0.3vh] rounded-[2vh] border-solid border-[#27066F] z-[1]`}
           id={`banner-${index}`}
         />
       ))}
