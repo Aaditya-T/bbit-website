@@ -20,14 +20,17 @@ const topButts = [
   {
     name: "Awards & Achievements",
     icon: "/home/heroSection/btnawards.svg",
+    href: "/awards",
   },
   {
     name: "Events Held",
     icon: "/home/heroSection/btnevents.svg",
+    href: "/events",
   },
   {
     name: "Newsletter",
     icon: "/home/heroSection/btnnewsletter.svg",
+    href: "/newsletter"
   },
 ];
 
@@ -113,7 +116,7 @@ const Home = () => {
                           alt={item.name}
                           className="w-[10vw] h-[8vh]"
                         />
-                        <button className="text-white bg-[daisyBush100] w-[12vw] py-[0.8vh] mt-[2.5vh] rounded-full border-[0.3vh] border-[--daisyBush100] text-[1.7vh]">
+                        <button className="text-white bg-[daisyBush100] w-[12vw] py-[0.8vh] mt-[2.5vh] rounded-full border-[0.3vh] border-[--daisyBush100] text-[1.7vh] cursor-pointer" onClick={() => window.location.href = item.href}>
                           {item.name}
                         </button>
                       </div>

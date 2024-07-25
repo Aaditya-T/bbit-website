@@ -12,19 +12,23 @@ const menuList = [
     link: "#",
   },
   {
+    name: "About",
+    link: "#",
+  },
+  {
     name: "Admissions",
     link: "admission",
+  },
+  {
+    name: "Department",
+    link: "courses"
   },
   {
     name: "Placements",
     link: "#",
   },
   {
-    name: "About",
-    link: "#",
-  },
-  {
-    name: "Contact",
+    name: "Downloads",
     link: "#",
   },
 ];

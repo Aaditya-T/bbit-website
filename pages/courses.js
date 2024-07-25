@@ -30,7 +30,7 @@ const Cards = ({ dept }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex flex-wrap justify-center gap-[3vw]"
+          className="flex flex-wrap justify-center gap-[1.5vw]"
         >
           {deptsData !== null &&
             Object.keys(deptsData).map((key, index) => {
