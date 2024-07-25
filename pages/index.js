@@ -244,7 +244,7 @@ const Home = () => {
             </div>
           </motion.div>
 
-          <div className="relative w-[22vw] mt-[9vh]">
+          <div className=" w-[22vw] mt-[9vh] bottom-0">
             <svg
               width="503"
               height="357"

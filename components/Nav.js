@@ -13,7 +13,7 @@ const menuList = [
   },
   {
     name: "Admissions",
-    link: "#",
+    link: "admission",
   },
   {
     name: "Placements",
@@ -46,7 +46,7 @@ const Nav = () => {
     <nav className="flex items-center justify-between w-full h-[8vh] fixed top-0 z-50 bg-[#F3F2FF]">
       <div className="flex items-center gap-[2vh] p-[2vh] mt-[1vh]">
           <Link href="/">
-            <Image src="/home/bbit.png" alt="logo" width={100} height={50} />
+            <img src="/home/bbit.png" alt="logo" className="h-[6vh] w-[13vh]"/>
           </Link>
       </div>
       <motion.div
