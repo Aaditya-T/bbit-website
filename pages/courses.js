@@ -47,7 +47,7 @@ const Cards = ({ dept }) => {
                     {dept.type}
                   </button>
                 );
-              });
+              }); 
               return (
                 <div className="relative text-[2vh] w-[22vw] h-[28vh] bg-[#FFB224] rounded-[4vh] text-[#FFFAEB] text-start" key={index}>
                   <span className='mr-[10vw] ml-[1vw] mt-[5vh] text-[3vh] inline-block font-bold' data-name={name}>{name}</span>

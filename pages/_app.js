@@ -3,12 +3,14 @@ import Nav from "../components/Nav";
 import Footer from "../components/footer";
 import "../styles/globals.css";
 import { useEffect, useState } from "react";
+import NavMobile from "@/components/mobile/nav";
 
 function MyApp({ Component, pageProps }) {
   const [isMob, setIsMob] = useState(false);
   const [dept, setDept] = useState(null);
 
   useEffect(() => {
+    console.log(isMobile);
     setIsMob(isMobile);
 
     const url = "/api/dept";
@@ -28,7 +30,10 @@ function MyApp({ Component, pageProps }) {
           <Footer />
         </>
       ) : (
-        <Component {...pageProps} dept={dept} />
+        <>
+          <NavMobile />
+          <Component {...pageProps} dept={dept} />
+        </>
       )}
 
     </>
