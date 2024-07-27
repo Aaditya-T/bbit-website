@@ -4,7 +4,8 @@ const Events = () => {
     const [eventData, setEventData] = useState(null);
     const [error, setError] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const eventsPerPage = 6; 
+    const eventsPerPage = 1; // Number of events per page
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -40,6 +41,70 @@ const Events = () => {
 
     const startIndex = (currentPage - 1) * eventsPerPage;
     const displayedEvents = eventData ? eventData.slice(startIndex, startIndex + eventsPerPage) : [];
+    const totalPages = eventData ? Math.ceil(eventData.length / eventsPerPage) : 1;
+
+    const renderPaginationButtons = () => {
+        const buttons = [];
+
+        if (totalPages <= 5) {
+            for (let i = 1; i <= totalPages; i++) {
+                buttons.push(
+                    <button
+                        key={i}
+                        onClick={() => handlePageClick(i)}
+                        className={`border border-[#27066F] px-[1.5vh] py-[1vh] rounded-xl w-[7vh] h-[7vh] flex justify-center items-center ${currentPage === i ? 'bg-[#27066F] text-white' : ''}`}
+                    >
+                        {i}
+                    </button>
+                );
+            }
+        } else {
+            buttons.push(
+                <button
+                    key={1}
+                    onClick={() => handlePageClick(1)}
+                    className={`border border-[#27066F] px-[1.5vh] py-[1vh] rounded-xl w-[7vh] h-[7vh] flex justify-center items-center ${currentPage === 1 ? 'bg-[#27066F] text-white' : ''}`}
+                >
+                    1
+                </button>
+            );
+
+            if (currentPage > 3) {
+                buttons.push(<span key="left-ellipsis" className="px-[1.5vh] py-[1vh] flex justify-center items-center">...</span>);
+            }
+
+            const startPage = Math.max(2, currentPage - 1);
+            const endPage = Math.min(totalPages - 1, currentPage + 1);
+
+            for (let i = startPage; i <= endPage; i++) {
+                buttons.push(
+                    <button
+                        key={i}
+                        onClick={() => handlePageClick(i)}
+                        className={`border border-[#27066F] px-[1.5vh] py-[1vh] rounded-xl w-[7vh] h-[7vh] flex justify-center items-center ${currentPage === i ? 'bg-[#27066F] text-white' : ''}`}
+                    >
+                        {i}
+                    </button>
+                );
+            }
+
+            if (currentPage < totalPages - 2) {
+                buttons.push(<span key="right-ellipsis" className="px-[1.5vh] py-[1vh] flex justify-center items-center">...</span>);
+            }
+
+            buttons.push(
+                <button
+                    key={totalPages}
+                    onClick={() => handlePageClick(totalPages)}
+                    className={`border border-[#27066F] px-[1.5vh] py-[1vh] rounded-xl w-[7vh] h-[7vh] flex justify-center items-center ${currentPage === totalPages ? 'bg-[#27066F] text-white' : ''}`}
+                >
+                    {totalPages}
+                </button>
+            );
+        }
+
+        return buttons;
+    };
 
     return (
         <div className="mt-[10vh] mb-[20vh]">
@@ -76,20 +141,12 @@ const Events = () => {
                     <svg width="800px" height="800px" viewBox="0 0 1024 1024" className="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M768 903.232l-50.432 56.768L256 512l461.568-448 50.432 56.768L364.928 512z" fill="#000000" /></svg>
                 </button>
 
-                {Array.from({ length: Math.ceil(eventData ? eventData.length / eventsPerPage : 1) }, (_, i) => (
-                    <button
-                        key={i}
-                        onClick={() => handlePageClick(i + 1)}
-                        className={`border border-[#27066F] px-[1.5vh] py-[1vh] rounded-xl w-[7vh] h-[7vh] flex justify-center items-center ${currentPage === i + 1 ? 'bg-[#27066F] text-white' : ''}`}
-                    >
-                        {i + 1}
-                    </button>
-                ))}
+                {renderPaginationButtons()}
 
                 <button
                     onClick={handleNextClick}
                     className="border border-[#27066F] px-[1.5vh] py-[1vh] rounded-xl w-[7vh] h-[7vh] flex justify-center items-center"
-                    disabled={eventData && currentPage === Math.ceil(eventData.length / eventsPerPage)}
+                    disabled={eventData && currentPage === totalPages}
                 >
                     <svg width="800px" height="800px" viewBox="0 0 1024 1024" className="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M256 120.768l50.432-56.768L659.2 512 197.632 960 147.2 903.232 528.704 512z" fill="#000000" /></svg>
                 </button>
