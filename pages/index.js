@@ -44,7 +44,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div style={{ overflow: "hidden" }}>
+    <div style={{ overflow: "hidden" }} className="mb-56">
       {!isMob && (
         <>
           <FlexBanner />
@@ -232,7 +232,7 @@ const Home = () => {
           </div>
 
           {/* swiper */}
-          <div className="relative p-1 border-4 border-solid border-[#27066F] rounded-[10px] z-[9999]">
+          <div className="relative p-1 border-4 border-solid border-[#27066F] rounded-[10px] z-10">
             <Swiper
               effect={"flip"}
               spaceBetween={50}
@@ -244,7 +244,6 @@ const Home = () => {
                 disableOnInteraction: false,
               }}
             >
-              {/* show images banner_1.jpg, banner_2.jpg... till 4 */}
               {[1, 2, 3, 4].map((index) => (
                 <SwiperSlide key={index}>
                   <img
@@ -257,7 +256,7 @@ const Home = () => {
             </Swiper>
           </div>
 
-          <div className="relative flex justify-center items-center w-full -mt-36">
+          <div className="relative flex justify-center items-center w-full -mt-28">
             <svg viewBox="0 0 400 357" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M-128.016 119.509C-142.271 116.166 -159 114.738 -159 114.738V357H204.804H591V0C591 0 580.443 0.22724 543.094 16.6122C505.745 32.9971 281.314 155.797 125.293 182.344C37.1517 197.341 -47.8371 138.311 -128.016 119.509Z"
@@ -280,22 +279,23 @@ const Home = () => {
               </defs>
             </svg>
 
-            <div className="absolute bottom-14 flex flex-row items-center">
+            <div className="absolute bottom-12 flex flex-row items-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5 }}
-                className="z-10 flex flex-row items-center gap-8"
+                className="z-10 flex flex-row items-center gap-10"
               >
                 {topButts.map((item, index) => (
+                  index === 2 ? null : 
                   <div key={index} className="z-10 flex flex-col items-center">
                     <img
                       src={item.icon}
                       alt={item.name}
-                      className="w-16 h-12"
+                      className="w-9 h-9"
                     />
                     <button
-                      className="text-white bg-inherit w-28 py-2 mt-2 rounded-full border-2 border-[#F3F2FF] text-xs cursor-pointer"
+                      className="text-white bg-inherit w-32 h-10 mt-2 rounded-full border-2 border-[#F3F2FF] text-xs cursor-pointer"
                       onClick={() => (window.location.href = item.href)}
                     >
                       {item.name}

@@ -4,6 +4,7 @@ import Footer from "../components/footer";
 import "../styles/globals.css";
 import { useEffect, useState } from "react";
 import NavMobile from "@/components/mobile/nav";
+import Footer_Mob from "@/components/mobile/Footer_Mob";
 
 function MyApp({ Component, pageProps }) {
   const [isMob, setIsMob] = useState(false);
@@ -33,6 +34,7 @@ function MyApp({ Component, pageProps }) {
         <>
           <NavMobile />
           <Component {...pageProps} dept={dept} />
+          <Footer_Mob />
         </>
       )}
 
