@@ -30,7 +30,7 @@ const Cards = ({ dept }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex flex-wrap justify-center gap-[1.5vw]"
+          className="flex flex-wrap gap-[1.5vw] justify-center"
         >
           {deptsData !== null &&
             Object.keys(deptsData).map((key, index) => {
@@ -43,13 +43,14 @@ const Cards = ({ dept }) => {
                     className="w-[4vw] h-[4vh] bg-transparent rounded-[1vh] text-white font-bold border-2 hover:bg-white hover:text-black"
                     key={index}
                     onClick={() => router.push(`/course/${dept.slug}`)}
+                    
                   >
                     {dept.type}
                   </button>
                 );
               }); 
               return (
-                <div className="relative text-[2vh] w-[22vw] h-[28vh] bg-[#FFB224] rounded-[4vh] text-[#FFFAEB] text-start" key={index}>
+                <div className="relative text-[2vh] w-[22vw] h-[28vh] bg-[#FFB224] rounded-[4vh] text-[#FFFAEB] text-start flex" key={index}>
                   <span className='mr-[10vw] ml-[1vw] mt-[5vh] text-[3vh] inline-block font-bold' data-name={name}>{name}</span>
                   <img
                     src={path}
@@ -68,7 +69,7 @@ const Cards = ({ dept }) => {
           {deptsData === null &&
             Array.from({ length: 6 }).map((_, index) => {
               return (
-                <div className="w-[22vw] h-[28vh] bg-[#FFB224] rounded-[4vh] text-[#FFFAEB] text-start" key={index}>
+                <div className="w-[22vw] h-[28vh] bg-[#FFB224] rounded-[4vh] text-[#FFFAEB] text-start" key={index} >
                   <div class="p-20 max-w-sm w-full mx-auto">
                     <div class="animate-pulse flex space-x-4">
                       <div class="flex-1 space-y-6 py-1">
