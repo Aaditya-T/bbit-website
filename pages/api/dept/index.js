@@ -5,11 +5,15 @@ export default async (req, res) => {
     const { data, error } = await supabase
         .from('department')
         .select(`
-            *,
-            faculty (
-              *
-            )
-          `)
+          *,
+          faculty (
+            *
+          ),
+          lab (
+            *
+          )
+        `)
+        
     if (error) return res.status(401).json({ error: error.message })
     res.setHeader('Cache-Control', 's-maxage=300, stale-while-revalidate')
     return res.status(200).json(data)

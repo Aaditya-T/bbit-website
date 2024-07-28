@@ -158,11 +158,11 @@ const DepartmentPage = ({ dept }) => {
               Laboratory
             </h2>
           </div>
-          {/* {departmentData.lab.map((lab, index) => (
+          {departmentData?.lab.map((lab, index) => (
             <Element key={index} name={`lab-${index + 1}`}>
               <div className="flex items-center ml-[6.4vw] mt-[5vh] p-[1vh]">
                 <img
-                  src={lab.img}
+                  src={`https://y4xgzczst4lpi3wu.public.blob.vercel-storage.com${lab.image}`}
                   alt={lab.title}
                   className="w-[23vw] h-[35vh] rounded-[3vh] object-cover -ml-[2vw] "
                 />
@@ -171,12 +171,12 @@ const DepartmentPage = ({ dept }) => {
                     {lab.title}
                   </h2>
                   <p className="text-[2vh] w-[22vw] mt-[1vh] text-[#54031f] font-normal">
-                    {lab.detail}
+                    {lab.desc}
                   </p>
                 </div>
               </div>
             </Element>
-          ))} */}
+          ))}
         </Element>
       </div>
 
