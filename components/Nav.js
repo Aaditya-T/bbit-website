@@ -47,8 +47,8 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="flex items-center justify-between w-full h-[8vh] fixed top-0 z-50 bg-[#F3F2FF]">
-      <div className="flex items-center gap-[2vh] p-[2vh] mt-[1vh]">
+    <nav className="flex items-center justify-between w-full h-[8vh] fixed top-0 z-10 bg-[#F3F2FF]">
+      <div className="gap-[2vh] p-[2vh] mt-[1vh]">
           <Link href="/">
             <img src="/home/bbit.png" alt="logo" className="h-[6vh] w-[13vh]"/>
           </Link>

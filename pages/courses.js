@@ -44,6 +44,7 @@ const Cards = ({ dept }) => {
                     className="w-[13vw] h-[4vh] md:w-[5vw] lg:w-[4vw] lg:h-[4vh] bg-transparent rounded-[1vh] text-white font-bold border-2 hover:bg-white hover:text-black"
                     key={index}
                     onClick={() => router.push(`/course/${dept.slug}`)}
+                    
                   >
                     {dept.type}
                   </button>
