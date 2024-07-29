@@ -57,7 +57,7 @@ const Cards = ({ dept }) => {
                   <img
                     src={path}
                     alt={name}
-                    className="absolute w-10 h-10 ml-12 top-5 lg:w-[6vw] lg:h-[12vh] lg:mt-[2vh] lg:ml-[15vw] bg-img-base"
+                    className="absolute w-10 h-10 ml-12 top-5 lg:w-[6vw] lg:h-[12vh] lg:mt-[5vh] lg:ml-[15vw] bg-img-base"
                   />
                   <div className="absolute bottom-[3vh] left-[5vw] lg:left-[1vw] flex flex-row justify-center gap-[1vw]">
                     {buttons}
