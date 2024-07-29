@@ -25,13 +25,13 @@ const Cards = ({ dept }) => {
   }, [dept]);
 
   return (
-    <div className="p-[1vw] lg:p-[8vw] mx-auto mb-[20vh] lg:mb-[10vh] mt-12 md:-mt-10 lg:-mt-10">
+    <div className="p-[1vw] mx-auto mb-[20vh] lg:mb-[30vh] mt-[7vh]">
       <div className="flex flex-wrap text-center">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex flex-wrap justify-center gap-3 lg:gap-[1.5vw]"
+          className="flex flex-wrap gap-3 lg:gap-[1.5vw] ml-[15vw]"
         >
           {deptsData !== null &&
             Object.keys(deptsData).map((key, index) => {
@@ -57,7 +57,7 @@ const Cards = ({ dept }) => {
                   <img
                     src={path}
                     alt={name}
-                    className="absolute w-10 h-10 ml-12 top-5 lg:w-[6vw] lg:h-[12vh] lg:mt-[2vh] lg:ml-[15vw] bg-img-base"
+                    className="absolute w-10 h-10 ml-12 top-5 lg:w-[6vw] lg:h-[12vh] lg:mt-[5vh] lg:ml-[15vw] bg-img-base"
                   />
                   <div className="absolute bottom-[3vh] left-[5vw] lg:left-[1vw] flex flex-row justify-center gap-[1vw]">
                     {buttons}

@@ -21,13 +21,13 @@ const DepartmentPage = ({ dept }) => {
 
   return (
     <>
-      <div className="flex">
-        <div className="ml-[2.5vw] w-[2vw] flex-none -mt-[19vh]">
+      <div className="flex ml-[15vw]">
+      <div className="flex-none w-[vw] mx-[vw]">
           <Sidebar />
         </div>
-        <div className="mx-auto mt-[22vh] w-[50vw]">
+        <div className="mx-auto mt-[22vh] w-[90vw] h-full">
           <Element name="about" className="flex flex-col items-center">
-            <div className="ml-[1.4vw]">
+            <div className="ml-[1vw]">
               <h2
                 id="vision"
                 className="text-[3vh] mb-[1vw] text-[#27066F] font-bold -mt-[7vh]"
@@ -109,13 +109,13 @@ const DepartmentPage = ({ dept }) => {
                   <img
                     src={`https://y4xgzczst4lpi3wu.public.blob.vercel-storage.com${lab.image}`}
                     alt={lab.title}
-                    className="w-[26vw] h-[35vh] rounded-[3vh] object-cover -ml-[2vw] "
+                    className="w-[26vw] h-[35vh] rounded-[3vh] object-cover ml-[2vw]"
                   />
                   <div className="ml-[1.5vw]">
                     <h2 className="text-[2.2vh] flex justify-center text-[#27066F] font-bold">
                       {lab.title}
                     </h2>
-                    <p className="text-[2vh] w-[18vw] mt-[1vh] text-[#27066F] font-normal">
+                    <p className="text-[2vh] w-[22vw] mt-[1vh] text-[#27066F] font-normal">
                       {lab.desc}
                     </p>
                   </div>
@@ -188,13 +188,13 @@ const DepartmentPage = ({ dept }) => {
             </div>
           </Element>
 
-          <Element name="department-activities">
+          <Element name="activities">
             <div className="w-[12vw] h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mx-auto mt-[10vh] relative flex justify-center items-center">
               <h2
                 id="department-activities"
                 className="text-[2vh] text-[#27066F] font-bold "
               >
-                Department Activities
+                Activities
               </h2>
             </div>
             <div className="mt-[6vh] mx-auto relative mb-[34vh]">
