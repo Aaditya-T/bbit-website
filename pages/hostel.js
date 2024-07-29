@@ -56,7 +56,7 @@ const hostel = () => {
                     <ol>
                         <li className="text-[2.3vh]">1. Security check at the main gate of each Hostel.</li>
                         <li className="text-[2.3vh]">2. Individual security guard at each hostel building.</li>
-                        <li className="text-[2.3vh]">3. Lady Warden at boys&#39;'s hostels.</li>
+                        <li className="text-[2.3vh]">3. Lady Warden at boys&#39;s hostels.</li>
                     </ol>
 
                 </div>
