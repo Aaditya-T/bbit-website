@@ -3,7 +3,7 @@ const hostel = () => {
         <>
             <div className="flex justify-center items-center relative">
                 <div className="flex bg-[#ffde88] w-[22vw] font-extrabold text-[2.7vh] rounded-[2.5vh] h-[6vh] mb-[45vh] text-center justify-center items-center absolute font-[OrelegaOne] text-[#27066F] ">
-                    GIRL'S HOSTEL
+                GIRL&#39;S HOSTEL
                 </div>
                 <div className="relative mt-[24vh] z-10">
                     <img src="../home/banner-1.jpg" className="w-[80vw] h-[50vh]"></img>
@@ -32,7 +32,7 @@ const hostel = () => {
 
                 </div>
                 <div className="flex bg-[#ffde88] w-[22vw] font-extrabold text-[2.7vh] rounded-[2.5vh] h-[6vh] mb-[5vh] mt-[70vh] text-center justify-center items-center absolute font-[OrelegaOne] text-[#27066F] ">
-                    BOY'S HOSTEL
+                    BOY&#39;S HOSTEL
                 </div>
                 <div className="absolute mt-[83vh] z-10">
                     <img src="../home/banner-1.jpg" className="w-[80vw] h-[50vh]"></img>
