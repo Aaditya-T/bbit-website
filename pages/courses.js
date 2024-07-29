@@ -31,7 +31,7 @@ const Cards = ({ dept }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex flex-wrap gap-3 lg:gap-[1.5vw] ml-[15vw]"
+          className="flex flex-wrap gap-3 lg:gap-[1.5vw] lg:ml-[15vw]"
         >
           {deptsData !== null &&
             Object.keys(deptsData).map((key, index) => {
@@ -52,8 +52,8 @@ const Cards = ({ dept }) => {
               }); 
               
               return (
-                <div className="relative text-[2vh] w-[40vw] h-[25vh] lg:w-[22vw] lg:h-[28vh] bg-[#FFB224] rounded-[4vh] text-[#FFFAEB] text-start" key={index}>
-                  <span className='mr-[10vw] ml-[1vw] mt-[8vh] md:mt-10 lg:mt-10 text-[5vw] md:text-[3vh] lg:text-[3vh] inline-block font-bold' data-name={name}>{name}</span>
+                <div className="relative mx-auto text-[2vh] w-[45vw] h-[25vh] lg:w-[22vw] lg:h-[28vh] bg-[#FFB224] rounded-[4vh] text-[#FFFAEB] text-start" key={index}>
+                  <span className='lg:mr-[10vw] ml-[1vw] mt-[8vh] md:mt-10 lg:mt-10 text-[5vw] md:text-[3vh] lg:text-[3vh] inline-block font-bold' data-name={name}>{name}</span>
                   <img
                     src={path}
                     alt={name}
