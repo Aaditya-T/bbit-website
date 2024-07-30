@@ -4,12 +4,53 @@ const Events = () => {
     const [eventData, setEventData] = useState(null);
     const [error, setError] = useState(false);
     const [currentYear, setCurrentYear] = useState(null);
-    const [loading, setLoading] = useState(true); // Added loading state
+    const [loading, setLoading] = useState(true);
     const eventsPerPage = 30;
+
+    const renderYearButtons = () => {
+        const years = Array.from(new Set(eventData.map(event => event.year))).sort();
+        const firstYear = years[0];
+        const lastYear = years[years.length - 1];
+    
+        const handleYearClick = (year) => {
+            setCurrentYear(year);
+        };
+    
+        return years.map((year, index) => {
+            if (
+                year === firstYear ||
+                year === lastYear ||
+                year === currentYear ||
+                year === currentYear - 1 ||
+                year === currentYear + 1
+            ) {
+                return (
+                    <button
+                        key={year}
+                        onClick={() => handleYearClick(year)}
+                        className={`border-[0.2vh] border-[#27066F] px-[1.5vh] py-[1vh] rounded-[1vh] w-[6vh] h-[6vh] flex justify-center items-center ${currentYear === year ? 'bg-[#27066F] text-white' : ''}`}
+                    >
+                        {year}
+                    </button>
+                );
+            } else if (
+                (index === 1 && currentYear > firstYear + 1) ||
+                (index === years.length - 2 && currentYear < lastYear - 1)
+            ) {
+                return (
+                    <span key={year} className="w-[6vh] h-[6vh] flex justify-center items-center">
+                        ...
+                    </span>
+                );
+            } else {
+                return null;
+            }
+        });
+    };
 
     useEffect(() => {
         const fetchData = async () => {
-            setLoading(true); // Start loading
+            setLoading(true);
             try {
                 const response = await fetch('./api/dept/EventData');
                 if (!response.ok) {
@@ -17,7 +58,6 @@ const Events = () => {
                 }
                 const data = await response.json();
                 setEventData(data);
-                // Set the initial year to the first available year
                 if (data.length > 0) {
                     const years = Array.from(new Set(data.map(event => event.year))).sort();
                     setCurrentYear(years[0]);
@@ -26,7 +66,7 @@ const Events = () => {
                 setError(true);
                 console.error("Fetch error:", error);
             } finally {
-                setLoading(false); // Stop loading
+                setLoading(false);
             }
         };
         fetchData();
@@ -54,19 +94,6 @@ const Events = () => {
 
     const groupedEvents = eventData ? eventData.filter(event => event.year === currentYear) : [];
     const displayedEvents = groupedEvents.slice(0, eventsPerPage);
-
-    const renderYearButtons = () => {
-        const years = Array.from(new Set(eventData.map(event => event.year))).sort();
-        return years.map(year => (
-            <button
-                key={year}
-                onClick={() => handleYearClick(year)}
-                className={`border-[0.2vh] border-[#27066F] px-[1.5vh] py-[1vh] rounded-[1vh] w-[6vh] h-[6vh] flex justify-center items-center ${currentYear === year ? 'bg-[#27066F] text-white' : ''}`}
-            >
-                {year}
-            </button>
-        ));
-    };
 
     return (
         <div className="mt-[9.5vh] mb-[20vh] ">
