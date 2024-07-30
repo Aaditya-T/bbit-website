@@ -58,19 +58,20 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5 }}
-              className="absolute text-[--text-primary] font-OrelegaOne ml-[10vw] z-10"
+              className="absolute text-[--text-primary] ml-[10vw] z-10"
             >
-              <div className="text-left text-[2.4vw] mt-[12vh] mb-[0.8vh]">
-                <div className="text-[1.8vw]">Welcome to</div>B & B Institute Of
+              <div className="text-left text-[2.4vw] mt-[12vh] mb-[0.8vh] font-OrelegaOne ">
+                <div className="text-[2vw]">Welcome to <br/> B & B Institute Of
                 Technology
+                </div>
               </div>
-              <div className="text-[1.4vw]">
+              <div className="text-[1.4vw] font-bold">
                 Unlock your potential with innovative
                 <br /> courses and hands-on learning
                 <br />
                 opportunities.
               </div>
-              <div className="mt-[1.5vh] font-extralight text-[1vw]">
+              <div className="mt-[1.5vh] font-normal text-[1vw]">
                 Contact us to know more:
                 <br /> Phone: 02692 - 237240 <br />
                 Email: principal@bbit.ac.in
