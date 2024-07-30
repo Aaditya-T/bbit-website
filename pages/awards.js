@@ -71,13 +71,13 @@ export default function Awards() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="flex flex-col items-center justify-center p-4 mb-[81vh] mr-[172vh] absolute">
-        <h1 className="text-2xl font-bold mb-4">Select a Year</h1>
+      <div className="flex flex-col items-center justify-center mb-[23vh] mr-[80vw] absolute">
+        <h1 className="text-[2.6vh] font-bold mb-[2vh]">Select a Year</h1>
         <form onSubmit={(e) => e.preventDefault()} className="flex flex-col items-center">
           <select
             value={selectedYear}
             onChange={handleYearChange}
-            className="border p-2 rounded-lg mb-4"
+            className="border-[0.3vh] p-[2vh] rounded-[1.5vh] mb-[2vh] text-[2vh]"
           >
             {years.map((yr) => (
               <option key={yr} value={yr}>
@@ -90,7 +90,7 @@ export default function Awards() {
 
       <div className="flex-2 p-[2.5vh] pl-[10vw] mb-[25vh]">
         {noAwards ? (
-          <div className="mb-[144vh] flex flex-col items-center justify-center p-4">
+          <div className="mb-[30vh] mt-[32vh] flex flex-col items-center justify-center text-[3vh] font-bold text-red-700">
             <h1>No Award Data Available</h1>
           </div>
         ) : (
@@ -105,15 +105,13 @@ export default function Awards() {
                   key={i}
                   className="mt-[10vh] relative w-[23vw] h-[48vh] border-[0.3vh] bg-purple-100 rounded-[1vw] z-30 border-[#27066F] mx-[2vw]"
                 >
-                  <div>
                     <img
                       src="/events_images/awards-batch.svg"
                       className="w-[5vw] h-[10vh] -mt-[4vh] ml-[20vw] z-40 absolute"
                       alt="badge"
                     />
-                  </div>
                   <div className="text-center w-[2.4vw] h-[5.2vh] -top-[2.5vh] left-[21.3vw] text-purple-600 bg-white font-bold rounded-[40vw] z-50 relative">
-                    <p className="text-center pt-[1.1vh] text-[1.7vh]">24/7</p>
+                    <p className="text-center pt-[1.3vh] text-[1.7vh]">24/7</p>
                   </div>
                   <div
                     className="text-[1.7vw] text-[#000] w-full h-[34vh] font-black text-center py-[10vh] top-[0vw] bg-[#D9D9D9] z-30 absolute rounded-t-[1vw]"
@@ -124,7 +122,7 @@ export default function Awards() {
                       backgroundRepeat: "no-repeat",
                     }}
                   ></div>
-                  <div className="mt-[31vh] ml-[1vw] font-bold text-[2.3vh]">{award?.title}</div>
+                  <div className="mt-[30vh] ml-[1vw] font-bold text-[2.3vh]">{award?.title}</div>
                   <div className="ml-[1vw] font-normal text-[1.8vh]">{award?.desc}</div>
                 </div>
               ))}
