@@ -38,7 +38,7 @@ const Events = () => {
                 (index === years.length - 2 && currentYear < lastYear - 1)
             ) {
                 return (
-                    <span key={year} className="w-[6vh] h-[6vh] flex justify-center items-center">
+                    <span key={year} className="w-[2vw] h-[6vh] flex justify-center items-center">
                         ...
                     </span>
                 );
