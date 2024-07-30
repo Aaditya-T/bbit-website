@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { isMobile } from 'react-device-detect';
 
 const Cards = ({ dept }) => {
   const router = useRouter();
@@ -25,13 +24,13 @@ const Cards = ({ dept }) => {
   }, [dept]);
 
   return (
-    <div className="p-[1vw] mx-auto mb-[20vh] lg:mb-[30vh] mt-[7vh]">
+    <div className="p-[1vw] mx-auto mb-[20vh] lg:mb-[30vh] md:mb-[30vh] mt-[7vh]">
       <div className="flex flex-wrap text-center">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex flex-wrap gap-3 lg:gap-[1.5vw] ml-[15vw]"
+          className="flex flex-wrap gap-3 lg:gap-[1.5vw] md:gap-[1.5vw] lg:ml-[15vw] md:ml-[15vw]"
         >
           {deptsData !== null &&
             Object.keys(deptsData).map((key, index) => {
@@ -52,8 +51,8 @@ const Cards = ({ dept }) => {
               }); 
               
               return (
-                <div className="relative text-[2vh] w-[40vw] h-[25vh] lg:w-[22vw] lg:h-[28vh] bg-[#FFB224] rounded-[4vh] text-[#FFFAEB] text-start" key={index}>
-                  <span className='mr-[10vw] ml-[1vw] mt-[8vh] md:mt-10 lg:mt-10 text-[5vw] md:text-[3vh] lg:text-[3vh] inline-block font-bold' data-name={name}>{name}</span>
+                <div className="relative lg:mx-0 md:mx-0 mx-auto text-[2vh] w-[45vw] h-[25vh] lg:w-[22vw] lg:h-[28vh] bg-[#FFB224] rounded-[4vh] text-[#FFFAEB] text-start" key={index}>
+                  <span className='lg:mr-[10vw] ml-[1vw] mt-[8vh] md:mt-10 lg:mt-10 text-[5vw] md:text-[3vh] lg:text-[3vh] inline-block font-bold' data-name={name}>{name}</span>
                   <img
                     src={path}
                     alt={name}
@@ -71,7 +70,7 @@ const Cards = ({ dept }) => {
           {deptsData === null &&
             Array.from({ length: 6 }).map((_, index) => {
               return (
-                <div className="w-[40vw] lg:w-[22vw] md:w-[22vw] h-[25vh] bg-[#FFB224] rounded-[4vh] text-[#FFFAEB] text-start" key={index}>
+                <div className=" w-[40vw] lg:w-[22vw] md:w-[22vw] h-[25vh] bg-[#FFB224] rounded-[4vh] text-[#FFFAEB] text-start" key={index}>
                   <div class="lg:p-20 md:p-20 p-10 max-w-sm w-full mx-auto">
                     <div class="animate-pulse flex space-x-4">
                       <div class="flex-1 space-y-6 py-1">

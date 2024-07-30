@@ -25,7 +25,7 @@ const menuList = [
   },
   {
     name: "Placements",
-    link: "#",
+    link: "placement",
   },
   {
     name: "Downloads",

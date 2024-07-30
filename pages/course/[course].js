@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import Sidebar from "@/components/sidebar";
 import { data } from "autoprefixer";
@@ -21,21 +22,21 @@ const DepartmentPage = ({ dept }) => {
 
   return (
     <>
-      <div className="flex ml-[15vw]">
-      <div className="flex-none w-[vw] mx-[vw]">
+      <div className="flex md:ml-[15vw] lg:ml-[15vw]">
+        <div className="flex-none">
           <Sidebar />
         </div>
-        <div className="mx-auto mt-[22vh] w-[90vw] h-full">
+        <div className="mx-auto lg:mt-[22vh] md:mt-[22vh] mt-[25vh] lg:w-[90vw] md:w-[90vw] w-[80vw] h-full">
           <Element name="about" className="flex flex-col items-center">
             <div className="ml-[1vw]">
               <h2
                 id="vision"
                 className="text-[3vh] mb-[1vw] text-[#27066F] font-bold -mt-[7vh]"
               >
-                Vision
+                Vision:
               </h2>
 
-              <p className="w-[49vw] text-[2vh] text-[#27066F] font-normal">
+              <p className="lg:w-[49vw] md:w-[49vw] text-[2vh] text-[#27066F] font-normal">
                 {departmentData?.vision}
               </p>
 
@@ -45,17 +46,17 @@ const DepartmentPage = ({ dept }) => {
               >
                 Mission
               </h2>
-              <p className="w-[49vw] text-[2vh] whitespace-pre-line mt-[2vh] text-[#27066F] font-normal">
+              <p className="lg:w-[49vw] md:w-[49vw] text-[2vh] whitespace-pre-line mt-[2vh] text-[#27066F] font-normal">
                 {departmentData?.mission}
               </p>
             </div>
           </Element>
 
           <Element name="faculty members">
-            <div className="w-[12vw] h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[7vh] mx-auto relative flex justify-center">
+            <div className="py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 lg:w-[12vw] md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
               <h2
                 id="faculty members"
-                className="mt-[0.7vh] text-[2vh] text-[#27066F] font-bold flex justify-center"
+                className="lg:mt-[0.7vh] md:mt-[0.7vh] text-[2vh] text-[#27066F] font-bold flex justify-center"
               >
                 Faculty Members
               </h2>
@@ -65,16 +66,16 @@ const DepartmentPage = ({ dept }) => {
               {departmentData?.faculty.map((faculty) => (
                 <div
                   key={faculty.id}
-                  className="text-[#27066F] border-[0.1vw] w-[15vw] border-solid border-[#54031f] rounded-[1vw] bg-[#c5b5e853]"
+                  className="text-[#27066F] border-[0.1vw] w-[35vw] md:w-[15vw] lg:w-[15vw] border-solid border-[#54031f] rounded-[1vw] bg-[#c5b5e853]"
                 >
-                  <div className="w-full">
+                  <div className="w-full h-1/2 lg:h-auto md:h-auto">
                     <img
                       src={`https://y4xgzczst4lpi3wu.public.blob.vercel-storage.com${faculty.image}`}
                       alt={faculty.full_name}
-                      className="h-[27vh] w-[18vw] object-cover rounded-t-[2vh] relative"
+                      className="w-full h-full lg:h-[27vh] md:h-[27vh] md:w-[18vw] lg:w-[18vw] object-cover lg:rounded-t-[2vh] md:rounded-t-[2vh] relative"
                     />
                   </div>
-                  <div className="flex justify-center items-center h-[13vh]">
+                  <div className="flex justify-center items-center lg:h-[13vh]">
                     <div className=" text-center">
                       <p className="text-[1.9vh] font-bold">
                         {faculty.full_name}
@@ -95,7 +96,7 @@ const DepartmentPage = ({ dept }) => {
           </Element>
 
           <Element name="laboratory">
-            <div className="w-[12vw] h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[10vh] relative mx-auto flex justify-center items-center">
+            <div className="py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 lg:w-[12vw] md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
               <h2
                 id="laboratory"
                 className="text-[2vh] text-[#27066F] font-bold"
@@ -105,17 +106,17 @@ const DepartmentPage = ({ dept }) => {
             </div>
             {departmentData?.lab.map((lab, index) => (
               <Element key={index} name={`lab-${index + 1}`}>
-                <div className="flex items-center mt-[5vh] p-[1vh] relative justify-center">
+                <div className="flex flex-col lg:flex-row md:flex-row lg:items-center md:items-center lg:justify-start md:justify-center mt-[5vh] relative">
                   <img
                     src={`https://y4xgzczst4lpi3wu.public.blob.vercel-storage.com${lab.image}`}
                     alt={lab.title}
-                    className="w-[26vw] h-[35vh] rounded-[3vh] object-cover ml-[2vw]"
+                    className="lg:w-[26vw] md:w-[26vw] md:h-[35vh] lg:h-[35vh] rounded-[3vh] object-cover ml-[2vw]"
                   />
-                  <div className="ml-[1.5vw]">
-                    <h2 className="text-[2.2vh] flex justify-center text-[#27066F] font-bold">
+                  <div className="ml-[1.5vw] p-2">
+                    <h2 className="text-[2.2vh] flex lg:justify-center md:justify-center text-[#27066F] font-bold">
                       {lab.title}
                     </h2>
-                    <p className="text-[2vh] w-[22vw] mt-[1vh] text-[#27066F] font-normal">
+                    <p className="text-[2vh] lg:w-[22vw] md:w-[22vw] mt-[1vh] text-[#27066F] font-normal">
                       {lab.desc}
                     </p>
                   </div>
@@ -125,17 +126,17 @@ const DepartmentPage = ({ dept }) => {
           </Element>
 
           <Element name="timetable">
-            <div className="w-[12vw] h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mx-auto mt-[10vh]  flex justify-center items-center">
+            <div className="py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 lg:w-[12vw] md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
               <h2
-                id="timetable"
-                className="text-[2vh] text-[#27066F] font-bold absolute"
+                id="laboratory"
+                className="text-[2vh] text-[#27066F] font-bold"
               >
-                Time Table
+                Time table
               </h2>
             </div>
 
             <div className="mt-[8vh] relative">
-              <div className="w-[46vw] h-[50vh] bg-[#D8D1FF] mx-auto border-[0.2vh] border-[#27066F] overflow-hidden mb-[30vh]">
+              <div className="lg:w-[46vw] md:w-[46vw] lg:h-[50vh] md:h-[50vh] bg-[#D8D1FF] mx-auto border-[0.2vh] border-[#27066F] overflow-hidden mb-[0vh]">
                 <table className="table-fixed w-full border-collapse">
                   <thead>
                     <tr>
@@ -150,9 +151,8 @@ const DepartmentPage = ({ dept }) => {
                         <th
                           key={sem}
                           onClick={() => setSelectedSemester(sem)}
-                          className={`cursor-pointer text-[#54031F] text-center py-[2vh] px-[1vw] font-semibold text-[2vh] border-t-[0.1vh] border-b-[0.2vh] border-[#27066F] ${
-                            selectedSemester === sem ? "bg-[#B3A1FF]" : ""
-                          }`}
+                          className={`cursor-pointer text-[#54031F] text-center py-[2vh] px-[1vw] font-semibold text-[2vh] border-t-[0.1vh] border-b-[0.2vh] border-[#27066F] ${selectedSemester === sem ? "bg-[#B3A1FF]" : ""
+                            }`}
                         >
                           {sem}
                         </th>
@@ -165,22 +165,22 @@ const DepartmentPage = ({ dept }) => {
           </Element>
 
           <Element name="syllabus">
-            <div className="w-[12vw] h-[5vh] bg-[#D8D1FF] relative rounded-[1.5vh] mx-auto -mt-[19vh]  flex justify-center items-center">
+            <div className="py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 lg:w-[12vw] md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
               <h2
-                id="syllabus"
-                className="text-[2vh] text-[#27066F] font-bold "
+                id="laboratory"
+                className="text-[2vh] text-[#27066F] font-bold"
               >
                 Syllabus
               </h2>
             </div>
-            <div className="w-[46vw] h-[18vh] bg-[#D8D1FF] border-[0.2vh] border-[#27066F] rounded-[2vh] mx-auto mt-[6vh] flex justify-center items-center">
-              <p className="text-[#27066F] font-semibold text-[2.5vh]">
+            <div className="p-5 lg:p-0 md:p-0 lg:w-[46vw] md:w-[46vw] lg:h-[18vh] md:h-[18vh] bg-[#D8D1FF] border-[0.2vh] border-[#27066F] rounded-[2vh] mx-auto mt-[6vh] flex justify-center items-center">
+              <p className="text-[#27066F] font-semibold lg:text-[2.5vh] md:text-[2.5vh]">
                 Access the most recent syllabus by visiting the Official GTU
                 Website. <br />
                 <a
                   href="https://syllabus.gtu.ac.in/Syllabus.aspx?tp=DI"
                   target="_blank"
-                  className="font-semibold text-[2.3vh] text-[#000000] flex justify-center"
+                  className="font-semibold lg:text-[2.3vh] md:text-[2.3vh] text-[#000000] flex justify-center"
                 >
                   https://syllabus.gtu.ac.in/Syllabus.aspx?tp=DI
                 </a>
@@ -189,26 +189,26 @@ const DepartmentPage = ({ dept }) => {
           </Element>
 
           <Element name="activities">
-            <div className="w-[12vw] h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mx-auto mt-[10vh] relative flex justify-center items-center">
+            <div className="py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 lg:w-[12vw] md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
               <h2
-                id="department-activities"
-                className="text-[2vh] text-[#27066F] font-bold "
+                id="laboratory"
+                className="text-[2vh] text-[#27066F] font-bold"
               >
                 Activities
               </h2>
             </div>
-            <div className="mt-[6vh] mx-auto relative mb-[34vh]">
-              <div className="w-[46vw] h-[30vh] bg-[#D8D1FF] border-[0.2vh] border-[#27066F] rounded-[2vh] mx-auto">
+            <div className="mt-[6vh] mx-auto relative mb-[34vh]  space-y-5">
+              <div className="lg:w-[46vw] md:w-[46vw] lg:h-[30vh] md:h-[30vh] bg-[#D8D1FF] border-[0.2vh] border-[#27066F] rounded-[2vh] mx-auto">
                 <img
                   src="/home/banner-1.jpg"
-                  className="w-[17vw] h-[29.7vh] rounded-tl-[2vh] rounded-bl-[2vh]"
+                  className="w-1/2 h-[20vh] lg:w-[17vw] md:w-[17vw] lg:h-[29.7vh] md:h-[29.7vh] rounded-tl-[2vh] rounded-bl-[2vh]"
                 ></img>
               </div>
 
-              <div className="w-[46vw] h-[30vh] bg-[#D8D1FF] border-[0.2vh] border-[#27066F] rounded-[2vh] mt-[4vh] mx-auto">
+              <div className="lg:w-[46vw] md:w-[46vw] lg:h-[30vh] md:h-[30vh] bg-[#D8D1FF] border-[0.2vh] border-[#27066F] rounded-[2vh] mx-auto">
                 <img
                   src="/home/banner-1.jpg"
-                  className="w-[17vw] h-[29.7vh] rounded-tl-[2vh] rounded-bl-[2vh]"
+                  className="w-1/2 h-[20vh] lg:w-[17vw] md:w-[17vw] lg:h-[29.7vh] md:h-[29.7vh] rounded-tl-[2vh] rounded-bl-[2vh]"
                 ></img>
               </div>
             </div>
