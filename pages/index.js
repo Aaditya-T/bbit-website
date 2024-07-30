@@ -14,9 +14,14 @@ import {
 } from "@/components/ui/card";
 import { isMobile } from "react-device-detect";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFlip } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-flip";
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+
+// import required modules
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
+
 
 const topButts = [
   {
@@ -234,15 +239,24 @@ const Home = () => {
           {/* swiper */}
           <div className="relative p-1 border-4 border-solid border-[#27066F] rounded-[10px] z-10">
             <Swiper
-              effect={"flip"}
-              spaceBetween={50}
-              modules={[Autoplay, EffectFlip]}
-              slidesPerView={1}
-              loop={true}
+              effect={'coverflow'}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={'auto'}
+              coverflowEffect={{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              modules={[Autoplay, EffectCoverflow, Pagination]}
+              className="mySwiper"
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
               }}
+              loop={true}
             >
               {[1, 2, 3, 4].map((index) => (
                 <SwiperSlide key={index}>
@@ -287,20 +301,20 @@ const Home = () => {
                 className="z-10 flex flex-row items-center gap-10"
               >
                 {topButts.map((item, index) => (
-                  index === 2 ? null : 
-                  <div key={index} className="z-10 flex flex-col items-center">
-                    <img
-                      src={item.icon}
-                      alt={item.name}
-                      className="w-9 h-9"
-                    />
-                    <button
-                      className="text-white bg-inherit w-32 h-10 mt-2 rounded-full border-2 border-[#F3F2FF] text-xs cursor-pointer"
-                      onClick={() => (window.location.href = item.href)}
-                    >
-                      {item.name}
-                    </button>
-                  </div>
+                  index === 2 ? null :
+                    <div key={index} className="z-10 flex flex-col items-center">
+                      <img
+                        src={item.icon}
+                        alt={item.name}
+                        className="w-9 h-9"
+                      />
+                      <button
+                        className="text-white bg-inherit w-32 h-10 mt-2 rounded-full border-2 border-[#F3F2FF] text-xs cursor-pointer"
+                        onClick={() => (window.location.href = item.href)}
+                      >
+                        {item.name}
+                      </button>
+                    </div>
                 ))}
               </motion.div>
             </div>

@@ -4,8 +4,6 @@ export default function Admission() {
 
     return (
         <div className="mt-[10vh]">
-
-
             <div className="flex flex-col items-center justify-center mb-[20vh]">
                 <div className="bg-[#FFDE88] px-[7vw] rounded-full">
                     <h1 className="text-[8vw] lg:text-[5vh] font-light text-[#27066F] font-OrelegaOne">Admission Process</h1>
