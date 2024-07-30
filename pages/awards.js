@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState } from "react";
 
 export default function Awards() {
@@ -51,10 +52,6 @@ export default function Awards() {
     }
   }, [selectedYear]);
 
-  if (!awardData) {
-   
-  }
-
   return (
     
     <div className="flex flex-col items-center justify-center">
@@ -92,7 +89,7 @@ export default function Awards() {
       <div className="flex-2 p-[2.5vh] pl-[10vw] mb-[25vh]">
         <h1 className="flex -mb-[2vh] mt-[10vh] justify-center text-[3.5vh] font-bold ">Awards for {selectedYear}</h1>
         <div className="grid grid-cols-3 gap-y-[1vh] font-[Outfit]">
-          {Array(5).fill().map((_, i) => (
+          {/* {Array(5).fill().map((_, i) => (
             <div key={i} className="mt-[10vh] relative w-[23vw] h-[48vh] border-[0.3vh] bg-purple-100 rounded-[1vw] z-30 border-[#27066F] mx-[2vw]">
               <div>
                 <img
@@ -116,10 +113,9 @@ export default function Awards() {
               <div className="mt-[31vh] ml-[1vw] font-bold text-[2.3vh]">{awardData[i]?.title}</div>
               <div className="ml-[1vw] font-normal text-[1.8vh]">{awardData[i]?.desc}</div>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
-     
     </div>
   );
 }
