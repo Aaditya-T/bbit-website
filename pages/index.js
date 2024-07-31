@@ -41,12 +41,33 @@ const topButts = [
   },
 ];
 
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat('en-GB', {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric'
+  }).format(date);
+};
+
 const Home = () => {
   const [isMob, setIsMob] = useState(false);
-
+  const [latestNews, setLatestNews] = useState(null);
+  const [loading , setLoading] = useState(true);
   useEffect(() => {
     setIsMob(isMobile);
+    fetch("/api/dept/latest_news")
+      .then((res) => res.json())
+      .then((data) => {
+        setLatestNews(data);
+        setLoading(false)
+      });
+
   }, []);
+
+  useEffect(()=>{
+    console.log(latestNews)
+  },[latestNews])
 
   return (
     <div style={{ overflow: "hidden" }} className="mb-56">
@@ -61,8 +82,8 @@ const Home = () => {
               className="absolute text-[--text-primary] ml-[10vw] z-10"
             >
               <div className="text-left text-[2.4vw] mt-[12vh] mb-[0.8vh] font-OrelegaOne ">
-                <div className="text-[2vw]">Welcome to <br/> B & B Institute Of
-                Technology
+                <div className="text-[2vw]">Welcome to <br /> B & B Institute Of
+                  Technology
                 </div>
               </div>
               <div className="text-[1.4vw] font-bold">
@@ -333,22 +354,28 @@ const Home = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  {Array.from({ length: 3 }).map((_, index) => (
-                    <>
-                      <div key={index} className="flex items-start space-x-4">
-                        <CalendarIcon className="w-8 h-8" />
-                        <div>
-                          <p className="font-medium text-lg mt-1">
-                            25 June 2024
-                          </p>
-                          <p className="text-lg text-[#27066F]">
-                            Create event result declaration
-                          </p>
+                  {loading ? (
+                    <div>
+                      <h1>Loading...</h1>
+                    </div>
+                  ) : (
+                    latestNews.map((news, index) => (
+                      <>
+                        <div key={index} className="flex items-start space-x-4">
+                          <CalendarIcon className="w-8 h-8" />
+                          <div>
+                            <p className="font-medium text-lg mt-1">
+                              {formatDate(news.created_at)}
+                            </p>
+                            <p className="text-lg text-[#27066F]">
+                              {news.desc}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      <hr className="h-1 bg-[#27066F] rounded-2xl" />
-                    </>
-                  ))}
+                        <hr className="h-1 bg-[#27066F] rounded-2xl" />
+                      </>
+                    ))
+                  )}
                 </CardContent>
               </Card>
             </div>

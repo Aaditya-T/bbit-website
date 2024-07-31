@@ -6,8 +6,37 @@ import {
   CardContent,
   CardFooter
 } from "@/components/ui/card";
+import { useEffect , useState } from "react";
+
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat('en-GB', {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric'
+  }).format(date);
+};
 
 export function SecondSection() {
+  const [latestNews, setLatestNews] = useState(null);
+  const [loading , setLoading] = useState(true);
+  useEffect(() => {
+    fetch("/api/dept/latest_news")
+      .then((res) => res.json())
+      .then((data) => {
+        setLatestNews(data);
+        setLoading(false)
+      });
+  }, []);
+
+  if (loading){
+    return(
+      <div>
+        <h1>Loading...</h1>
+      </div>
+    )
+  }
+
   return (
     <div className="mt-[10vh] flex flex-col items-center justify-center max-w-[70vw] mx-auto">
       <div className="grid gap-[10vw] md:grid-cols-3">
@@ -18,14 +47,14 @@ export function SecondSection() {
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-[2.7vh]">
-            {Array.from({ length: 3 }).map((_, index) => (
+            {latestNews.map((news, index) => (
               <>
                 <div key={index} className="flex items-start space-x-[2vh] text-[#27066F]">
                   <CalendarIcon className="w-[2vw] h-[3vh] text-muted-foreground mt-[0.3vh]" />
                   <div>
-                    <p className="font-bold text-[1.1vw] mb-[1vh]">25 June 2024</p>
+                    <p className="font-bold text-[1.1vw] mb-[1vh]">{formatDate(news.created_at)}</p>
                     <p className="text-[1.09vw] text-muted-foreground font-semibold">
-                      Create event result declaration
+                      {news.desc}
                     </p>
                   </div>
                 </div>
