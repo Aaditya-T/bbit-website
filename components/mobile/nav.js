@@ -15,15 +15,15 @@ const menuList = [
   },
   {
     name: "Admissions",
-    link: "admission",
+    link: "/admission",
   },
   {
     name: "Department",
-    link: "courses"
+    link: "/courses"
   },
   {
     name: "Placements",
-    link: "#",
+    link: "/placement",
   },
   {
     name: "Downloads",
@@ -54,6 +54,7 @@ const sidebar = {
 const NavMobile = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
+
   useEffect(() => {
     if (isOpen) {
       //scroll to top
@@ -67,9 +68,10 @@ const NavMobile = () => {
       document.body.style.overflow = "auto";
     };
   }, [isOpen]);
+
   return (
     <>
-      <nav className={`flex items-center justify-between w-full h-12 fixed top-0 z-[9999] ${isOpen ? "bg-[#d8d1ff]" : "bg-[#F3F2FF]"}`}>
+      <nav className={`flex items-center justify-between w-full h-12 fixed top-0 z-[99999] ${isOpen ? "bg-[#d8d1ff]" : "bg-[#F3F2FF]"}`}>
         <div className="flex items-center gap-2 p-2 mt-1">
           <Link href="/">
             {!isOpen && <img src="/home/bbit.png" alt="logo" className="h-6 w-13" />}
@@ -83,14 +85,14 @@ const NavMobile = () => {
           ref={containerRef}
           className="flex items-center mr-3 relative"
         >
-          <motion.div className="background absolute top-0 left-0 w-full h-full bg-[#d8d1ff]" variants={sidebar} />
+          <motion.div className="background absolute top-0 left-0 w-full h-full bg-[#]" variants={sidebar} />
           <MenuToggle toggle={() => toggleOpen()} />
         </motion.div>
       </nav>
 
       {isOpen && (
         <motion.ul
-          className="absolute top-0 left-0 bottom-0 w-[100vw] bg-[#d8d1ff] text-[#27066F] font-OrelegaOne z-50 text-2xl"
+          className="absolute top-0 left-0 bottom-0 w-[100vw] bg-[#d8d1ff] text-[#27066F] font-OrelegaOne z-[9999] text-2xl"
           initial={{ x: "-100%" }}
           animate={{ x: 0 }}
           transition={{ duration: 0.5 }}
