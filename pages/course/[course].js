@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Sidebar from "@/components/sidebar";
-import { data } from "autoprefixer";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { Element } from "react-scroll";
@@ -53,7 +52,7 @@ const DepartmentPage = ({ dept }) => {
           </Element>
 
           <Element name="faculty members">
-            <div className="py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 lg:w-[12vw] md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
+            <div className="z-10 py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 lg:w-[12vw] md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
               <h2
                 id="faculty members"
                 className="lg:mt-[0.7vh] md:mt-[0.7vh] text-[2vh] text-[#27066F] font-bold flex justify-center"
@@ -62,29 +61,30 @@ const DepartmentPage = ({ dept }) => {
               </h2>
             </div>
 
-            <div className="flex flex-wrap gap-[3vh] mt-[4vh] mx-auto relative justify-center">
+            <div className="flex flex-wrap gap-4 mt-[4vh] mx-auto relative justify-center">
               {departmentData?.faculty.map((faculty) => (
                 <div
                   key={faculty.id}
-                  className="text-[#27066F] border-[0.1vw] w-[35vw] md:w-[15vw] lg:w-[15vw] border-solid border-[#54031f] rounded-[1vw] bg-[#c5b5e853]"
+                  className="text-[#27066F] border-[0.1vw] w-[35vw] md:w-[15vw] lg:w-[15vw] border-solid border-[#54031f] rounded-[2vw] lg:rounded-[1vw] md:rounded-[1vw] bg-[#c5b5e853]"
                 >
                   <div className="w-full h-1/2 lg:h-auto md:h-auto">
                     <img
                       src={`https://y4xgzczst4lpi3wu.public.blob.vercel-storage.com${faculty.image}`}
                       alt={faculty.full_name}
-                      className="w-full h-full lg:h-[27vh] md:h-[27vh] md:w-[18vw] lg:w-[18vw] object-cover lg:rounded-t-[2vh] md:rounded-t-[2vh] relative"
+                      className="w-full h-full lg:h-[27vh] md:h-[27vh] md:w-[18vw] lg:w-[18vw] object-cover rounded-t-[2vw] lg:rounded-t-[2vh] md:rounded-t-[2vh] relative"
                     />
                   </div>
                   <div className="flex justify-center items-center lg:h-[13vh]">
-                    <div className=" text-center">
-                      <p className="text-[1.9vh] font-bold">
+                    <div className="text-center">
+                      <p className="lg:text-[1.9vh] md:text-[1.9vh] text-base font-bold">
                         {faculty.full_name}
                       </p>
-                      <p className="text-[1.8vh]">{faculty.designation}</p>
-                      <h2 className="text-[1.8vh]">
+                      <hr className="w-full border-[0.1vh] border-[#54031f] mt-2 mb-2"></hr>
+                      <p className="lg:text-[1.8vh] md:text-[1.8vh] text-sm">{faculty.designation}</p>
+                      <h2 className="lg:text-[1.8vh] md:text-[1.8vh] text-sm">
                         Qualification: {faculty.qualification}
                       </h2>
-                      <h2 className="text-[1.8vh]">
+                      <h2 className="lg:text-[1.8vh] md:text-[1.8vh] text-sm">
                         Experience:{" "}
                         {new Date().getFullYear() - faculty.yoe + " years"}
                       </h2>
@@ -98,7 +98,6 @@ const DepartmentPage = ({ dept }) => {
           <Element name="laboratory">
             <div className="py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 lg:w-[12vw] md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
               <h2
-                id="laboratory"
                 className="text-[2vh] text-[#27066F] font-bold"
               >
                 Laboratory
@@ -106,7 +105,7 @@ const DepartmentPage = ({ dept }) => {
             </div>
             {departmentData?.lab.map((lab, index) => (
               <Element key={index} name={`lab-${index + 1}`}>
-                <div className="flex flex-col lg:flex-row md:flex-row lg:items-center md:items-center lg:justify-start md:justify-center mt-[5vh] relative">
+                <div className="flex flex-col lg:flex-row md:flex-row lg:items-center md:items-center lg:justify-center md:justify-center mt-[5vh] relative">
                   <img
                     src={`https://y4xgzczst4lpi3wu.public.blob.vercel-storage.com${lab.image}`}
                     alt={lab.title}
@@ -128,7 +127,6 @@ const DepartmentPage = ({ dept }) => {
           <Element name="timetable">
             <div className="py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 lg:w-[12vw] md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
               <h2
-                id="laboratory"
                 className="text-[2vh] text-[#27066F] font-bold"
               >
                 Time table
@@ -167,14 +165,13 @@ const DepartmentPage = ({ dept }) => {
           <Element name="syllabus">
             <div className="py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 lg:w-[12vw] md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
               <h2
-                id="laboratory"
                 className="text-[2vh] text-[#27066F] font-bold"
               >
                 Syllabus
               </h2>
             </div>
             <div className="p-5 lg:p-0 md:p-0 lg:w-[46vw] md:w-[46vw] lg:h-[18vh] md:h-[18vh] bg-[#D8D1FF] border-[0.2vh] border-[#27066F] rounded-[2vh] mx-auto mt-[6vh] flex justify-center items-center">
-              <p className="text-[#27066F] font-semibold lg:text-[2.5vh] md:text-[2.5vh]">
+              <p className="text-[#27066F] font-semibold text-sm lg:text-[2.5vh] md:text-[2.5vh]">
                 Access the most recent syllabus by visiting the Official GTU
                 Website. <br />
                 <a
@@ -191,7 +188,6 @@ const DepartmentPage = ({ dept }) => {
           <Element name="activities">
             <div className="py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 lg:w-[12vw] md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
               <h2
-                id="laboratory"
                 className="text-[2vh] text-[#27066F] font-bold"
               >
                 Activities
