@@ -62,7 +62,7 @@ export default function Admission({ dept }) {
                 </td>
               </tr>
               {gia.map((item , index) => (
-                <tr className="text-[#27066F] text-[1.8vh] lg:text-[2.5vh] font-light font-OrelegaOne">
+                <tr key = {item.id} className="text-[#27066F] text-[1.8vh] lg:text-[2.5vh] font-light font-OrelegaOne">
                 <td className="border-[0.2vw] border-[#27066F]">{index+1}</td>
                 <td className="border-[0.2vw] border-[#27066F]">
                   {item.name}
@@ -87,7 +87,7 @@ export default function Admission({ dept }) {
                 </td>
               </tr>
               {sfi.map((item , index) => (
-                <tr className="text-[#27066F] text-[1.8vh] lg:text-[2.5vh] font-light font-OrelegaOne">
+                <tr key = {item.id}className="text-[#27066F] text-[1.8vh] lg:text-[2.5vh] font-light font-OrelegaOne">
                 <td className="border-[0.2vw] border-[#27066F]">{index+1}</td>
                 <td className="border-[0.2vw] border-[#27066F]">
                   {item.name}
