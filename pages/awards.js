@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+const formateData = (dateString) => {
+  const date = new Date(dateString);
+  const day = date.getUTCDate().toString().padStart(2, '0'); 
+  const month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
+  return `${day}/${month}`;
+}
+
 export default function Awards() {
   const currentYear = new Date().getFullYear();
   const [selectedYear, setSelectedYear] = useState(currentYear);
@@ -23,6 +30,10 @@ export default function Awards() {
   useEffect(() => {
     fetchData();
   }, []);
+
+  // useEffect(() => {
+  //   console.log("awardData:", awardData);
+  // }, [awardData]);
 
   const fetchData = async () => {
     setLoading(true);
@@ -120,7 +131,7 @@ export default function Awards() {
                   alt="badge"
                 />
                 <div className="text-center lg:block md:block hidden  w-[2.4vw] md:h-[5.2vh] lg:-top-[2.5vh] md:-top-[2.5vh] lg:left-[21.3vw] md:left-[21.3vw] text-purple-600 bg-white font-bold rounded-[40vw] z-10 relative">
-                  <p className="text-center pt-[1.3vh] text-[1.7vh]">24/7</p>
+                  <p className="text-center pt-[1.3vh] text-[1.7vh]">{formateData(award.created_at)}</p>
                 </div>
                 <div
                   className="text-[1.7vw] text-[#000] w-full h-[34vh] font-black text-center py-[10vh] top-[0vw] bg-[#D9D9D9] absolute rounded-t-[1vw]"

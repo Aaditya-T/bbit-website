@@ -69,7 +69,7 @@ const DepartmentPage = ({ dept }) => {
                 >
                   <div className="w-full h-1/2 lg:h-auto md:h-auto">
                     <img
-                      src={`https://y4xgzczst4lpi3wu.public.blob.vercel-storage.com${faculty.image}`}
+                      src={`https://cvpjo1eotxjwvkts.public.blob.vercel-storage.com${faculty.image}`}
                       alt={faculty.full_name}
                       className="w-full h-full lg:h-[27vh] md:h-[27vh] md:w-[18vw] lg:w-[18vw] object-cover rounded-t-[2vw] lg:rounded-t-[2vh] md:rounded-t-[2vh] relative"
                     />
@@ -107,7 +107,7 @@ const DepartmentPage = ({ dept }) => {
               <Element key={index} name={`lab-${index + 1}`}>
                 <div className="flex flex-col lg:flex-row md:flex-row lg:items-center md:items-center lg:justify-center md:justify-center mt-[5vh] relative">
                   <img
-                    src={`https://y4xgzczst4lpi3wu.public.blob.vercel-storage.com${lab.image}`}
+                    src={`https://cvpjo1eotxjwvkts.public.blob.vercel-storage.com${lab.image}`}
                     alt={lab.title}
                     className="lg:w-[26vw] md:w-[26vw] md:h-[35vh] lg:h-[35vh] rounded-[3vh] object-cover ml-[2vw]"
                   />
