@@ -1,12 +1,8 @@
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardFooter
-} from "@/components/ui/card";
-import { useEffect , useState } from "react";
+import { useEffect, useState } from "react";
+
+//card bg: #D8D1FF
+//text bg: #27066F
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -19,114 +15,69 @@ const formatDate = (dateString) => {
 
 export function SecondSection() {
   const [latestNews, setLatestNews] = useState(null);
-  const [loading , setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     fetch("/api/dept/latest_news")
       .then((res) => res.json())
       .then((data) => {
         setLatestNews(data);
-        setLoading(false)
+        setLoading(false);
       });
   }, []);
 
-  if (loading){
-    return(
-      <div>
-        <h1>Loading...</h1>
-      </div>
-    )
-  }
 
   return (
-    <div className="mt-[10vh] flex flex-col items-center justify-center max-w-[70vw] mx-auto">
-      <div className="grid gap-[10vw] md:grid-cols-3">
-        <Card className="p-[2vw] rounded-[2vh] bg-[#D8D1FF] min-w-[30vw] max-w-[30vw]">
-          <CardHeader className="items-center">
-            <CardTitle className="text-[1.5vw] text-[#27066F] font-bold">
-              LATEST NEWS
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-[2.7vh]">
-            {latestNews.map((news, index) => (
-              <>
-                <div key={index} className="flex items-start space-x-[2vh] text-[#27066F]">
-                  <CalendarIcon className="w-[2vw] h-[3vh] text-muted-foreground mt-[0.3vh]" />
-                  <div>
-                    <p className="font-bold text-[1.1vw] mb-[1vh]">{formatDate(news.created_at)}</p>
-                    <p className="text-[1.09vw] text-muted-foreground font-semibold">
-                      {news.desc}
-                    </p>
+    <div className="grid grid-cols-1 md:grid-cols-2 md:px-5 md:max-w-[80%] mx-auto mt-5 md:mt-16">
+      <div className="bg-[#D8D1FF] rounded-xl p-5 flex flex-col justify-between">
+        <h1 className="text-[#27066F] text-2xl font-bold mb-16 text-center">Latest News</h1>
+        <div className="flex-grow flex flex-col space-y-4">
+          {loading ? (
+            <div className="space-y-4">
+              {[...Array(3)].map((_, index) => (
+                <div key={index} className="flex items-start space-x-5 animate-pulse">
+                  <div className="w-8 h-8 bg-gray-500 rounded"></div>
+                  <div className="flex-1 space-y-2 py-1">
+                    <div className="h-4 bg-gray-500 rounded w-3/4"></div>
+                    <div className="h-4 bg-gray-500 rounded"></div>
                   </div>
                 </div>
-                <hr className="h-[0.6vh] bg-[#27066F] rounded-[2vh]" />
-              </>
-            ))}
-          </CardContent>
-          <CardFooter>
-            <Button variant="default" className="bg-[#EAE6FF] text-[#27066F] font-bold w-[6vw] text-[1.8vh]">
-              View More
-            </Button>
-          </CardFooter>
-        </Card>
-
-        <div className=" left-[16vw] h-full flex flex-col justify-center items-center relative">
-          <Card className="bg-[#D8D1FF] rounded-[2vh] w-[40vw] h-[29vh] text-[#27066F] absolute mb-[41vh]">
-            <CardHeader className="pb-[0vh]">
-              <div className="flex items-center space-x-[2vh] mx-auto">
-                <div>
-                  <CardTitle className="text-[3vh] font-bold mb-[0.8vh]">
-                    Our Vision
-                  </CardTitle>
+              ))}
+            </div>
+          ) : (
+            latestNews.map((news, index) => (
+              <div key={index} className="flex-grow flex flex-col justify-between">
+                <div className="flex items-start space-x-5">
+                  <CalendarIcon className="w-8 h-8" />
+                  <div>
+                    <p className="font-medium text-lg mt-1">{formatDate(news.created_at)}</p>
+                    <p className="text-lg text-[#27066F] mt-2">{news.desc}</p>
+                  </div>
                 </div>
+                <hr className="h-1 bg-[#27066F] rounded-2xl mt-4" />
               </div>
-            </CardHeader>
-            <CardContent className="space-y-[2vh]">
-              <p className="text-[1.9vh] md:text-[2vh] font-semibold">
-                At BBIT our vision is to create a nurturing and innovative
-                environment where every student can thrive academically,
-                socially, and personally. We aspire to be a leading institution
-                recognized for excellence in education, fostering a culture of
-                inclusivity, critical thinking, and lifelong learning. Through
-                cutting-edge research, community engagement, and a commitment to
-                sustainability, we aim to empower our students to become
-                compassionate leaders and impactful global citizens.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="p-[2.5vh] bg-[#D8D1FF] rounded-[2vh] w-[40vw] h-[39vh] mt-[31vh] text-[#27066F]">
-            <CardHeader className="pb-[0vh]">
-              <div className="flex items-center space-x-[2vh] mx-auto">
-                <div>
-                  <CardTitle className="text-[3vh] font-bold -mt-[4vh] mb-[1vh]">
-                    Our Mission
-                  </CardTitle>
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-[2vh]">
-              <ul className="list-disc">
-                <li className="text-[2vh] md:text-[2vh] font-semibold mb-[1.7vh]">
-                  Develop strong fundamental concepts, analytical abilities, and
-                  problem-solving skills.
-                </li>
-                <li className="text-[2vh] md:text-[2vh] font-semibold mb-[1.7vh]">
-                  Provide an environment that fosters creativity and innovation.
-                </li>
-                <li className="text-[2vh] md:text-[2vh] font-semibold mb-[1.7vh]">
-                  Deliver quality training to enhance skills and
-                  entrepreneurship.
-                </li>
-                <li className="text-[2vh] md:text-[2vh] font-semibold mb-[1.7vh]">
-                  Create opportunities for lifelong learning to meet evolving
-                  global technological standards.
-                </li>
-                <li className="text-[2vh] md:text-[2vh] font-semibold">
-                  Encourage excellence in technical education.
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
+            ))
+          )}
+        </div>
+        <Button className="bg-[#eae6ff] rounded-xl mt-5">View All</Button>
+      </div>
+      {/* vision and mission card */}
+      <div className="md:px-5 mt-12 md:mt-0 font-semibold">
+        <div className="bg-[#D8D1FF] rounded-xl p-4">
+          <h1 className="text-[#27066F] text-2xl font-bold mb-5 text-center">Our Vision</h1>
+          <p className="text-lg text-[#27066F]">
+            At BBIT, our vision is to create an innovative and nurturing environment where students thrive academically, socially, and personally. We aim to be a leading institution known for educational excellence, inclusivity, critical thinking, and lifelong learning. Through cutting-edge research, community engagement, and sustainability, we empower students to become compassionate leaders and impactful global citizens.
+          </p>
+        </div>
+        <div className="bg-[#D8D1FF] rounded-xl p-4 mt-5">
+          <h1 className="text-[#27066F] text-2xl font-bold mb-5 text-center">Our Mission</h1>
+          <ul className="list-disc list-inside text-lg text-[#27066F]">
+            <li>Develop strong fundamental concepts, analytical abilities, and problem-solving skills.</li>
+            <li>Provide an environment that fosters creativity and innovation.</li>
+            <li>Deliver quality training to enhance skills and entrepreneurship.</li>
+            <li>Create opportunities for lifelong learning to meet evolving global technological standards.</li>
+            <li>Encourage excellence in technical education.</li>
+          </ul>
         </div>
       </div>
     </div>

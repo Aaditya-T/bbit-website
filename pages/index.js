@@ -17,6 +17,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import Image from "next/image";
 
 
 // import required modules
@@ -53,7 +54,7 @@ const formatDate = (dateString) => {
 const Home = () => {
   const [isMob, setIsMob] = useState(false);
   const [latestNews, setLatestNews] = useState(null);
-  const [loading , setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     setIsMob(isMobile);
     fetch("/api/dept/latest_news")
@@ -64,10 +65,6 @@ const Home = () => {
       });
 
   }, []);
-
-  useEffect(()=>{
-    console.log(latestNews)
-  },[latestNews])
 
   return (
     <div style={{ overflow: "hidden" }} className="mb-56">
@@ -171,66 +168,44 @@ const Home = () => {
               initial={{ opacity: 0, y: 40 }}
               transition={{ duration: 1.5 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className=""
+              className="mb-[10vh]"
             >
-              <div className="relative w-[80vw] h-[90vh] mt-[17vh]">
-                <div className="flex flex-col-2 gap-3 ml-[14.5vw] w-[71.2vw]">
-                  <Card className="p-[1vw] bg-[#D8D1FF] rounded-2xl shadow-lg">
-                    <CardHeader className="pb-4">
-                      <div className="flex items-center space-x-4 text-[#27066F]">
-                        <Avatar className="w-[5vw] h-[5vw]">
-                          <AvatarImage src="/home/chairman.svg" />
-                          <AvatarFallback>BP</AvatarFallback>
-                        </Avatar>
-                        <div>
-                          <CardTitle className="text-[1.7vw] font-bold">
-                            Chairman{"'"}s Message
-                          </CardTitle>
-                          <CardDescription className="text-[1.2vw] font-medium">
-                            Er. BHIKHUBHAI B. PATEL
-                          </CardDescription>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <p className="text-[1vw] font-semibold text-[#27066F]">
-                        Education plays a vital role in the socio-economic
-                        development of the country. Education that is thorough,
-                        purposeful and meets the requirements of today&apos;s
-                        technological industry market. It is our deepest desire
-                        to serve the society by molding the technocrats of
-                        tomorrow.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card className="p-[1vw] bg-[#D8D1FF] rounded-2xl shadow-lg">
-                    <CardHeader className="pb-4">
-                      <div className="flex items-center space-x-4 text-[#27066F]">
-                        <Avatar className="w-[5vw] h-[5vw]">
-                          <AvatarImage src="/home/principal.svg" />
-                          <AvatarFallback>KM</AvatarFallback>
-                        </Avatar>
-                        <div>
-                          <CardTitle className="text-[1.7vw] font-bold">
-                            Principal{"'"}s Message
-                          </CardTitle>
-                          <CardDescription className="text-[1.2vw] font-medium">
-                            Dr. K.M Makwana
-                          </CardDescription>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <p className="text-[1vw] font-semibold text-[#27066F]">
-                        I am proud of being the Principal of such a wonderful
-                        institution dedicated to the causes of better India.
-                        Through education and their real empowerment, come on
-                        let&apos;s give our best and make this institution a
-                        modern temple of learning through our diligence,
-                        devotion and dedication.
-                      </p>
-                    </CardContent>
-                  </Card>
+              {/* chairman's message and principal's message with image and name*/}
+              <div className="grid grid-cols-1 md:grid-cols-2 md:px-5 md:max-w-[80%] mx-auto md:mt-16 gap-x-4">
+                <div className="flex items-start p-5 bg-[#D8D1FF] rounded-xl">
+                  <div className="ml-5">
+                    <h2 className="text-[#27066F] text-xl font-bold">CHAIRMAN{"'"}S MESSAGE</h2>
+                    <h3 className="text-[#27066F] font-semibold mt-5">Er. BHIKHUBHAI B. PATEL</h3>
+                    <p className="text-[#27066F] font-semibold mt-1">
+                      Education plays a vital role in the socio-economic development of the country. Education that is thorough, purposeful, and meets the requirements of today's technological industry market. It is our deepest desire to serve the society by molding the technocrats of tomorrow.
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0">
+                    <Image
+                      src="/home/chairman.svg" // Replace with the correct image path
+                      alt="Chairman Image"
+                      width={100} // Set appropriate width
+                      height={100} // Set appropriate height
+                      className="rounded-full -mt-16 absolute -ml-28"
+                    />
+                  </div>
+                </div>
+                <div className="flex items-start p-5 bg-[#D8D1FF] rounded-xl">
+                  <div className="ml-5">
+                    <h2 className="text-[#27066F] text-xl font-bold">PRINCIPAL{"'"}s MESSAGE</h2>
+                    <h3 className="text-[#27066F] font-semibold mt-5">Dr. K.M Makwana</h3>
+                    <p className="text-[#27066F] font-semibold mt-1">
+                    I am proud of being the Principal of such a wonderful institution dedicated to the causes of better India. Through education and their real empowerment, come on let's give our best and make this Institution a modern temple of learning through our diligence, devotion and dedication.                    </p>
+                  </div>
+                  <div className="flex-shrink-0">
+                    <Image
+                      src="/home/principal.svg" // Replace with the correct image path
+                      alt="Chairman Image"
+                      width={100} // Set appropriate width
+                      height={100} // Set appropriate height
+                      className="rounded-full -mt-16 absolute -ml-28"
+                    />
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -259,7 +234,7 @@ const Home = () => {
           </div>
 
           {/* swiper */}
-          <div className="relative p-1 border-4 border-solid border-[#27066F] rounded-[10px] z-10">
+          <div className="relative border-4 border-solid border-[#27066F] rounded-[10px] z-10">
             <Swiper
               effect={'coverflow'}
               grabCursor={true}
@@ -285,7 +260,7 @@ const Home = () => {
                   <img
                     src={`/home/banner-${index}.jpg`}
                     alt="college-images"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover rounded-[5px]"
                   />
                 </SwiperSlide>
               ))}
@@ -343,86 +318,16 @@ const Home = () => {
           </div>
 
           <div className="relative w-full mt-16 p-2">
-            <div className="flex flex-col gap-4 mb-14">
-              {/* a latest news card */}
-              <Card className="p-4 bg-[#D8D1FF] rounded-2xl shadow-lg mb-5">
-                <CardHeader className="pb-4 text-center items-center">
-                  <div className="flex items-center text-center space-x-4 text-[#27066F]">
-                    <CardTitle className="text-2xl font-bold items-center text-center">
-                      Latest News
-                    </CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  {loading ? (
-                    <div>
-                      <h1>Loading...</h1>
-                    </div>
-                  ) : (
-                    latestNews.map((news, index) => (
-                      <>
-                        <div key={index} className="flex items-start space-x-4">
-                          <CalendarIcon className="w-8 h-8" />
-                          <div>
-                            <p className="font-medium text-lg mt-1">
-                              {formatDate(news.created_at)}
-                            </p>
-                            <p className="text-lg text-[#27066F]">
-                              {news.desc}
-                            </p>
-                          </div>
-                        </div>
-                        <hr className="h-1 bg-[#27066F] rounded-2xl" />
-                      </>
-                    ))
-                  )}
-                </CardContent>
-              </Card>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              transition={{ duration: 1.5 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className=""
+            >
+              <SecondSection />
+            </motion.div>
 
-            <div className="flex flex-col gap-5 mb-20">
-
-              <Card className="p-4 bg-[#D8D1FF] rounded-2xl shadow-lg">
-                <CardHeader className="pb-4 text-center items-center">
-                  <div className="flex space-x-4 text-[#27066F]">
-                    <CardTitle className="text-xl font-bold">
-                      Our Vision
-                    </CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-lg font-semibold text-[#27066F]">
-                    Education plays a vital role in the socio-economic
-                    development of the country. Education that is thorough,
-                    purposeful and meets the requirements of today's
-                    technological industry market. It is our deepest desire to
-                    serve the society by molding the technocrats of tomorrow.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="p-4 bg-[#D8D1FF] rounded-2xl shadow-lg">
-                <CardHeader className="pb-4 text-center items-center">
-                  <div className="flex space-x-4 text-[#27066F]">
-                    <CardTitle className="text-xl font-bold">
-                      Our Mission
-                    </CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-lg font-semibold text-[#27066F]">
-                    Education plays a vital role in the socio-economic
-                    development of the country. Education that is thorough,
-                    purposeful and meets the requirements of today's
-                    technological industry market. It is our deepest desire to
-                    serve the society by molding the technocrats of tomorrow.
-                  </p>
-                </CardContent>
-              </Card>
-
-            </div>
-
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 mt-28">
 
               <Card className="p-4 bg-[#D8D1FF] rounded-2xl shadow-lg">
                 <CardHeader className="pb-4">
