@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState, useEffect } from "react";
 
 const Events = () => {
@@ -11,11 +12,11 @@ const Events = () => {
         const years = Array.from(new Set(eventData.map(event => event.year))).sort();
         const firstYear = years[0];
         const lastYear = years[years.length - 1];
-    
+
         const handleYearClick = (year) => {
             setCurrentYear(year);
         };
-    
+
         return years.map((year, index) => {
             if (
                 year === firstYear ||
@@ -28,7 +29,7 @@ const Events = () => {
                     <button
                         key={year}
                         onClick={() => handleYearClick(year)}
-                        className={`border-[0.2vh] border-[#27066F] px-[1.5vh] py-[1vh] rounded-[1vh] w-[6vh] h-[6vh] flex justify-center items-center ${currentYear === year ? 'bg-[#27066F] text-white' : ''}`}
+                        className={`border-[0.2vh] border-[#27066F] px-[1.5vh] py-[1vh] rounded-[1vh] w-[7vh] lg:w-[6vh] md:w-[6vh] h-[4vh] lg:h-[6vh] md:h-[6vh] flex justify-center items-center ${currentYear === year ? 'bg-[#27066F] text-white' : ''}`}
                     >
                         {year}
                     </button>
@@ -98,7 +99,7 @@ const Events = () => {
     return (
         <div className="mt-[9.5vh] mb-[20vh] ">
             <div className="px-[5vw] h-[20vh]">
-                <h1 className="text-[2.5vw] font-light text-center font-OrelegaOne text-[--text-primary]">Events</h1>
+                <h1 className="text-3xl lg:text-[2.5vw] md:text-[2.5vw] font-light text-center font-OrelegaOne text-[--text-primary]">Events</h1>
             </div>
 
             {loading ? (
@@ -113,16 +114,17 @@ const Events = () => {
                 <>
                     {/* big cards with desc */}
                     <div className="bg-gradient-to-t from-[#FFC84A] to-[#F3F2FF] h-[24vh] -mt-[15vh]"></div>
-                    <div className="grid grid-cols-3 gap-[5vw] mb-[10vh] -mt-[11vh] px-[5vw]">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-[2vw] md:gap-[5vw] lg:gap-[5vw] mb-[10vh] -mt-[11vh] px-[5vw]">
                         {displayedEvents.length > 0 ? (
                             displayedEvents.map((event, i) => (
-                                <div className="w-full bg-[#F3F2FF] rounded-[5vh]" key={i}>
-                                    <div 
-                                        className="h-[32vh] bg-cover bg-center mt-[3vh] rounded-t-[5vh]"
-                                        style={{ backgroundImage: `url(https://y4xgzczst4lpi3wu.public.blob.vercel-storage.com${event.image_path})` }}
+                                <div className="w-full bg-[#F3F2FF] rounded-[2vh] h-fit" key={i}>
+                                    <img
+                                        src={`https://y4xgzczst4lpi3wu.public.blob.vercel-storage.com${event.image_path}`}
+                                        alt={event.title}
+                                        className="rounded-t-[4vh] h-1/2 w-full"
                                     />
-                                    <div className="px-[2vh] py-[2vh]">
-                                        <p className="text-[1vw] font-normal text-center text-[--text-primary]">{event.desc}</p>
+                                    <div className="p-[1vh]">
+                                        <p className="lg:text-[1vw] md:text-[1vw] text-[3vw] font-normal text-center text-[--text-primary]">{event.desc}</p>
                                     </div>
                                 </div>
                             ))
@@ -135,7 +137,7 @@ const Events = () => {
                     <div className="flex justify-center gap-[1.7vh] mb-[34vh] mt-[14vh] text-[2vh]">
                         <button
                             onClick={handlePrevClick}
-                            className="border-[0.2vh] border-[#27066F] px-[1vw] py-[1vh] rounded-[1vh] w-[3vw] h-[6vh] flex justify-center items-center"
+                            className="border-[0.2vh] border-[#27066F] px-[3vw] lg:px-[1vw] md:px-[1vw] py-[1vh] rounded-[1vh] w-[10vw] lg:w-[3vw] md:w-[3vw] h-[4vh] lg:h-[6vh] md:h-[6vh] flex justify-center items-center"
                             disabled={!eventData || !currentYear || currentYear === Math.min(...Array.from(new Set(eventData.map(event => event.year)))).toString()}
                         >
                             <svg width="800px" height="800px" viewBox="0 0 1024 1024" className="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M768 903.232l-50.432 56.768L256 512l461.568-448 50.432 56.768L364.928 512z" fill="#000000" /></svg>
@@ -145,7 +147,7 @@ const Events = () => {
 
                         <button
                             onClick={handleNextClick}
-                            className="border-[0.2vh] border-[#27066F] px-[1vw] py-[1vh] rounded-[1vh] w-[3vw] h-[6vh] flex justify-center items-center"
+                            className="border-[0.2vh] border-[#27066F] px-[3vw] lg:px-[1vw] md:px-[1vw] py-[1vh] rounded-[1vh] w-[10vw] lg:w-[3vw] md:w-[3vw] h-[4vh] lg:h-[6vh] md:h-[6vh] flex justify-center items-center"
                             disabled={!eventData || !currentYear || currentYear === Math.max(...Array.from(new Set(eventData.map(event => event.year)))).toString()}
                         >
                             <svg width="800px" height="800px" viewBox="0 0 1024 1024" className="icon" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M256 120.768l50.432-56.768L659.2 512 197.632 960 147.2 903.232 528.704 512z" fill="#000000" /></svg>
