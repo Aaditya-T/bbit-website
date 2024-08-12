@@ -196,7 +196,7 @@ const DepartmentPage = ({ dept }) => {
               </h2>
             </div>
             {departmentData?.dept_activities.map((activity , index) =>(
-              <div className="mt-[6vh] mx-auto relative mb-[34vh] space-y-5">
+              <div key={index} className="mt-[6vh] mx-auto relative mb-[34vh] space-y-5">
               <div className="md:h-[30vh] bg-[#D8D1FF] border-[0.2vh] border-[#27066F] rounded-[2vh] mx-auto">
                 <img
                   src={activity.image}
