@@ -19,27 +19,18 @@ const menuList = [
     link: "/admission",
   },
   {
-    name: "Department",
+    name: "Departments",
     link: "/courses",
   },
   {
     name: "Placements",
-    link: "/placements",
+    link: "/placement",
   },
   {
     name: "Downloads",
     link: "/downloads",
   }
 ];
-// About BBIT 
-// Principal’s CV
-// Organization Chart
-// Institute Committees
-// Center of Excellence - Siemens
-// Center of Excellence - Welding
-// Campus Drive
-// CDTP
-// AICTE
 const subMenu1 = [
   {
     name: "About BBIT",
@@ -79,9 +70,40 @@ const subMenu1 = [
   },
 ];
 
+const submenu2 = [
+  {
+    name: "MOU",
+    link: "/mou",
+  },
+  {
+    name: "Mandatory Disclosure",
+    link: "/disclosure",
+  },
+  {
+    name: "Tender Notice",
+    link: "/tender",
+  },
+  {
+    name: "TEQIP",
+    link: "/teqip",
+  },
+  {
+    name: "Right to Info. Act",
+    link: "/right",
+  },
+  {
+    name: "Faculty & Staff list",
+    link: "/faculty",
+  },
+  {
+    name: "Recruitment Rules For Faculty",
+    link: "/recruitment",
+  },
+];
+
 
 const Nav = () => {
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState(true);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
 
   const toggleSubMenu = () => {
     setIsSubMenuOpen(!isSubMenuOpen);
@@ -108,7 +130,7 @@ const Nav = () => {
   return (
     <nav className="flex items-center justify-between w-full">
       <div className="flex items-center gap-2">
-        <h1 className="text-2xl font-bold">
+        <h1 className="text-2xl font-bold" onClick={() => window.location.replace("/")}>
           <img
             src="/home/bbit.png"
             alt="logo"
@@ -123,18 +145,17 @@ const Nav = () => {
       >
         {menuList.map((item) => {
           return (
-            <motion.div
-              key={item.name}
-              className="relative px-7 font-OrelegaOne text-[--text-primary] hover:bg-[#EAE6FF] hover:rounded-xl"
-              onMouseEnter={item?.isDropDown ? toggleSubMenu : undefined}
-              onMouseLeave={item?.isDropDown ? toggleSubMenu : undefined}
-            >
-              <a href={item.link} className={cmnClass}>
+            <a href={item.link} className={cmnClass} key={item.name}>
+              <motion.div
+                className="relative flex px-7 font-OrelegaOne text-[--text-primary] hover:bg-[#EAE6FF] hover:rounded-t-xl"
+                onMouseEnter={item?.isDropDown ? toggleSubMenu : undefined}
+                onMouseLeave={item?.isDropDown ? toggleSubMenu : undefined}
+              >
                 {item.name}
                 {item?.isDropDown && (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="w-3.5 text-[#27066F]"
+                    className="w-3.5 text-[#27066F]" 
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -147,34 +168,44 @@ const Nav = () => {
                     />
                   </svg>
                 )}
-              </a>
-              <AnimatePresence>
-                {isSubMenuOpen && item?.isDropDown && (
-                  <motion.div
-                    initial="closed"
-                    animate={isSubMenuOpen ? "open" : "closed"}
-                    variants={variant}
-                    className="absolute top-7 bg-[#EAE6FF] rounded-xl border w-fit flex flex-row px-3 py-2 z-10"
-                  >
-                    {/* two boxes with different options */}
-                    <div className="flex flex-col gap-2 mr-5 bg-[#D8D1FF] pl-6 pr-24 rounded-xl">
-                      <span className="text-[#27066F] font-OrelegaOne text-[--text-primary] text-xl text-nowrap">
-                        The Institute
-                      </span>
-                      <div className="flex flex-col gap-5">
-                        {subMenu1.map((item) => (
-                          <a href={item.link} key={item.name} className="font-sans font-semibold text-nowrap">
-                            {item.name}
-                          </a>
-                        ))}
+                <AnimatePresence>
+                  {isSubMenuOpen && item?.isDropDown && (
+                    <motion.div
+                      initial="closed"
+                      animate={isSubMenuOpen ? "open" : "closed"}
+                      variants={variant}
+                      className="absolute top-7 bg-[#EAE6FF] rounded-xl border w-fit flex flex-row px-3 py-2 z-10 -left-36"
+                    >
+                      {/* two boxes with different options */}
+                      <div className="flex flex-col gap-2 mr-5 bg-[#D8D1FF] pl-6 pr-24 rounded-xl">
+                        <span className="text-[#27066F] font-OrelegaOne text-[--text-primary] text-2xl text-nowrap">
+                          The Institute
+                        </span>
+                        <div className="flex flex-col gap-5 text-base">
+                          {subMenu1.map((item) => (
+                            <a href={item.link} key={item.name} className="font-sans font-semibold text-nowrap">
+                              {item.name}
+                            </a>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex flex-col gap-2 ml-5 bg-[#D8D1FF]">
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
+                      <div className="flex flex-col gap-2 bg-[#D8D1FF] pl-6 pr-24 rounded-xl">
+                        <span className="text-[#27066F] font-OrelegaOne text-[--text-primary] text-2xl text-nowrap">
+                          Legal Forms
+                        </span>
+                        <div className="flex flex-col gap-5 text-base">
+                          {submenu2.map((item) => (
+                            <a href={item.link} key={item.name} className="font-sans font-semibold text-nowrap">
+                              {item.name}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            </a>
           );
         })}
       </motion.div>
