@@ -12,6 +12,7 @@ const menuList = [
   {
     name: "About",
     link: "#",
+    isDropDown: true,
   },
   {
     name: "Admissions",
@@ -99,8 +100,24 @@ const NavMobile = () => {
         >
           {menuList.map((item, index) => (
             <motion.li key={index} className="cursor-pointer mt-10 ml-4" whileHover={{ scale: 1.1 }}>
-              <Link href={item.link} onClick={() => toggleOpen()}>
+              <Link href={item.link} onClick={() => toggleOpen()} className="flex">
                 {item.name}
+                {item?.isDropDown && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-3.5 text-[#27066F]" 
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                )}
               </Link>
             </motion.li>
           ))}
