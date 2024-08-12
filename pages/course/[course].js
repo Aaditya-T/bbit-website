@@ -19,6 +19,10 @@ const DepartmentPage = ({ dept }) => {
     setDepartmentData(data);
   }, [course, dept]);
 
+  useEffect(() => {
+    console.log(departmentData);
+  }, [departmentData]);
+
   return (
     <>
       <div className="flex md:ml-[10vw]">
@@ -51,7 +55,10 @@ const DepartmentPage = ({ dept }) => {
             </div>
           </Element>
 
-          <Element name="faculty members" className="flex flex-col items-center">
+          <Element
+            name="faculty members"
+            className="flex flex-col items-center"
+          >
             <div className="py-2 md:py-0 md:px-0 md:w-[12vw] md:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
               <h2
                 id="faculty members"
@@ -80,7 +87,9 @@ const DepartmentPage = ({ dept }) => {
                         {faculty.full_name}
                       </p>
                       <hr className="w-full border-[0.1vh] border-[#27066F] mt-2 mb-2"></hr>
-                      <p className="mt-[1vh] md:text-[1.8vh] text-sm">{faculty.designation}</p>
+                      <p className="mt-[1vh] md:text-[1.8vh] text-sm">
+                        {faculty.designation}
+                      </p>
                       <h2 className="mt-[1vh] md:text-[1.8vh] text-sm">
                         Qualification: {faculty.qualification}
                       </h2>
@@ -97,9 +106,7 @@ const DepartmentPage = ({ dept }) => {
 
           <Element name="laboratory">
             <div className="py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 lg:w-[12vw] md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
-              <h2
-                className="text-[2vh] text-[#27066F] font-bold md:py-2"
-              >
+              <h2 className="text-[2vh] text-[#27066F] font-bold md:py-2">
                 Laboratory
               </h2>
             </div>
@@ -126,9 +133,7 @@ const DepartmentPage = ({ dept }) => {
 
           <Element name="timetable">
             <div className="py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 lg:w-[12vw] md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
-              <h2
-                className="text-[2vh] text-[#27066F] font-bold  md:py-2"
-              >
+              <h2 className="text-[2vh] text-[#27066F] font-bold  md:py-2">
                 Time table
               </h2>
             </div>
@@ -149,8 +154,9 @@ const DepartmentPage = ({ dept }) => {
                         <th
                           key={sem}
                           onClick={() => setSelectedSemester(sem)}
-                          className={`cursor-pointer text-[#27066F] text-center py-[2vh] px-[1vw] font-semibold text-[2vh] border-t-[0.1vh] border-b-[0.2vh] border-[#27066F] ${selectedSemester === sem ? "bg-[#B3A1FF]" : ""
-                            }`}
+                          className={`cursor-pointer text-[#27066F] text-center py-[2vh] px-[1vw] font-semibold text-[2vh] border-t-[0.1vh] border-b-[0.2vh] border-[#27066F] ${
+                            selectedSemester === sem ? "bg-[#B3A1FF]" : ""
+                          }`}
                         >
                           {sem}
                         </th>
@@ -164,9 +170,7 @@ const DepartmentPage = ({ dept }) => {
 
           <Element name="syllabus">
             <div className="py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 lg:w-[12vw] md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
-              <h2
-                className="text-[2vh] text-[#27066F] font-bold md:py-2"
-              >
+              <h2 className="text-[2vh] text-[#27066F] font-bold md:py-2">
                 Syllabus
               </h2>
             </div>
@@ -187,20 +191,22 @@ const DepartmentPage = ({ dept }) => {
 
           <Element name="activities">
             <div className="py-2 lg:py-0 md:py-0 lg:px-0 md:px-0 md:w-[12vw] md:h-[5vh] lg:h-[5vh] bg-[#D8D1FF] rounded-[1.5vh] mt-[5vh] mx-auto relative flex justify-center w-fit px-5">
-              <h2
-                className="text-[2vh] text-[#27066F] font-bold md:py-2"
-              >
+              <h2 className="text-[2vh] text-[#27066F] font-bold md:py-2">
                 Activities
               </h2>
             </div>
-            <div className="mt-[6vh] mx-auto relative mb-[34vh] space-y-5">
+            {departmentData?.dept_activities.map((activity , index) =>(
+              <div className="mt-[6vh] mx-auto relative mb-[34vh] space-y-5">
               <div className="md:h-[30vh] bg-[#D8D1FF] border-[0.2vh] border-[#27066F] rounded-[2vh] mx-auto">
                 <img
-                  src="/home/banner-1.jpg"
+                  src={activity.image}
                   className="w-1/2 h-[20vh] lg:w-[17vw] md:w-[17vw] lg:h-[29.7vh] md:h-[29.7vh] rounded-tl-[2vh] rounded-bl-[2vh]"
+                  alt="image"
                 ></img>
               </div>
+              {activity.title}
             </div>
+            ))}
           </Element>
         </div>
       </div>
