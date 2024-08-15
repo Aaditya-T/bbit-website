@@ -11,6 +11,9 @@ export default async function fetchData(req, res) {
           ),
           lab (
             *
+          ),
+          dept_activities (
+            *
           )
         `)
 
