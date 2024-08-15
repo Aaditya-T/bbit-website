@@ -49,9 +49,13 @@ const DepartmentPage = ({ dept }) => {
               >
                 Mission
               </h2>
-              <p className="lg:w-[49vw] md:w-[49vw] text-[2vh] whitespace-pre-line mt-[2vh] text-[#27066F] font-normal">
-                {departmentData?.mission}
-              </p>
+              <div className="lg:w-[49vw] md:w-[49vw] text-[2vh] whitespace-pre-line mt-[2vh] text-[#27066F] font-normal">
+                <ol>
+                  {departmentData?.mission.map((points, index) => (
+                    <li key={index}>{points}</li>
+                  ))}
+                </ol>
+              </div>
             </div>
           </Element>
 
@@ -195,17 +199,20 @@ const DepartmentPage = ({ dept }) => {
                 Activities
               </h2>
             </div>
-            {departmentData?.dept_activities.map((activity , index) =>(
-              <div key={index} className="mt-[6vh] mx-auto relative mb-[34vh] space-y-5">
-              <div className="md:h-[30vh] bg-[#D8D1FF] border-[0.2vh] border-[#27066F] rounded-[2vh] mx-auto">
-                <img
-                  src={activity.image}
-                  className="w-1/2 h-[20vh] lg:w-[17vw] md:w-[17vw] lg:h-[29.7vh] md:h-[29.7vh] rounded-tl-[2vh] rounded-bl-[2vh]"
-                  alt="image"
-                ></img>
+            {departmentData?.dept_activities.map((activity, index) => (
+              <div
+                key={index}
+                className="mt-[6vh] mx-auto relative mb-[34vh] space-y-5"
+              >
+                <div className="md:h-[30vh] bg-[#D8D1FF] border-[0.2vh] border-[#27066F] rounded-[2vh] mx-auto">
+                  <img
+                    src={activity.image}
+                    className="w-1/2 h-[20vh] lg:w-[17vw] md:w-[17vw] lg:h-[29.7vh] md:h-[29.7vh] rounded-tl-[2vh] rounded-bl-[2vh]"
+                    alt="image"
+                  ></img>
+                </div>
+                {activity.title}
               </div>
-              {activity.title}
-            </div>
             ))}
           </Element>
         </div>
