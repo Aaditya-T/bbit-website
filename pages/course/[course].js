@@ -50,11 +50,15 @@ const DepartmentPage = ({ dept }) => {
                 Mission
               </h2>
               <div className="lg:w-[49vw] md:w-[49vw] text-[2vh] whitespace-pre-line mt-[2vh] text-[#27066F] font-normal">
-                <ol>
-                  {departmentData?.mission.map((points, index) => (
-                    <li key={index}>{points}</li>
-                  ))}
-                </ol>
+                {departmentData?.mission ? (
+                  <ol>
+                    {departmentData.mission.map((points, index) => (
+                      <li key={index}>{points}</li>
+                    ))}
+                  </ol>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
           </Element>
