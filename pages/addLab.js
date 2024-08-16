@@ -53,57 +53,62 @@ export default function AddLab() {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
+            <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                    <label>Title:</label>
+                    <label className="block font-semibold mb-2">Title:</label>
                     <input 
                         type="text" 
                         value={title} 
                         onChange={(e) => setTitle(e.target.value)} 
                         required 
+                        className="w-full p-2 border border-gray-300 rounded-md"
                     />
                 </div>
                 <div>
-                    <label>Description:</label>
+                    <label className="block font-semibold mb-2">Description:</label>
                     <input 
                         type="text" 
                         value={description} 
                         onChange={(e) => setDescription(e.target.value)} 
                         required 
+                        className="w-full p-2 border border-gray-300 rounded-md"
                     />
                 </div>
                 <div>
-                    <label>Image URL:</label>
+                    <label className="block font-semibold mb-2">Image URL:</label>
                     <input 
                         type="text" 
                         value={image} 
                         onChange={(e) => setImage(e.target.value)} 
                         required 
+                        className="w-full p-2 border border-gray-300 rounded-md"
                     />
                 </div>
                 <div>
-                    <label>Lab ID:</label>
+                    <label className="block font-semibold mb-2">Lab ID:</label>
                     <input 
                         type="text" 
                         value={lab_id} 
                         onChange={(e) => setLab_id(e.target.value)} 
                         required 
+                        className="w-full p-2 border border-gray-300 rounded-md"
                     />
                 </div>
                 <div>
-                    <label>Image:</label>
+                    <label className="block font-semibold mb-2">Image:</label>
                     <input 
                         type="file"
                         onChange={(e) => setUploadImage(e.target.files[0])} 
                         required 
+                        className="w-full p-2 border border-gray-300 rounded-md"
                     />
                 </div>
-                <button type="submit">Add Lab</button>
+                <button type="submit" className="w-full py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Add Lab</button>
             </form>
             
             {message && (
-                <div style={{ color: isError ? 'red' : 'green', marginTop: '10px' }}>
+                <div className={`mt-4 p-2 rounded-md ${isError ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
                     {message}
                 </div>
             )}
