@@ -86,10 +86,10 @@ const DepartmentPage = ({ dept }) => {
                     <img
                       src={`https://cvpjo1eotxjwvkts.public.blob.vercel-storage.com${faculty.image}`}
                       alt={faculty.full_name}
-                      className="w-full h-full lg:h-[27vh] md:h-[27vh] md:w-[18vw] lg:w-[18vw] object-cover rounded-t-[2vw] lg:rounded-t-[2vh] md:rounded-t-[2vh] relative"
+                      className="w-full h-full lg:h-[30vh] md:h-[27vh] md:w-[18vw] lg:w-[18vw] rounded-t-[2vw] lg:rounded-t-[2vh] md:rounded-t-[2vh] relative"
                     />
                   </div>
-                  <div className="flex justify-center items-center lg:h-[13vh]">
+                  <div className="flex justify-center items-center lg:h-[13vh] lg:mt-4">
                     <div className="text-center">
                       <p className="lg:text-[1.9vh] md:text-[1.9vh] text-base font-bold">
                         {faculty.full_name}
@@ -98,10 +98,10 @@ const DepartmentPage = ({ dept }) => {
                       <p className="mt-[1vh] md:text-[1.8vh] text-sm">
                         {faculty.designation}
                       </p>
-                      <h2 className="mt-[1vh] md:text-[1.8vh] text-sm">
+                      <h2 className="md:text-[1.8vh] text-sm">
                         Qualification: {faculty.qualification}
                       </h2>
-                      <h2 className="mt-[1vh] md:text-[1.8vh] text-sm">
+                      <h2 className="md:text-[1.8vh] text-sm">
                         Experience:{" "}
                         {new Date().getFullYear() - faculty.yoe + " years"}
                       </h2>
