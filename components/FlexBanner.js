@@ -30,7 +30,7 @@ const FlexBanner = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5 }}
-      className="absolute mt-[5vh] w-[25vw] h-[10vh] flex gap-[0.1vh] top-[10vh] right-[10vw] z-[1]"
+      className="absolute mt-[5vh] w-[25vw] h-[10vh] flex gap-[0.1vh] top-[10vh] right-[15vw] z-[1]"
     >
       {[1, 2, 3, 4].map((index) => (
         <img

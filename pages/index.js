@@ -116,10 +116,10 @@ const Home = () => {
                     y2="0.141304"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#F3F2FF" />
-                    <stop offset="0.15" stop-color="#AB86F7" />
-                    <stop offset="0.24" stop-color="#8146F2" />
-                    <stop offset="0.75" stop-color="#5F13EE" />
+                    <stop stopColor="#F3F2FF" />
+                    <stop offset="0.15" stopColor="#AB86F7" />
+                    <stop offset="0.24" stopColor="#8146F2" />
+                    <stop offset="0.75" stopColor="#5F13EE" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -216,7 +216,7 @@ const Home = () => {
       {isMob && (
         <div style={{ overflow: "hidden" }}>
           {/* hero section */}
-          <div className="relative w-full mt-6 p-4">
+          <div className="relative w-full mt-6 p-10">
             <h1 className="text-3xl text-[#27066F] font-OrelegaOne font-light z-10 text-center">
               Welcome to <br /> B & B Institute Of Technology
             </h1>
@@ -234,37 +234,39 @@ const Home = () => {
           </div>
 
           {/* swiper */}
-          <div className="relative border-4 border-solid border-[#27066F] rounded-[10px] z-10">
-            <Swiper
-              effect={'coverflow'}
-              grabCursor={true}
-              centeredSlides={true}
-              slidesPerView={'auto'}
-              coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-              }}
-              modules={[Autoplay, EffectCoverflow, Pagination]}
-              className="mySwiper"
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
-              loop={true}
-            >
-              {[1, 2, 3, 4].map((index) => (
-                <SwiperSlide key={index}>
-                  <img
-                    src={`/home/banner-${index}.jpg`}
-                    alt="college-images"
-                    className="w-full h-full object-cover rounded-[5px]"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+          <div className="px-5">
+            <div className="relative border-4 border-solid border-[#27066F] rounded-[10px] z-10">
+              <Swiper
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={'auto'}
+                coverflowEffect={{
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: true,
+                }}
+                modules={[Autoplay, EffectCoverflow, Pagination]}
+                className="mySwiper"
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }}
+                loop={true}
+              >
+                {[1, 2, 3, 4].map((index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={`/home/banner-${index}.jpg`}
+                      alt="college-images"
+                      className="w-full h-full object-cover rounded-[5px]"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
           </div>
 
           <div className="relative flex justify-center items-center w-full -mt-28">
@@ -282,10 +284,10 @@ const Home = () => {
                   y2="0.0641802"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#F3F2FF" />
-                  <stop offset="0.24" stop-color="#AB86F7" />
-                  <stop offset="0.44" stop-color="#8146F2" />
-                  <stop offset="0.711667" stop-color="#5F13EE" />
+                  <stop stopColor="#F3F2FF" />
+                  <stop offset="0.24" stopColor="#AB86F7" />
+                  <stop offset="0.44" stopColor="#8146F2" />
+                  <stop offset="0.711667" stopColor="#5F13EE" />
                 </linearGradient>
               </defs>
             </svg>

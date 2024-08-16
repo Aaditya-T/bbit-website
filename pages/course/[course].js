@@ -39,7 +39,7 @@ const DepartmentPage = ({ dept }) => {
                 Vision:
               </h2>
 
-              <p className="md:w-[49vw] text-[2vh] text-[#27066F] font-normal">
+              <p className="md:w-[65vw] text-[2vh] text-[#27066F] font-normal">
                 {departmentData?.vision}
               </p>
 
@@ -49,7 +49,7 @@ const DepartmentPage = ({ dept }) => {
               >
                 Mission
               </h2>
-              <div className="lg:w-[49vw] md:w-[49vw] text-[2vh] whitespace-pre-line mt-[2vh] text-[#27066F] font-normal">
+              <div className="lg:w-[65vw] md:w-[49vw] text-[2vh] whitespace-pre-line mt-[2vh] text-[#27066F] font-normal">
                 <ol>
                   {departmentData?.mission.map((points, index) => (
                     <li key={index}>{points}</li>
@@ -72,7 +72,7 @@ const DepartmentPage = ({ dept }) => {
               </h2>
             </div>
 
-            <div className="flex flex-wrap gap-4 mt-[4vh] md:max-w-[80vw]">
+            <div className="flex flex-wrap gap-4 mt-[4vh] md:max-w-[80vw] md:ml-4">
               {departmentData?.faculty.map((faculty) => (
                 <div
                   key={faculty.id}
@@ -116,7 +116,7 @@ const DepartmentPage = ({ dept }) => {
             </div>
             {departmentData?.lab.map((lab, index) => (
               <Element key={index} name={`lab-${index + 1}`}>
-                <div className="flex flex-col md:flex-row mt-[5vh] relative">
+                <div className="flex flex-col md:flex-row mt-[5vh] relative md:ml-4">
                   <img
                     src={`https://cvpjo1eotxjwvkts.public.blob.vercel-storage.com${lab.image}`}
                     alt={lab.title}
@@ -143,17 +143,14 @@ const DepartmentPage = ({ dept }) => {
             </div>
 
             <div className="mt-[8vh] relative">
-              <div className="bg-[#D8D1FF] mx-auto border-[0.2vh] border-[#27066F] overflow-hidden mb-[0vh]">
+              <div className="bg-[#D8D1FF] mx-auto border-[0.2vh] border-[#27066F] overflow-hidden mb-[0vh] md:ml-4">
                 <table className="table-fixed w-full border-collapse">
                   <thead>
                     <tr>
                       {[
-                        "Sem 1",
-                        "Sem 2",
-                        "Sem 3",
-                        "Sem 4",
-                        "Sem 5",
-                        "Sem 6",
+                        "Year 1",
+                        "Year 2",
+                        "Year 3",
                       ].map((sem) => (
                         <th
                           key={sem}
@@ -178,7 +175,7 @@ const DepartmentPage = ({ dept }) => {
                 Syllabus
               </h2>
             </div>
-            <div className="p-5 md:p-0 md:h-[10vh] bg-[#D8D1FF] border-[0.2vh] border-[#27066F] rounded-[2vh] mx-auto mt-[6vh] flex justify-center items-center">
+            <div className="p-5 md:p-0 md:h-[10vh] bg-[#D8D1FF] border-[0.2vh] border-[#27066F] rounded-[2vh] mx-auto mt-[6vh] flex justify-center items-center md:ml-4">
               <p className="text-[#27066F] font-semibold text-sm md:text-[2.5vh]">
                 Access the most recent syllabus by visiting the Official GTU
                 Website. <br />

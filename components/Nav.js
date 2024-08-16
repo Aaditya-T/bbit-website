@@ -174,16 +174,16 @@ const Nav = () => {
                       initial="closed"
                       animate={isSubMenuOpen ? "open" : "closed"}
                       variants={variant}
-                      className="absolute top-7 bg-[#EAE6FF] rounded-xl border w-fit flex flex-row px-3 py-2 z-10 -left-36"
+                      className="absolute top-7 bg-[#EAE6FF] rounded-xl border w-fit flex flex-row px-3 py-2 z-50 -left-36"
                     >
                       {/* two boxes with different options */}
                       <div className="flex flex-col gap-2 mr-5 bg-[#D8D1FF] pl-6 pr-24 rounded-xl">
                         <span className="text-[#27066F] font-OrelegaOne text-[--text-primary] text-2xl text-nowrap">
                           The Institute
                         </span>
-                        <div className="flex flex-col gap-5 text-base">
+                        <div className="flex flex-col gap-5 text-base px">
                           {subMenu1.map((item) => (
-                            <a href={item.link} key={item.name} className="font-sans font-semibold text-nowrap">
+                            <a href={item.link} key={item.name} className={`font-sans font-semibold text-nowrap`}>
                               {item.name}
                             </a>
                           ))}
