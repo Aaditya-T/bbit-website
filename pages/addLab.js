@@ -21,6 +21,7 @@ export default function AddLab() {
         const blob = await put(image, file, { 
             access: 'public',
             token: "vercel_blob_rw_CVPJO1EOTXjWVktS_yMDecTgF1Z4UKrnYhxCLyApBTHbZva",
+            addRandomSuffix: false,
         });
         return blob.url;
     }
