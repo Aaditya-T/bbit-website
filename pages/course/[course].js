@@ -87,6 +87,12 @@ const DepartmentPage = ({ dept }) => {
                       src={`https://cvpjo1eotxjwvkts.public.blob.vercel-storage.com${faculty.image}`}
                       alt={faculty.full_name}
                       className="w-full h-full lg:h-[30vh] md:h-[27vh] md:w-[18vw] lg:w-[18vw] rounded-t-[2vw] lg:rounded-t-[2vh] md:rounded-t-[2vh] relative"
+                      onError={(e) => {
+                        e.target.src = '../faculty/default-image.svg';
+                      }}
+                      onLoad={(e) => {
+                        e.target.onerror = null;
+                      }}
                     />
                   </div>
                   <div className="flex justify-center items-center lg:h-[13vh] lg:mt-4">
@@ -159,9 +165,8 @@ const DepartmentPage = ({ dept }) => {
                         <th
                           key={sem}
                           onClick={() => setSelectedSemester(sem)}
-                          className={`cursor-pointer text-[#27066F] text-center py-[2vh] px-[1vw] font-semibold text-[2vh] border-t-[0.1vh] border-b-[0.2vh] border-[#27066F] ${
-                            selectedSemester === sem ? "bg-[#B3A1FF]" : ""
-                          }`}
+                          className={`cursor-pointer text-[#27066F] text-center py-[2vh] px-[1vw] font-semibold text-[2vh] border-t-[0.1vh] border-b-[0.2vh] border-[#27066F] ${selectedSemester === sem ? "bg-[#B3A1FF]" : ""
+                            }`}
                         >
                           {sem}
                         </th>
