@@ -49,12 +49,16 @@ const DepartmentPage = ({ dept }) => {
               >
                 Mission
               </h2>
-              <div className="lg:w-[65vw] md:w-[49vw] text-[2vh] whitespace-pre-line mt-[2vh] text-[#27066F] font-normal">
-                <ol>
-                  {departmentData?.mission.map((points, index) => (
-                    <li key={index}>{points}</li>
-                  ))}
-                </ol>
+              <div className="lg:w-[65vw] text-[2vh] whitespace-pre-line mt-[2vh] text-[#27066F] font-normal">
+                {departmentData?.mission ? (
+                  <ol>
+                    {departmentData.mission.map((points, index) => (
+                      <li key={index}>{points}</li>
+                    ))}
+                  </ol>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
           </Element>
