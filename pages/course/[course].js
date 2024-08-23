@@ -71,7 +71,7 @@ const CourseDetails = () => {
         <img
           src={member.image}
           alt={member.name}
-          className="w-full h-48 rounded-t-lg object-cover"
+          className="w-full h-48 rounded-t-lg"
         />
         <div className="p-2 text-center">
           <h3 className="text-sm sm:text-base font-semibold">{member.name}</h3>
