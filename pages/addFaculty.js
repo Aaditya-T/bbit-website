@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
-import { put } from "@vercel/blob";
+import uploadImageToBlobStorage from "./api/dept/uploadImage"
 
 const supabaseUrl = 'https://zmxakjcdriifuftsmkvj.supabase.co';
 const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpteGFramNkcmlpZnVmdHNta3ZqIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyMDQzODM5NCwiZXhwIjoyMDM2MDE0Mzk0fQ.VwdhlJmpaJEN5gKrODuvhfP0oOxTvESImIkahVo1Xf0';
@@ -16,15 +16,6 @@ export default function AddFaculty() {
     const [uploadImage, setUploadImage] = useState(null);
     const [message, setMessage] = useState(null);
     const [isError, setIsError] = useState(false);
-
-    async function uploadImageToBlobStorage(file) {
-        const blob = await put(image, file, { 
-            access: 'public',
-            addRandomSuffix : false,
-            token: "vercel_blob_rw_CVPJO1EOTXjWVktS_yMDecTgF1Z4UKrnYhxCLyApBTHbZva",
-        });
-        return blob.url;
-    }
 
     useEffect(() => {
         if (uploadImage) {

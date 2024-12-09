@@ -1,9 +1,9 @@
-import { createClient } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
 import { put } from "@vercel/blob";
+import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = 'https://zmxakjcdriifuftsmkvj.supabase.co';
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpteGFramNkcmlpZnVmdHNta3ZqIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcyMDQzODM5NCwiZXhwIjoyMDM2MDE0Mzk0fQ.VwdhlJmpaJEN5gKrODuvhfP0oOxTvESImIkahVo1Xf0';
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseAnonKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export default function AddActivites(){
@@ -34,7 +34,9 @@ export default function AddActivites(){
             });
         }
     },[uploadImage])
-
+    useEffect(()=> {
+        console.log(process.env.SUPABASE_URL)
+    },[])
     const handleSubmit = async(e) =>{
         e.preventDefault();
 
